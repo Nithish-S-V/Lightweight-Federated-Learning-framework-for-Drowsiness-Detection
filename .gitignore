@@ -35,3 +35,8 @@ Rasp/old/3,10,20_DataSplit/
 Report/
 venv/
 distributed.zip
+
+Anaconda3-2024.10-1-Windows-x86_64.exe
+Rasp/model/drowsiness_vgg_16_model_teacher_5_epoch.keras
+*.keras
+*.exe
