@@ -1,0 +1,89 @@
+import socket
+import pickle
+import zlib
+import tempfile
+import tensorflow as tf
+from cryptography.fernet import Fernet
+import hashlib
+import base64
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+class FederatedClient:
+    def __init__(self, server_ip, server_port, data_dir):
+        self.server_ip = server_ip
+        self.server_port = server_port
+        self.data_dir = data_dir
+        self.model = None
+        self.cipher = None
+
+    def connect(self):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.connect((self.server_ip, self.server_port))
+            
+            # Receive encryption key
+            self.cipher = Fernet(s.recv(1024))
+            
+            while True:
+                # Receive model
+                data_size = int.from_bytes(s.recv(4), 'big')
+                encrypted = self._recv_all(s, data_size)
+                round_num = int.from_bytes(s.recv(4), 'big')
+                
+                # Process model
+                decrypted = self.cipher.decrypt(encrypted)
+                decompressed = zlib.decompress(decrypted)
+                
+                with tempfile.NamedTemporaryFile(suffix=".keras") as tmp:
+                    tmp.write(decompressed)
+                    self.model = tf.keras.models.load_model(tmp.name)
+                
+                # Train locally
+                self._train_round()
+                
+                # Send updates
+                serialized = pickle.dumps(self.model.get_weights())
+                compressed = zlib.compress(serialized)
+                encrypted = self.cipher.encrypt(compressed)
+                
+                s.sendall(len(encrypted).to_bytes(4, 'big'))
+                s.sendall(encrypted)
+
+    def _train_round(self):
+        datagen = ImageDataGenerator(
+            rescale=1./255,
+            rotation_range=20,
+            width_shift_range=0.2,
+            height_shift_range=0.2,
+            horizontal_flip=True,
+            validation_split=0.2
+        )
+        
+        train_gen = datagen.flow_from_directory(
+            self.data_dir,
+            target_size=(224, 224),
+            batch_size=32,
+            class_mode='binary',
+            subset='training'
+        )
+        
+        self.model.fit(
+            train_gen,
+            epochs=1,
+            verbose=0
+        )
+
+    def _recv_all(self, sock, size):
+        data = b''
+        while len(data) < size:
+            packet = sock.recv(size - len(data))
+            if not packet: break
+            data += packet
+        return data
+
+if __name__ == "__main__":
+    client = FederatedClient(
+        server_ip="192.168.1.100",
+        server_port=5000,
+        data_dir="client_data"
+    )
+    client.connect()

@@ -1,0 +1,1674 @@
+(fedlearn-env) client2@raspberrypi:~/Client2 $ python client2_en.py
+Connected to server.
+
+==== Round 1 ====
+Receiving encrypted model (2495544 bytes)...
+Receiving model: 100%|██████████████████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 2.56MB/s]
+Model for Round 1 loaded successfully.
+Found 629 images belonging to 2 classes.
+Found 156 images belonging to 2 classes.
+Training locally on Set 1...
+[codecarbon WARNING @ 01:57:12] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon WARNING @ 01:57:13] Error while trying to count physical CPUs: invalid literal for int() with base 10: '-'. Defaulting to 1.
+[codecarbon INFO @ 01:57:13] [setup] RAM Tracking...
+[codecarbon INFO @ 01:57:13] [setup] CPU Tracking...
+[codecarbon WARNING @ 01:57:13] We saw that you have a Cortex-A72 but we don't know it. Please contact us.
+[codecarbon WARNING @ 01:57:13] No CPU tracking mode found. Falling back on estimation based on TDP for CPU.
+ Linux OS detected: Please ensure RAPL files exist at /sys/class/powercap/intel-rapl/subsystem to measure CPU
+
+[codecarbon INFO @ 01:57:13] CPU Model on constant consumption mode: Cortex-A72
+[codecarbon WARNING @ 01:57:13] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 01:57:13] [setup] GPU Tracking...
+[codecarbon INFO @ 01:57:13] No GPU found.
+[codecarbon INFO @ 01:57:13] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: Unspecified
+
+[codecarbon INFO @ 01:57:13] >>> Tracker's metadata:
+[codecarbon INFO @ 01:57:13]   Platform system: Linux-6.6.74+rpt-rpi-v8-aarch64-with-glibc2.36
+[codecarbon INFO @ 01:57:13]   Python version: 3.11.2
+[codecarbon INFO @ 01:57:13]   CodeCarbon version: 3.0.0
+[codecarbon INFO @ 01:57:13]   Available RAM : 7.627 GB
+[codecarbon INFO @ 01:57:13]   CPU count: 4 thread(s) in 1 physical CPU(s)
+[codecarbon INFO @ 01:57:13]   CPU model: Cortex-A72
+[codecarbon INFO @ 01:57:13]   GPU count: None
+[codecarbon INFO @ 01:57:13]   GPU model: None
+[codecarbon INFO @ 01:57:16] Emissions data (if any) will be saved to file /home/client2/Client2/emissions.csv
+/home/client2/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Epoch 1/20
+[codecarbon INFO @ 01:57:31] Energy consumed for RAM : 0.000013 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 01:57:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 01:57:31] Energy consumed for All CPU : 0.000177 kWh
+[codecarbon INFO @ 01:57:31] 0.000190 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.8460 - loss: 0.4916[codecarbon INFO @ 01:57:46] Energy consumed for RAM : 0.000025 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 01:57:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 01:57:46] Energy consumed for All CPU : 0.000354 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8421 - loss: 0.4770 [codecarbon INFO @ 01:58:01] Energy consumed for RAM : 0.000038 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 01:58:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 01:58:01] Energy consumed for All CPU : 0.000531 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8403 - loss: 0.4687[codecarbon INFO @ 01:58:16] Energy consumed for RAM : 0.000050 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 01:58:16] Delta energy consumed for CPU with constant : 0.000178 kWh, power : 42.5 W
+[codecarbon INFO @ 01:58:16] Energy consumed for All CPU : 0.000709 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 68s 3s/step - accuracy: 0.8400 - loss: 0.4672 - val_accuracy: 0.7564 - val_loss: 0.4097
+Epoch 2/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.9078 - loss: 0.3485[codecarbon INFO @ 01:58:31] Energy consumed for RAM : 0.000063 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 01:58:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 01:58:31] Energy consumed for All CPU : 0.000886 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.8317 - loss: 0.3550[codecarbon INFO @ 01:58:46] Energy consumed for RAM : 0.000075 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 01:58:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 01:58:46] Energy consumed for All CPU : 0.001063 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8170 - loss: 0.3504[codecarbon INFO @ 01:59:01] Energy consumed for RAM : 0.000088 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 01:59:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 01:59:01] Energy consumed for All CPU : 0.001240 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8141 - loss: 0.3489 - val_accuracy: 0.7821 - val_loss: 0.3520
+Epoch 3/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 43s 2s/step - accuracy: 0.8750 - loss: 0.2887[codecarbon INFO @ 01:59:16] Energy consumed for RAM : 0.000100 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 01:59:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 01:59:16] Energy consumed for All CPU : 0.001417 kWh
+[codecarbon INFO @ 01:59:16] 0.001517 kWh of electricity used since the beginning.
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.8522 - loss: 0.2994[codecarbon INFO @ 01:59:31] Energy consumed for RAM : 0.000113 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 01:59:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 01:59:31] Energy consumed for All CPU : 0.001594 kWh
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.8641 - loss: 0.2942[codecarbon INFO @ 01:59:46] Energy consumed for RAM : 0.000125 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 01:59:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 01:59:46] Energy consumed for All CPU : 0.001771 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8648 - loss: 0.2926[codecarbon INFO @ 02:00:01] Energy consumed for RAM : 0.000137 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:00:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:00:01] Energy consumed for All CPU : 0.001948 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8647 - loss: 0.2921 - val_accuracy: 0.7115 - val_loss: 0.3213
+Epoch 4/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.8855 - loss: 0.2498[codecarbon INFO @ 02:00:16] Energy consumed for RAM : 0.000150 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:00:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:00:16] Energy consumed for All CPU : 0.002125 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8751 - loss: 0.2519 [codecarbon INFO @ 02:00:31] Energy consumed for RAM : 0.000162 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:00:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:00:31] Energy consumed for All CPU : 0.002303 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8739 - loss: 0.2517[codecarbon INFO @ 02:00:46] Energy consumed for RAM : 0.000175 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:00:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:00:46] Energy consumed for All CPU : 0.002479 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8737 - loss: 0.2515 - val_accuracy: 0.7051 - val_loss: 0.3071
+Epoch 5/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 28s 2s/step - accuracy: 0.8421 - loss: 0.2570[codecarbon INFO @ 02:01:01] Energy consumed for RAM : 0.000187 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:01:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:01:01] Energy consumed for All CPU : 0.002656 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 13s 2s/step - accuracy: 0.8517 - loss: 0.2467[codecarbon INFO @ 02:01:16] Energy consumed for RAM : 0.000200 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:01:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:01:16] Energy consumed for All CPU : 0.002833 kWh
+[codecarbon INFO @ 02:01:16] 0.003033 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8543 - loss: 0.2416[codecarbon INFO @ 02:01:31] Energy consumed for RAM : 0.000212 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:01:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:01:31] Energy consumed for All CPU : 0.003010 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8544 - loss: 0.2411 - val_accuracy: 0.7115 - val_loss: 0.2974
+Epoch 6/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.8296 - loss: 0.2155[codecarbon INFO @ 02:01:46] Energy consumed for RAM : 0.000225 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:01:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:01:46] Energy consumed for All CPU : 0.003188 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.8527 - loss: 0.2116[codecarbon INFO @ 02:02:01] Energy consumed for RAM : 0.000237 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:02:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:02:01] Energy consumed for All CPU : 0.003365 kWh
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8521 - loss: 0.2129[codecarbon INFO @ 02:02:16] Energy consumed for RAM : 0.000250 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:02:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:02:16] Energy consumed for All CPU : 0.003542 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8513 - loss: 0.2131 - val_accuracy: 0.7500 - val_loss: 0.2847
+Epoch 7/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 34s 2s/step - accuracy: 0.8984 - loss: 0.1936[codecarbon INFO @ 02:02:31] Energy consumed for RAM : 0.000262 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:02:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:02:31] Energy consumed for All CPU : 0.003719 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.8719 - loss: 0.2005[codecarbon INFO @ 02:02:46] Energy consumed for RAM : 0.000275 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:02:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:02:46] Energy consumed for All CPU : 0.003896 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8706 - loss: 0.2010[codecarbon INFO @ 02:03:01] Energy consumed for RAM : 0.000287 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:03:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:03:01] Energy consumed for All CPU : 0.004073 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8714 - loss: 0.2011 - val_accuracy: 0.7308 - val_loss: 0.2781
+Epoch 8/20
+[codecarbon INFO @ 02:03:16] Energy consumed for RAM : 0.000300 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:03:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:03:16] Energy consumed for All CPU : 0.004250 kWh
+[codecarbon INFO @ 02:03:16] 0.004550 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:03:16] 0.009013 g.CO2eq/s mean an estimation of 284.24875732069614 kg.CO2eq/year
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 23s 2s/step - accuracy: 0.8824 - loss: 0.1950[codecarbon INFO @ 02:03:31] Energy consumed for RAM : 0.000312 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:03:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:03:31] Energy consumed for All CPU : 0.004427 kWh
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.8797 - loss: 0.1936[codecarbon INFO @ 02:03:46] Energy consumed for RAM : 0.000325 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:03:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:03:46] Energy consumed for All CPU : 0.004604 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8801 - loss: 0.1923[codecarbon INFO @ 02:04:01] Energy consumed for RAM : 0.000337 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:04:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:04:01] Energy consumed for All CPU : 0.004781 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8803 - loss: 0.1920 - val_accuracy: 0.6987 - val_loss: 0.2761
+Epoch 9/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.8439 - loss: 0.1859[codecarbon INFO @ 02:04:16] Energy consumed for RAM : 0.000350 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:04:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:04:16] Energy consumed for All CPU : 0.004958 kWh
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.8664 - loss: 0.1819[codecarbon INFO @ 02:04:31] Energy consumed for RAM : 0.000362 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:04:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:04:31] Energy consumed for All CPU : 0.005135 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8726 - loss: 0.1799[codecarbon INFO @ 02:04:46] Energy consumed for RAM : 0.000375 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:04:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:04:46] Energy consumed for All CPU : 0.005312 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8733 - loss: 0.1796 - val_accuracy: 0.6987 - val_loss: 0.2724
+Epoch 10/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 30s 2s/step - accuracy: 0.8190 - loss: 0.1937[codecarbon INFO @ 02:05:01] Energy consumed for RAM : 0.000387 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:05:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:05:01] Energy consumed for All CPU : 0.005489 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 13s 2s/step - accuracy: 0.8392 - loss: 0.1849[codecarbon INFO @ 02:05:16] Energy consumed for RAM : 0.000400 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:05:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:05:16] Energy consumed for All CPU : 0.005667 kWh
+[codecarbon INFO @ 02:05:16] 0.006067 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8463 - loss: 0.1830[codecarbon INFO @ 02:05:31] Energy consumed for RAM : 0.000412 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:05:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:05:31] Energy consumed for All CPU : 0.005844 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8470 - loss: 0.1827 - val_accuracy: 0.7115 - val_loss: 0.2697
+Epoch 11/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.8739 - loss: 0.1682[codecarbon INFO @ 02:05:46] Energy consumed for RAM : 0.000425 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:05:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:05:46] Energy consumed for All CPU : 0.006021 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 17s 2s/step - accuracy: 0.8725 - loss: 0.1673[codecarbon INFO @ 02:06:01] Energy consumed for RAM : 0.000437 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:06:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:06:01] Energy consumed for All CPU : 0.006198 kWh
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8790 - loss: 0.1641[codecarbon INFO @ 02:06:16] Energy consumed for RAM : 0.000450 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:06:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:06:16] Energy consumed for All CPU : 0.006375 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8811 - loss: 0.1633 - val_accuracy: 0.7308 - val_loss: 0.2644
+Epoch 12/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 41s 2s/step - accuracy: 0.8438 - loss: 0.1945[codecarbon INFO @ 02:06:31] Energy consumed for RAM : 0.000462 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:06:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:06:31] Energy consumed for All CPU : 0.006552 kWh
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.8943 - loss: 0.1658[codecarbon INFO @ 02:06:46] Energy consumed for RAM : 0.000475 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:06:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:06:46] Energy consumed for All CPU : 0.006729 kWh
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9018 - loss: 0.1612[codecarbon INFO @ 02:07:01] Energy consumed for RAM : 0.000487 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:07:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:07:01] Energy consumed for All CPU : 0.006906 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9008 - loss: 0.1612[codecarbon INFO @ 02:07:16] Energy consumed for RAM : 0.000500 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:07:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:07:16] Energy consumed for All CPU : 0.007083 kWh
+[codecarbon INFO @ 02:07:16] 0.007583 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9005 - loss: 0.1612 - val_accuracy: 0.7179 - val_loss: 0.2622
+Epoch 13/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.8668 - loss: 0.1541[codecarbon INFO @ 02:07:31] Energy consumed for RAM : 0.000512 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:07:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:07:31] Energy consumed for All CPU : 0.007260 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8688 - loss: 0.1546 [codecarbon INFO @ 02:07:47] Energy consumed for RAM : 0.000525 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:07:47] Delta energy consumed for CPU with constant : 0.000178 kWh, power : 42.5 W
+[codecarbon INFO @ 02:07:47] Energy consumed for All CPU : 0.007438 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8741 - loss: 0.1530[codecarbon INFO @ 02:08:01] Energy consumed for RAM : 0.000537 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:08:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:08:02] Energy consumed for All CPU : 0.007615 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8749 - loss: 0.1527 - val_accuracy: 0.7436 - val_loss: 0.2547
+Epoch 14/20
+[codecarbon INFO @ 02:08:16] Energy consumed for RAM : 0.000550 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:08:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:08:16] Energy consumed for All CPU : 0.007792 kWh
+[codecarbon INFO @ 02:08:16] 0.008341 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:08:31] Energy consumed for RAM : 0.000562 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:08:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:08:31] Energy consumed for All CPU : 0.007969 kWh
+[codecarbon INFO @ 02:08:31] 0.008531 kWh of electricity used since the beginning.
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.8766 - loss: 0.1791[codecarbon INFO @ 02:08:47] Energy consumed for RAM : 0.000575 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:08:47] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:08:47] Energy consumed for All CPU : 0.008146 kWh
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.8904 - loss: 0.1634[codecarbon INFO @ 02:09:02] Energy consumed for RAM : 0.000587 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:09:02] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:09:02] Energy consumed for All CPU : 0.008323 kWh
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8932 - loss: 0.1570[codecarbon INFO @ 02:09:17] Energy consumed for RAM : 0.000600 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:09:17] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:09:17] Energy consumed for All CPU : 0.008500 kWh
+[codecarbon INFO @ 02:09:17] 0.009100 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.8930 - loss: 0.1558 - val_accuracy: 0.7179 - val_loss: 0.2517
+Epoch 15/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 34s 2s/step - accuracy: 0.8750 - loss: 0.1393[codecarbon INFO @ 02:09:32] Energy consumed for RAM : 0.000612 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:09:32] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:09:32] Energy consumed for All CPU : 0.008677 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.8890 - loss: 0.1372[codecarbon INFO @ 02:09:47] Energy consumed for RAM : 0.000625 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:09:47] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:09:47] Energy consumed for All CPU : 0.008854 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8883 - loss: 0.1386[codecarbon INFO @ 02:10:02] Energy consumed for RAM : 0.000637 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:10:02] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:10:02] Energy consumed for All CPU : 0.009031 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8873 - loss: 0.1390 - val_accuracy: 0.7051 - val_loss: 0.2539
+Epoch 16/20
+[codecarbon INFO @ 02:10:17] Energy consumed for RAM : 0.000650 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:10:17] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:10:17] Energy consumed for All CPU : 0.009208 kWh
+[codecarbon INFO @ 02:10:17] 0.009858 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.8911 - loss: 0.1426[codecarbon INFO @ 02:10:32] Energy consumed for RAM : 0.000662 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:10:32] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:10:32] Energy consumed for All CPU : 0.009385 kWh
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.8926 - loss: 0.1409[codecarbon INFO @ 02:10:47] Energy consumed for RAM : 0.000675 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:10:47] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:10:47] Energy consumed for All CPU : 0.009562 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8932 - loss: 0.1402[codecarbon INFO @ 02:11:02] Energy consumed for RAM : 0.000687 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:11:02] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:11:02] Energy consumed for All CPU : 0.009739 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8934 - loss: 0.1401 - val_accuracy: 0.7115 - val_loss: 0.2581
+Epoch 17/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.8804 - loss: 0.1448[codecarbon INFO @ 02:11:17] Energy consumed for RAM : 0.000700 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:11:17] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:11:17] Energy consumed for All CPU : 0.009916 kWh
+[codecarbon INFO @ 02:11:17] 0.010616 kWh of electricity used since the beginning.
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.8904 - loss: 0.1406[codecarbon INFO @ 02:11:32] Energy consumed for RAM : 0.000712 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:11:32] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:11:32] Energy consumed for All CPU : 0.010093 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8960 - loss: 0.1387[codecarbon INFO @ 02:11:47] Energy consumed for RAM : 0.000725 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:11:47] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:11:47] Energy consumed for All CPU : 0.010271 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 49s 2s/step - accuracy: 0.8965 - loss: 0.1384 - val_accuracy: 0.7051 - val_loss: 0.2513
+Epoch 18/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.9010 - loss: 0.1302[codecarbon INFO @ 02:12:02] Energy consumed for RAM : 0.000737 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:12:02] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:12:02] Energy consumed for All CPU : 0.010448 kWh
+12/20 ━━━━━━━━━━━━━━━━━━━━ 15s 2s/step - accuracy: 0.8996 - loss: 0.1289[codecarbon INFO @ 02:12:17] Energy consumed for RAM : 0.000750 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:12:17] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:12:17] Energy consumed for All CPU : 0.010625 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8959 - loss: 0.1302[codecarbon INFO @ 02:12:32] Energy consumed for RAM : 0.000762 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:12:32] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:12:32] Energy consumed for All CPU : 0.010802 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8956 - loss: 0.1303 - val_accuracy: 0.7372 - val_loss: 0.2521
+Epoch 19/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 35s 2s/step - accuracy: 0.9219 - loss: 0.1200[codecarbon INFO @ 02:12:47] Energy consumed for RAM : 0.000775 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:12:47] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:12:47] Energy consumed for All CPU : 0.010979 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.9062 - loss: 0.1244[codecarbon INFO @ 02:13:02] Energy consumed for RAM : 0.000787 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:13:02] Delta energy consumed for CPU with constant : 0.000178 kWh, power : 42.5 W
+[codecarbon INFO @ 02:13:02] Energy consumed for All CPU : 0.011157 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9037 - loss: 0.1253[codecarbon INFO @ 02:13:17] Energy consumed for RAM : 0.000800 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:13:17] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:13:17] Energy consumed for All CPU : 0.011334 kWh
+[codecarbon INFO @ 02:13:17] 0.012133 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9032 - loss: 0.1254 - val_accuracy: 0.6795 - val_loss: 0.2672
+Epoch 20/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 44s 2s/step - accuracy: 0.8438 - loss: 0.1422[codecarbon INFO @ 02:13:32] Energy consumed for RAM : 0.000812 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:13:32] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:13:32] Energy consumed for All CPU : 0.011511 kWh
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.8949 - loss: 0.1265[codecarbon INFO @ 02:13:47] Energy consumed for RAM : 0.000825 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:13:47] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:13:47] Energy consumed for All CPU : 0.011688 kWh
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.8964 - loss: 0.1267[codecarbon INFO @ 02:14:02] Energy consumed for RAM : 0.000837 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:14:02] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:14:02] Energy consumed for All CPU : 0.011865 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8963 - loss: 0.1269[codecarbon INFO @ 02:14:17] Energy consumed for RAM : 0.000850 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:14:17] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:14:17] Energy consumed for All CPU : 0.012042 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8962 - loss: 0.1270 - val_accuracy: 0.7179 - val_loss: 0.2602
+[codecarbon INFO @ 02:14:17] Energy consumed for RAM : 0.000850 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:14:17] Delta energy consumed for CPU with constant : 0.000009 kWh, power : 42.5 W
+[codecarbon INFO @ 02:14:17] Energy consumed for All CPU : 0.012051 kWh
+[codecarbon INFO @ 02:14:17] 0.012901 kWh of electricity used since the beginning.
+[MEMORY] Current memory usage: 1098.59 MB
+[ENERGY] Estimated energy usage for Set 1: 0.0092 kg CO₂
+Found 7045 images belonging to 2 classes.
+/home/client2/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 437s 2s/step
+Test Accuracy : 85.32%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.89      0.82      0.86      3768
+   notdrowsy       0.81      0.89      0.85      3277
+
+    accuracy                           0.85      7045
+   macro avg       0.85      0.86      0.85      7045
+weighted avg       0.86      0.85      0.85      7045
+
+Sending updated weights (3347704 bytes) to the server...
+Uploading weights: 100%|████████████████████████████████████████████████████████| 3.35M/3.35M [00:00<00:00, 11.8MB/s]
+Training and weight update for Round 1 completed.
+
+
+==== Round 2 ====
+Receiving encrypted model (2509772 bytes)...
+Receiving model: 100%|██████████████████████████████████████████████████████████| 2.51M/2.51M [00:00<00:00, 6.62MB/s]
+Model for Round 2 loaded successfully.
+Found 630 images belonging to 2 classes.
+Found 156 images belonging to 2 classes.
+Training locally on Set 2...
+[codecarbon WARNING @ 02:22:31] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon WARNING @ 02:22:31] Error while trying to count physical CPUs: invalid literal for int() with base 10: '-'. Defaulting to 1.
+[codecarbon INFO @ 02:22:31] [setup] RAM Tracking...
+[codecarbon INFO @ 02:22:31] [setup] CPU Tracking...
+[codecarbon WARNING @ 02:22:31] We saw that you have a Cortex-A72 but we don't know it. Please contact us.
+[codecarbon WARNING @ 02:22:31] No CPU tracking mode found. Falling back on estimation based on TDP for CPU.
+ Linux OS detected: Please ensure RAPL files exist at /sys/class/powercap/intel-rapl/subsystem to measure CPU
+
+[codecarbon INFO @ 02:22:31] CPU Model on constant consumption mode: Cortex-A72
+[codecarbon WARNING @ 02:22:31] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 02:22:31] [setup] GPU Tracking...
+[codecarbon INFO @ 02:22:31] No GPU found.
+[codecarbon INFO @ 02:22:31] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: Unspecified
+
+[codecarbon INFO @ 02:22:31] >>> Tracker's metadata:
+[codecarbon INFO @ 02:22:31]   Platform system: Linux-6.6.74+rpt-rpi-v8-aarch64-with-glibc2.36
+[codecarbon INFO @ 02:22:31]   Python version: 3.11.2
+[codecarbon INFO @ 02:22:31]   CodeCarbon version: 3.0.0
+[codecarbon INFO @ 02:22:31]   Available RAM : 7.627 GB
+[codecarbon INFO @ 02:22:31]   CPU count: 4 thread(s) in 1 physical CPU(s)
+[codecarbon INFO @ 02:22:31]   CPU model: Cortex-A72
+[codecarbon INFO @ 02:22:31]   GPU count: None
+[codecarbon INFO @ 02:22:31]   GPU model: None
+[codecarbon INFO @ 02:22:34] Emissions data (if any) will be saved to file /home/client2/Client2/emissions.csv
+/home/client2/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Epoch 1/20
+[codecarbon INFO @ 02:22:49] Energy consumed for RAM : 0.000013 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:22:49] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:22:50] Energy consumed for All CPU : 0.000177 kWh
+[codecarbon INFO @ 02:22:50] 0.000190 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 23s 2s/step - accuracy: 0.8596 - loss: 0.1375[codecarbon INFO @ 02:23:05] Energy consumed for RAM : 0.000025 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:23:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:23:05] Energy consumed for All CPU : 0.000354 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8688 - loss: 0.1345 [codecarbon INFO @ 02:23:20] Energy consumed for RAM : 0.000037 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:23:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:23:20] Energy consumed for All CPU : 0.000531 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8685 - loss: 0.1348[codecarbon INFO @ 02:23:35] Energy consumed for RAM : 0.000050 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:23:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:23:35] Energy consumed for All CPU : 0.000709 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 68s 3s/step - accuracy: 0.8685 - loss: 0.1349 - val_accuracy: 0.7244 - val_loss: 0.2456
+Epoch 2/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.7566 - loss: 0.1859[codecarbon INFO @ 02:23:50] Energy consumed for RAM : 0.000062 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:23:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:23:50] Energy consumed for All CPU : 0.000885 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.8548 - loss: 0.1454[codecarbon INFO @ 02:24:05] Energy consumed for RAM : 0.000075 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:24:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:24:05] Energy consumed for All CPU : 0.001063 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8756 - loss: 0.1355[codecarbon INFO @ 02:24:20] Energy consumed for RAM : 0.000087 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:24:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:24:20] Energy consumed for All CPU : 0.001240 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8782 - loss: 0.1340 - val_accuracy: 0.6987 - val_loss: 0.2405
+Epoch 3/20
+[codecarbon INFO @ 02:24:35] Energy consumed for RAM : 0.000100 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:24:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:24:35] Energy consumed for All CPU : 0.001417 kWh
+[codecarbon INFO @ 02:24:35] 0.001517 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:24:35] 0.009013 g.CO2eq/s mean an estimation of 284.2353880229405 kg.CO2eq/year
+[codecarbon INFO @ 02:24:50] Energy consumed for RAM : 0.000112 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:24:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:24:50] Energy consumed for All CPU : 0.001594 kWh
+[codecarbon INFO @ 02:24:50] 0.001706 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:25:05] Energy consumed for RAM : 0.000125 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:25:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:25:05] Energy consumed for All CPU : 0.001771 kWh
+[codecarbon INFO @ 02:25:05] 0.001896 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.8504 - loss: 0.1349[codecarbon INFO @ 02:25:20] Energy consumed for RAM : 0.000137 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:25:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:25:20] Energy consumed for All CPU : 0.001948 kWh
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.8576 - loss: 0.1337[codecarbon INFO @ 02:25:35] Energy consumed for RAM : 0.000150 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:25:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:25:35] Energy consumed for All CPU : 0.002125 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8618 - loss: 0.1330[codecarbon INFO @ 02:25:50] Energy consumed for RAM : 0.000162 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:25:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:25:50] Energy consumed for All CPU : 0.002302 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.8628 - loss: 0.1328 - val_accuracy: 0.7436 - val_loss: 0.2365
+Epoch 4/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 28s 2s/step - accuracy: 0.8964 - loss: 0.1088[codecarbon INFO @ 02:26:05] Energy consumed for RAM : 0.000175 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:26:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:26:05] Energy consumed for All CPU : 0.002479 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 13s 2s/step - accuracy: 0.8958 - loss: 0.1124[codecarbon INFO @ 02:26:20] Energy consumed for RAM : 0.000187 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:26:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:26:20] Energy consumed for All CPU : 0.002656 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8943 - loss: 0.1139[codecarbon INFO @ 02:26:35] Energy consumed for RAM : 0.000200 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:26:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:26:35] Energy consumed for All CPU : 0.002833 kWh
+[codecarbon INFO @ 02:26:35] 0.003033 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8940 - loss: 0.1141 - val_accuracy: 0.7692 - val_loss: 0.2386
+Epoch 5/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.9149 - loss: 0.1057[codecarbon INFO @ 02:26:50] Energy consumed for RAM : 0.000212 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:26:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:26:50] Energy consumed for All CPU : 0.003010 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 17s 2s/step - accuracy: 0.8926 - loss: 0.1172[codecarbon INFO @ 02:27:05] Energy consumed for RAM : 0.000225 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:27:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:27:05] Energy consumed for All CPU : 0.003188 kWh
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8897 - loss: 0.1195[codecarbon INFO @ 02:27:20] Energy consumed for RAM : 0.000237 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:27:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:27:20] Energy consumed for All CPU : 0.003365 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8886 - loss: 0.1200 - val_accuracy: 0.6987 - val_loss: 0.2419
+Epoch 6/20
+[codecarbon INFO @ 02:27:35] Energy consumed for RAM : 0.000250 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:27:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:27:35] Energy consumed for All CPU : 0.003542 kWh
+[codecarbon INFO @ 02:27:35] 0.003792 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:27:50] Energy consumed for RAM : 0.000262 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:27:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:27:50] Energy consumed for All CPU : 0.003719 kWh
+[codecarbon INFO @ 02:27:50] 0.003981 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:28:05] Energy consumed for RAM : 0.000275 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:28:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:28:05] Energy consumed for All CPU : 0.003896 kWh
+[codecarbon INFO @ 02:28:05] 0.004171 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.8769 - loss: 0.1239[codecarbon INFO @ 02:28:20] Energy consumed for RAM : 0.000287 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:28:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:28:20] Energy consumed for All CPU : 0.004073 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8877 - loss: 0.1200 [codecarbon INFO @ 02:28:35] Energy consumed for RAM : 0.000300 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:28:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:28:35] Energy consumed for All CPU : 0.004250 kWh
+[codecarbon INFO @ 02:28:35] 0.004550 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8925 - loss: 0.1186[codecarbon INFO @ 02:28:50] Energy consumed for RAM : 0.000312 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:28:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:28:50] Energy consumed for All CPU : 0.004427 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.8931 - loss: 0.1185 - val_accuracy: 0.6731 - val_loss: 0.2478
+Epoch 7/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.9409 - loss: 0.1013[codecarbon INFO @ 02:29:05] Energy consumed for RAM : 0.000325 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:29:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:29:05] Energy consumed for All CPU : 0.004604 kWh
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.9230 - loss: 0.1057[codecarbon INFO @ 02:29:20] Energy consumed for RAM : 0.000337 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:29:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:29:20] Energy consumed for All CPU : 0.004781 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9170 - loss: 0.1080[codecarbon INFO @ 02:29:35] Energy consumed for RAM : 0.000350 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:29:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:29:35] Energy consumed for All CPU : 0.004959 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9165 - loss: 0.1082 - val_accuracy: 0.6795 - val_loss: 0.2419
+Epoch 8/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 30s 2s/step - accuracy: 0.9134 - loss: 0.1039[codecarbon INFO @ 02:29:50] Energy consumed for RAM : 0.000362 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:29:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:29:50] Energy consumed for All CPU : 0.005136 kWh
+12/20 ━━━━━━━━━━━━━━━━━━━━ 15s 2s/step - accuracy: 0.9121 - loss: 0.1076[codecarbon INFO @ 02:30:05] Energy consumed for RAM : 0.000375 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:30:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:30:05] Energy consumed for All CPU : 0.005313 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9079 - loss: 0.1103[codecarbon INFO @ 02:30:20] Energy consumed for RAM : 0.000387 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:30:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:30:20] Energy consumed for All CPU : 0.005490 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9078 - loss: 0.1104 - val_accuracy: 0.7115 - val_loss: 0.2364
+Epoch 9/20
+[codecarbon INFO @ 02:30:35] Energy consumed for RAM : 0.000400 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:30:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:30:35] Energy consumed for All CPU : 0.005667 kWh
+[codecarbon INFO @ 02:30:35] 0.006066 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:30:35] 0.009012 g.CO2eq/s mean an estimation of 284.2060647815681 kg.CO2eq/year
+[codecarbon INFO @ 02:30:50] Energy consumed for RAM : 0.000412 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:30:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:30:50] Energy consumed for All CPU : 0.005844 kWh
+[codecarbon INFO @ 02:30:50] 0.006256 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:31:05] Energy consumed for RAM : 0.000425 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:31:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:31:05] Energy consumed for All CPU : 0.006021 kWh
+[codecarbon INFO @ 02:31:05] 0.006446 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.9002 - loss: 0.1096[codecarbon INFO @ 02:31:20] Energy consumed for RAM : 0.000437 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:31:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:31:20] Energy consumed for All CPU : 0.006198 kWh
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9011 - loss: 0.1097[codecarbon INFO @ 02:31:35] Energy consumed for RAM : 0.000450 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:31:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:31:35] Energy consumed for All CPU : 0.006375 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9018 - loss: 0.1098[codecarbon INFO @ 02:31:50] Energy consumed for RAM : 0.000462 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:31:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:31:50] Energy consumed for All CPU : 0.006552 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9017 - loss: 0.1099 - val_accuracy: 0.7244 - val_loss: 0.2350
+Epoch 10/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.9191 - loss: 0.0988[codecarbon INFO @ 02:32:05] Energy consumed for RAM : 0.000475 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:32:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:32:05] Energy consumed for All CPU : 0.006729 kWh
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.9126 - loss: 0.1017[codecarbon INFO @ 02:32:20] Energy consumed for RAM : 0.000487 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:32:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:32:20] Energy consumed for All CPU : 0.006906 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9117 - loss: 0.1039[codecarbon INFO @ 02:32:35] Energy consumed for RAM : 0.000500 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:32:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:32:35] Energy consumed for All CPU : 0.007084 kWh
+[codecarbon INFO @ 02:32:35] 0.007583 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9116 - loss: 0.1042 - val_accuracy: 0.6346 - val_loss: 0.2488
+Epoch 11/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 28s 2s/step - accuracy: 0.9381 - loss: 0.0835[codecarbon INFO @ 02:32:50] Energy consumed for RAM : 0.000512 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:32:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:32:50] Energy consumed for All CPU : 0.007261 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 13s 2s/step - accuracy: 0.9220 - loss: 0.0922[codecarbon INFO @ 02:33:05] Energy consumed for RAM : 0.000525 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:33:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:33:05] Energy consumed for All CPU : 0.007438 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9176 - loss: 0.0958[codecarbon INFO @ 02:33:20] Energy consumed for RAM : 0.000537 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:33:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:33:20] Energy consumed for All CPU : 0.007615 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9172 - loss: 0.0961 - val_accuracy: 0.6795 - val_loss: 0.2424
+Epoch 12/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.9444 - loss: 0.0923[codecarbon INFO @ 02:33:35] Energy consumed for RAM : 0.000550 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:33:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:33:35] Energy consumed for All CPU : 0.007792 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 17s 2s/step - accuracy: 0.9444 - loss: 0.0928[codecarbon INFO @ 02:33:50] Energy consumed for RAM : 0.000562 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:33:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:33:50] Energy consumed for All CPU : 0.007969 kWh
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.9366 - loss: 0.0960[codecarbon INFO @ 02:34:05] Energy consumed for RAM : 0.000575 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:34:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:34:05] Energy consumed for All CPU : 0.008146 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9354 - loss: 0.0965 - val_accuracy: 0.7179 - val_loss: 0.2399
+Epoch 13/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 23s 1s/step - accuracy: 0.9381 - loss: 0.0985[codecarbon INFO @ 02:34:20] Energy consumed for RAM : 0.000587 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:34:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:34:20] Energy consumed for All CPU : 0.008323 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.9144 - loss: 0.1002[codecarbon INFO @ 02:34:35] Energy consumed for RAM : 0.000600 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:34:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:34:35] Energy consumed for All CPU : 0.008500 kWh
+[codecarbon INFO @ 02:34:35] 0.009100 kWh of electricity used since the beginning.
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9128 - loss: 0.1002[codecarbon INFO @ 02:34:50] Energy consumed for RAM : 0.000612 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:34:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:34:50] Energy consumed for All CPU : 0.008677 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9121 - loss: 0.1003 - val_accuracy: 0.7244 - val_loss: 0.2440
+Epoch 14/20
+[codecarbon INFO @ 02:35:05] Energy consumed for RAM : 0.000625 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:35:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:35:05] Energy consumed for All CPU : 0.008854 kWh
+[codecarbon INFO @ 02:35:05] 0.009479 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.8954 - loss: 0.1151[codecarbon INFO @ 02:35:20] Energy consumed for RAM : 0.000637 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:35:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:35:20] Energy consumed for All CPU : 0.009031 kWh
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9030 - loss: 0.1098[codecarbon INFO @ 02:35:35] Energy consumed for RAM : 0.000650 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:35:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:35:35] Energy consumed for All CPU : 0.009208 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9045 - loss: 0.1091[codecarbon INFO @ 02:35:50] Energy consumed for RAM : 0.000662 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:35:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:35:50] Energy consumed for All CPU : 0.009385 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9049 - loss: 0.1090 - val_accuracy: 0.6923 - val_loss: 0.2527
+Epoch 15/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.9228 - loss: 0.0890[codecarbon INFO @ 02:36:05] Energy consumed for RAM : 0.000675 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:36:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:36:05] Energy consumed for All CPU : 0.009562 kWh
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9156 - loss: 0.0954[codecarbon INFO @ 02:36:20] Energy consumed for RAM : 0.000687 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:36:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:36:20] Energy consumed for All CPU : 0.009740 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9120 - loss: 0.0973[codecarbon INFO @ 02:36:35] Energy consumed for RAM : 0.000700 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:36:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:36:35] Energy consumed for All CPU : 0.009917 kWh
+[codecarbon INFO @ 02:36:35] 0.010616 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9113 - loss: 0.0977 - val_accuracy: 0.6859 - val_loss: 0.2535
+Epoch 16/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.8634 - loss: 0.1292[codecarbon INFO @ 02:36:50] Energy consumed for RAM : 0.000712 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:36:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:36:50] Energy consumed for All CPU : 0.010094 kWh
+14/20 ━━━━━━━━━━━━━━━━━━━━ 10s 2s/step - accuracy: 0.8827 - loss: 0.1155[codecarbon INFO @ 02:37:05] Energy consumed for RAM : 0.000725 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:37:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:37:05] Energy consumed for All CPU : 0.010271 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8843 - loss: 0.1125[codecarbon INFO @ 02:37:20] Energy consumed for RAM : 0.000737 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:37:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:37:20] Energy consumed for All CPU : 0.010448 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8843 - loss: 0.1122 - val_accuracy: 0.6667 - val_loss: 0.2586
+Epoch 17/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.8709 - loss: 0.1093[codecarbon INFO @ 02:37:35] Energy consumed for RAM : 0.000750 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:37:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:37:35] Energy consumed for All CPU : 0.010625 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8886 - loss: 0.1060[codecarbon INFO @ 02:37:50] Energy consumed for RAM : 0.000762 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:37:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:37:50] Energy consumed for All CPU : 0.010802 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8923 - loss: 0.1052[codecarbon INFO @ 02:38:05] Energy consumed for RAM : 0.000775 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:38:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:38:05] Energy consumed for All CPU : 0.010979 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8928 - loss: 0.1051 - val_accuracy: 0.6923 - val_loss: 0.2526
+Epoch 18/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.8848 - loss: 0.1123[codecarbon INFO @ 02:38:20] Energy consumed for RAM : 0.000787 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:38:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:38:20] Energy consumed for All CPU : 0.011156 kWh
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9019 - loss: 0.1040[codecarbon INFO @ 02:38:35] Energy consumed for RAM : 0.000800 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:38:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:38:35] Energy consumed for All CPU : 0.011333 kWh
+[codecarbon INFO @ 02:38:35] 0.012133 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9076 - loss: 0.1014[codecarbon INFO @ 02:38:50] Energy consumed for RAM : 0.000812 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:38:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:38:50] Energy consumed for All CPU : 0.011510 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9081 - loss: 0.1011 - val_accuracy: 0.6859 - val_loss: 0.2534
+Epoch 19/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.8958 - loss: 0.1149[codecarbon INFO @ 02:39:05] Energy consumed for RAM : 0.000825 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:39:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:39:05] Energy consumed for All CPU : 0.011687 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.9159 - loss: 0.1025[codecarbon INFO @ 02:39:20] Energy consumed for RAM : 0.000837 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:39:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:39:20] Energy consumed for All CPU : 0.011864 kWh
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.9210 - loss: 0.0990[codecarbon INFO @ 02:39:35] Energy consumed for RAM : 0.000850 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:39:35] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:39:35] Energy consumed for All CPU : 0.012041 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9214 - loss: 0.0985 - val_accuracy: 0.6603 - val_loss: 0.2590
+Epoch 20/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 33s 2s/step - accuracy: 0.9219 - loss: 0.0957[codecarbon INFO @ 02:39:50] Energy consumed for RAM : 0.000862 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:39:50] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:39:50] Energy consumed for All CPU : 0.012218 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.9231 - loss: 0.0926[codecarbon INFO @ 02:40:05] Energy consumed for RAM : 0.000875 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:40:05] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:40:05] Energy consumed for All CPU : 0.012396 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9196 - loss: 0.0938[codecarbon INFO @ 02:40:20] Energy consumed for RAM : 0.000887 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:40:20] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:40:20] Energy consumed for All CPU : 0.012573 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9186 - loss: 0.0942 - val_accuracy: 0.6859 - val_loss: 0.2561
+[codecarbon INFO @ 02:40:33] Energy consumed for RAM : 0.000898 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:40:33] Delta energy consumed for CPU with constant : 0.000150 kWh, power : 42.5 W
+[codecarbon INFO @ 02:40:33] Energy consumed for All CPU : 0.012723 kWh
+[codecarbon INFO @ 02:40:33] 0.013621 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:40:33] 0.009013 g.CO2eq/s mean an estimation of 284.2260839730043 kg.CO2eq/year
+[MEMORY] Current memory usage: 2073.75 MB
+[ENERGY] Estimated energy usage for Set 2: 0.0097 kg CO₂
+Found 7045 images belonging to 2 classes.
+/home/client2/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 423s 2s/step
+Test Accuracy : 85.68%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.91      0.81      0.86      3768
+   notdrowsy       0.81      0.91      0.86      3277
+
+    accuracy                           0.86      7045
+   macro avg       0.86      0.86      0.86      7045
+weighted avg       0.86      0.86      0.86      7045
+
+Sending updated weights (3342220 bytes) to the server...
+Uploading weights: 100%|████████████████████████████████████████████████████████| 3.34M/3.34M [00:00<00:00, 12.9MB/s]
+Training and weight update for Round 2 completed.
+
+
+==== Round 3 ====
+Receiving encrypted model (2501132 bytes)...
+Receiving model: 100%|██████████████████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 6.70MB/s]
+Model for Round 3 loaded successfully.
+Found 629 images belonging to 2 classes.
+Found 157 images belonging to 2 classes.
+Training locally on Set 3...
+[codecarbon WARNING @ 02:48:23] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon WARNING @ 02:48:23] Error while trying to count physical CPUs: invalid literal for int() with base 10: '-'. Defaulting to 1.
+[codecarbon INFO @ 02:48:23] [setup] RAM Tracking...
+[codecarbon INFO @ 02:48:23] [setup] CPU Tracking...
+[codecarbon WARNING @ 02:48:23] We saw that you have a Cortex-A72 but we don't know it. Please contact us.
+[codecarbon WARNING @ 02:48:23] No CPU tracking mode found. Falling back on estimation based on TDP for CPU.
+ Linux OS detected: Please ensure RAPL files exist at /sys/class/powercap/intel-rapl/subsystem to measure CPU
+
+[codecarbon INFO @ 02:48:23] CPU Model on constant consumption mode: Cortex-A72
+[codecarbon WARNING @ 02:48:23] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 02:48:23] [setup] GPU Tracking...
+[codecarbon INFO @ 02:48:23] No GPU found.
+[codecarbon INFO @ 02:48:23] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: Unspecified
+
+[codecarbon INFO @ 02:48:23] >>> Tracker's metadata:
+[codecarbon INFO @ 02:48:23]   Platform system: Linux-6.6.74+rpt-rpi-v8-aarch64-with-glibc2.36
+[codecarbon INFO @ 02:48:23]   Python version: 3.11.2
+[codecarbon INFO @ 02:48:23]   CodeCarbon version: 3.0.0
+[codecarbon INFO @ 02:48:23]   Available RAM : 7.627 GB
+[codecarbon INFO @ 02:48:23]   CPU count: 4 thread(s) in 1 physical CPU(s)
+[codecarbon INFO @ 02:48:23]   CPU model: Cortex-A72
+[codecarbon INFO @ 02:48:23]   GPU count: None
+[codecarbon INFO @ 02:48:23]   GPU model: None
+[codecarbon INFO @ 02:48:26] Emissions data (if any) will be saved to file /home/client2/Client2/emissions.csv
+/home/client2/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Epoch 1/20
+[codecarbon INFO @ 02:48:41] Energy consumed for RAM : 0.000013 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:48:41] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:48:41] Energy consumed for All CPU : 0.000177 kWh
+[codecarbon INFO @ 02:48:41] 0.000190 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.8302 - loss: 0.1401[codecarbon INFO @ 02:48:56] Energy consumed for RAM : 0.000025 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:48:56] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:48:56] Energy consumed for All CPU : 0.000354 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8320 - loss: 0.1377 [codecarbon INFO @ 02:49:11] Energy consumed for RAM : 0.000038 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:49:11] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:49:11] Energy consumed for All CPU : 0.000531 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8359 - loss: 0.1369[codecarbon INFO @ 02:49:26] Energy consumed for RAM : 0.000050 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:49:26] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:49:26] Energy consumed for All CPU : 0.000708 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 68s 3s/step - accuracy: 0.8368 - loss: 0.1367 - val_accuracy: 0.6306 - val_loss: 0.3113
+Epoch 2/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 34s 2s/step - accuracy: 0.9062 - loss: 0.1166[codecarbon INFO @ 02:49:41] Energy consumed for RAM : 0.000062 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:49:41] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:49:41] Energy consumed for All CPU : 0.000885 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.8894 - loss: 0.1176[codecarbon INFO @ 02:49:57] Energy consumed for RAM : 0.000075 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:49:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:49:57] Energy consumed for All CPU : 0.001063 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8826 - loss: 0.1207[codecarbon INFO @ 02:50:12] Energy consumed for RAM : 0.000087 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:50:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:50:12] Energy consumed for All CPU : 0.001240 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 49s 2s/step - accuracy: 0.8814 - loss: 0.1213 - val_accuracy: 0.6433 - val_loss: 0.2882
+Epoch 3/20
+[codecarbon INFO @ 02:50:27] Energy consumed for RAM : 0.000100 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:50:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:50:27] Energy consumed for All CPU : 0.001417 kWh
+[codecarbon INFO @ 02:50:27] 0.001517 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:50:27] 0.009014 g.CO2eq/s mean an estimation of 284.2722475623997 kg.CO2eq/year
+[codecarbon INFO @ 02:50:42] Energy consumed for RAM : 0.000112 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:50:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:50:42] Energy consumed for All CPU : 0.001594 kWh
+[codecarbon INFO @ 02:50:42] 0.001706 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:50:57] Energy consumed for RAM : 0.000125 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:50:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:50:57] Energy consumed for All CPU : 0.001771 kWh
+[codecarbon INFO @ 02:50:57] 0.001896 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.8699 - loss: 0.1379[codecarbon INFO @ 02:51:12] Energy consumed for RAM : 0.000137 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:51:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:51:12] Energy consumed for All CPU : 0.001948 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8815 - loss: 0.1285 [codecarbon INFO @ 02:51:27] Energy consumed for RAM : 0.000150 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:51:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:51:27] Energy consumed for All CPU : 0.002125 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8807 - loss: 0.1270[codecarbon INFO @ 02:51:42] Energy consumed for RAM : 0.000162 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:51:42] Delta energy consumed for CPU with constant : 0.000178 kWh, power : 42.5 W
+[codecarbon INFO @ 02:51:42] Energy consumed for All CPU : 0.002303 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.8806 - loss: 0.1267 - val_accuracy: 0.5987 - val_loss: 0.2892
+Epoch 4/20
+[codecarbon INFO @ 02:51:57] Energy consumed for RAM : 0.000175 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:51:57] Delta energy consumed for CPU with constant : 0.000176 kWh, power : 42.5 W
+[codecarbon INFO @ 02:51:57] Energy consumed for All CPU : 0.002479 kWh
+[codecarbon INFO @ 02:51:57] 0.002654 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:52:12] Energy consumed for RAM : 0.000187 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:52:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:52:12] Energy consumed for All CPU : 0.002656 kWh
+[codecarbon INFO @ 02:52:12] 0.002844 kWh of electricity used since the beginning.
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.9167 - loss: 0.0999[codecarbon INFO @ 02:52:27] Energy consumed for RAM : 0.000200 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:52:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:52:27] Energy consumed for All CPU : 0.002833 kWh
+[codecarbon INFO @ 02:52:27] 0.003033 kWh of electricity used since the beginning.
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.8940 - loss: 0.1107[codecarbon INFO @ 02:52:42] Energy consumed for RAM : 0.000212 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:52:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:52:42] Energy consumed for All CPU : 0.003010 kWh
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8895 - loss: 0.1129[codecarbon INFO @ 02:52:57] Energy consumed for RAM : 0.000225 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:52:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:52:57] Energy consumed for All CPU : 0.003188 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 81s 2s/step - accuracy: 0.8890 - loss: 0.1130 - val_accuracy: 0.6051 - val_loss: 0.2820
+Epoch 5/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 33s 2s/step - accuracy: 0.9141 - loss: 0.1091[codecarbon INFO @ 02:53:12] Energy consumed for RAM : 0.000237 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:53:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:53:12] Energy consumed for All CPU : 0.003365 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.8999 - loss: 0.1063[codecarbon INFO @ 02:53:27] Energy consumed for RAM : 0.000250 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:53:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:53:27] Energy consumed for All CPU : 0.003542 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8912 - loss: 0.1074[codecarbon INFO @ 02:53:42] Energy consumed for RAM : 0.000262 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:53:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:53:42] Energy consumed for All CPU : 0.003719 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8903 - loss: 0.1075 - val_accuracy: 0.6369 - val_loss: 0.2869
+Epoch 6/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 40s 2s/step - accuracy: 1.0000 - loss: 0.0678[codecarbon INFO @ 02:53:57] Energy consumed for RAM : 0.000275 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:53:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:53:57] Energy consumed for All CPU : 0.003896 kWh
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.9472 - loss: 0.0825[codecarbon INFO @ 02:54:12] Energy consumed for RAM : 0.000287 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:54:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:54:12] Energy consumed for All CPU : 0.004073 kWh
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9319 - loss: 0.0902[codecarbon INFO @ 02:54:27] Energy consumed for RAM : 0.000300 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:54:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:54:27] Energy consumed for All CPU : 0.004250 kWh
+[codecarbon INFO @ 02:54:27] 0.004550 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9261 - loss: 0.0925 - val_accuracy: 0.6242 - val_loss: 0.2800
+Epoch 7/20
+[codecarbon INFO @ 02:54:42] Energy consumed for RAM : 0.000312 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:54:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:54:42] Energy consumed for All CPU : 0.004427 kWh
+[codecarbon INFO @ 02:54:42] 0.004739 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.8803 - loss: 0.1184[codecarbon INFO @ 02:54:57] Energy consumed for RAM : 0.000325 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:54:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:54:57] Energy consumed for All CPU : 0.004604 kWh
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.8830 - loss: 0.1135[codecarbon INFO @ 02:55:12] Energy consumed for RAM : 0.000337 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:55:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:55:12] Energy consumed for All CPU : 0.004781 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8857 - loss: 0.1117[codecarbon INFO @ 02:55:27] Energy consumed for RAM : 0.000350 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:55:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:55:27] Energy consumed for All CPU : 0.004958 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8863 - loss: 0.1113 - val_accuracy: 0.6688 - val_loss: 0.2822
+Epoch 8/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.8732 - loss: 0.1142[codecarbon INFO @ 02:55:42] Energy consumed for RAM : 0.000362 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:55:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:55:42] Energy consumed for All CPU : 0.005135 kWh
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.8900 - loss: 0.1051[codecarbon INFO @ 02:55:57] Energy consumed for RAM : 0.000375 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:55:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:55:57] Energy consumed for All CPU : 0.005312 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8961 - loss: 0.1029[codecarbon INFO @ 02:56:12] Energy consumed for RAM : 0.000387 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:56:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:56:12] Energy consumed for All CPU : 0.005489 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8964 - loss: 0.1029 - val_accuracy: 0.6369 - val_loss: 0.2900
+Epoch 9/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 28s 2s/step - accuracy: 0.9065 - loss: 0.0988[codecarbon INFO @ 02:56:27] Energy consumed for RAM : 0.000400 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:56:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:56:27] Energy consumed for All CPU : 0.005667 kWh
+[codecarbon INFO @ 02:56:27] 0.006066 kWh of electricity used since the beginning.
+13/20 ━━━━━━━━━━━━━━━━━━━━ 13s 2s/step - accuracy: 0.9046 - loss: 0.0993[codecarbon INFO @ 02:56:42] Energy consumed for RAM : 0.000412 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:56:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:56:42] Energy consumed for All CPU : 0.005844 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9064 - loss: 0.0985[codecarbon INFO @ 02:56:57] Energy consumed for RAM : 0.000425 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:56:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:56:57] Energy consumed for All CPU : 0.006020 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9066 - loss: 0.0984 - val_accuracy: 0.6306 - val_loss: 0.2954
+Epoch 10/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.9236 - loss: 0.0908[codecarbon INFO @ 02:57:12] Energy consumed for RAM : 0.000437 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:57:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:57:12] Energy consumed for All CPU : 0.006198 kWh
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9178 - loss: 0.0886[codecarbon INFO @ 02:57:27] Energy consumed for RAM : 0.000450 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:57:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:57:27] Energy consumed for All CPU : 0.006375 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9144 - loss: 0.0909[codecarbon INFO @ 02:57:42] Energy consumed for RAM : 0.000462 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:57:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:57:42] Energy consumed for All CPU : 0.006552 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9140 - loss: 0.0911 - val_accuracy: 0.6369 - val_loss: 0.2926
+Epoch 11/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 33s 2s/step - accuracy: 0.8594 - loss: 0.1125[codecarbon INFO @ 02:57:57] Energy consumed for RAM : 0.000475 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:57:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:57:57] Energy consumed for All CPU : 0.006729 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.8899 - loss: 0.1023[codecarbon INFO @ 02:58:12] Energy consumed for RAM : 0.000487 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:58:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:58:12] Energy consumed for All CPU : 0.006906 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8988 - loss: 0.0994[codecarbon INFO @ 02:58:27] Energy consumed for RAM : 0.000500 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:58:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:58:27] Energy consumed for All CPU : 0.007083 kWh
+[codecarbon INFO @ 02:58:27] 0.007583 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9007 - loss: 0.0986 - val_accuracy: 0.6306 - val_loss: 0.2963
+Epoch 12/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 42s 2s/step - accuracy: 0.8750 - loss: 0.1081[codecarbon INFO @ 02:58:42] Energy consumed for RAM : 0.000512 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:58:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:58:42] Energy consumed for All CPU : 0.007260 kWh
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.9106 - loss: 0.1016[codecarbon INFO @ 02:58:57] Energy consumed for RAM : 0.000525 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:58:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:58:57] Energy consumed for All CPU : 0.007437 kWh
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9141 - loss: 0.1011[codecarbon INFO @ 02:59:12] Energy consumed for RAM : 0.000537 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:59:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:59:12] Energy consumed for All CPU : 0.007614 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9163 - loss: 0.0997 - val_accuracy: 0.6178 - val_loss: 0.3033
+Epoch 13/20
+[codecarbon INFO @ 02:59:27] Energy consumed for RAM : 0.000550 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:59:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:59:27] Energy consumed for All CPU : 0.007791 kWh
+[codecarbon INFO @ 02:59:27] 0.008341 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:59:42] Energy consumed for RAM : 0.000562 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:59:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:59:42] Energy consumed for All CPU : 0.007968 kWh
+[codecarbon INFO @ 02:59:42] 0.008531 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:59:57] Energy consumed for RAM : 0.000575 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 02:59:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 02:59:57] Energy consumed for All CPU : 0.008145 kWh
+[codecarbon INFO @ 02:59:57] 0.008720 kWh of electricity used since the beginning.
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 28s 2s/step - accuracy: 0.9545 - loss: 0.0857[codecarbon INFO @ 03:00:12] Energy consumed for RAM : 0.000587 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:00:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:00:12] Energy consumed for All CPU : 0.008323 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 13s 2s/step - accuracy: 0.9375 - loss: 0.0917[codecarbon INFO @ 03:00:27] Energy consumed for RAM : 0.000600 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:00:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:00:27] Energy consumed for All CPU : 0.008500 kWh
+[codecarbon INFO @ 03:00:27] 0.009099 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9317 - loss: 0.0934[codecarbon INFO @ 03:00:42] Energy consumed for RAM : 0.000612 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:00:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:00:42] Energy consumed for All CPU : 0.008677 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9313 - loss: 0.0935 - val_accuracy: 0.6433 - val_loss: 0.2827
+Epoch 14/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.9219 - loss: 0.0988[codecarbon INFO @ 03:00:57] Energy consumed for RAM : 0.000625 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:00:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:00:57] Energy consumed for All CPU : 0.008854 kWh
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9156 - loss: 0.0942[codecarbon INFO @ 03:01:12] Energy consumed for RAM : 0.000637 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:01:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:01:12] Energy consumed for All CPU : 0.009031 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9123 - loss: 0.0937[codecarbon INFO @ 03:01:27] Energy consumed for RAM : 0.000650 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:01:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:01:27] Energy consumed for All CPU : 0.009208 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9124 - loss: 0.0936 - val_accuracy: 0.6369 - val_loss: 0.2787
+Epoch 15/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.8750 - loss: 0.1202[codecarbon INFO @ 03:01:42] Energy consumed for RAM : 0.000662 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:01:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:01:42] Energy consumed for All CPU : 0.009385 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.9028 - loss: 0.1063[codecarbon INFO @ 03:01:57] Energy consumed for RAM : 0.000675 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:01:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:01:57] Energy consumed for All CPU : 0.009562 kWh
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.9059 - loss: 0.1030[codecarbon INFO @ 03:02:12] Energy consumed for RAM : 0.000687 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:02:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:02:12] Energy consumed for All CPU : 0.009739 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9064 - loss: 0.1023 - val_accuracy: 0.6051 - val_loss: 0.3102
+Epoch 16/20
+[codecarbon INFO @ 03:02:27] Energy consumed for RAM : 0.000700 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:02:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:02:27] Energy consumed for All CPU : 0.009916 kWh
+[codecarbon INFO @ 03:02:27] 0.010616 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:02:27] 0.009013 g.CO2eq/s mean an estimation of 284.2418273529942 kg.CO2eq/year
+[codecarbon INFO @ 03:02:42] Energy consumed for RAM : 0.000712 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:02:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:02:42] Energy consumed for All CPU : 0.010093 kWh
+[codecarbon INFO @ 03:02:42] 0.010806 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:02:57] Energy consumed for RAM : 0.000725 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:02:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:02:57] Energy consumed for All CPU : 0.010270 kWh
+[codecarbon INFO @ 03:02:57] 0.010995 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.9116 - loss: 0.0940[codecarbon INFO @ 03:03:12] Energy consumed for RAM : 0.000737 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:03:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:03:12] Energy consumed for All CPU : 0.010448 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.9108 - loss: 0.0933 [codecarbon INFO @ 03:03:27] Energy consumed for RAM : 0.000750 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:03:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:03:27] Energy consumed for All CPU : 0.010625 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9114 - loss: 0.0930[codecarbon INFO @ 03:03:42] Energy consumed for RAM : 0.000762 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:03:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:03:42] Energy consumed for All CPU : 0.010802 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9116 - loss: 0.0929 - val_accuracy: 0.6178 - val_loss: 0.2989
+Epoch 17/20
+[codecarbon INFO @ 03:03:57] Energy consumed for RAM : 0.000775 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:03:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:03:57] Energy consumed for All CPU : 0.010979 kWh
+[codecarbon INFO @ 03:03:57] 0.011753 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:04:12] Energy consumed for RAM : 0.000787 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:04:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:04:12] Energy consumed for All CPU : 0.011156 kWh
+[codecarbon INFO @ 03:04:12] 0.011943 kWh of electricity used since the beginning.
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.9453 - loss: 0.0784[codecarbon INFO @ 03:04:27] Energy consumed for RAM : 0.000800 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:04:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:04:27] Energy consumed for All CPU : 0.011333 kWh
+[codecarbon INFO @ 03:04:27] 0.012133 kWh of electricity used since the beginning.
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9300 - loss: 0.0830[codecarbon INFO @ 03:04:42] Energy consumed for RAM : 0.000812 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:04:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:04:42] Energy consumed for All CPU : 0.011510 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9234 - loss: 0.0869[codecarbon INFO @ 03:04:57] Energy consumed for RAM : 0.000825 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:04:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:04:57] Energy consumed for All CPU : 0.011687 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9228 - loss: 0.0873 - val_accuracy: 0.5860 - val_loss: 0.3023
+Epoch 18/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 33s 2s/step - accuracy: 0.8828 - loss: 0.0984[codecarbon INFO @ 03:05:12] Energy consumed for RAM : 0.000837 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:05:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:05:12] Energy consumed for All CPU : 0.011864 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.9082 - loss: 0.0994[codecarbon INFO @ 03:05:27] Energy consumed for RAM : 0.000850 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:05:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:05:27] Energy consumed for All CPU : 0.012041 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9120 - loss: 0.0965[codecarbon INFO @ 03:05:42] Energy consumed for RAM : 0.000862 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:05:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:05:42] Energy consumed for All CPU : 0.012218 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9125 - loss: 0.0963 - val_accuracy: 0.6306 - val_loss: 0.3025
+Epoch 19/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 41s 2s/step - accuracy: 0.9688 - loss: 0.0779[codecarbon INFO @ 03:05:57] Energy consumed for RAM : 0.000875 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:05:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:05:57] Energy consumed for All CPU : 0.012396 kWh
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.9408 - loss: 0.0813[codecarbon INFO @ 03:06:12] Energy consumed for RAM : 0.000887 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:06:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:06:12] Energy consumed for All CPU : 0.012572 kWh
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9324 - loss: 0.0832[codecarbon INFO @ 03:06:27] Energy consumed for RAM : 0.000900 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:06:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:06:27] Energy consumed for All CPU : 0.012750 kWh
+[codecarbon INFO @ 03:06:27] 0.013649 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9294 - loss: 0.0841 - val_accuracy: 0.6369 - val_loss: 0.2921
+Epoch 20/20
+[codecarbon INFO @ 03:06:42] Energy consumed for RAM : 0.000912 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:06:42] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:06:42] Energy consumed for All CPU : 0.012927 kWh
+[codecarbon INFO @ 03:06:42] 0.013839 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.9007 - loss: 0.1012[codecarbon INFO @ 03:06:57] Energy consumed for RAM : 0.000925 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:06:57] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:06:57] Energy consumed for All CPU : 0.013104 kWh
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9073 - loss: 0.0968[codecarbon INFO @ 03:07:12] Energy consumed for RAM : 0.000937 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:07:12] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:07:12] Energy consumed for All CPU : 0.013281 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9085 - loss: 0.0960[codecarbon INFO @ 03:07:27] Energy consumed for RAM : 0.000950 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:07:27] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:07:27] Energy consumed for All CPU : 0.013458 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9087 - loss: 0.0959 - val_accuracy: 0.6115 - val_loss: 0.2926
+[codecarbon INFO @ 03:07:28] Energy consumed for RAM : 0.000951 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:07:28] Delta energy consumed for CPU with constant : 0.000019 kWh, power : 42.5 W
+[codecarbon INFO @ 03:07:28] Energy consumed for All CPU : 0.013477 kWh
+[codecarbon INFO @ 03:07:28] 0.014428 kWh of electricity used since the beginning.
+[MEMORY] Current memory usage: 2232.66 MB
+[ENERGY] Estimated energy usage for Set 3: 0.0103 kg CO₂
+Found 7045 images belonging to 2 classes.
+/home/client2/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 423s 2s/step
+Test Accuracy : 85.24%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.90      0.82      0.86      3768
+   notdrowsy       0.81      0.89      0.85      3277
+
+    accuracy                           0.85      7045
+   macro avg       0.85      0.85      0.85      7045
+weighted avg       0.86      0.85      0.85      7045
+
+Sending updated weights (3054392 bytes) to the server...
+Uploading weights: 100%|████████████████████████████████████████████████████████| 3.05M/3.05M [00:00<00:00, 19.0MB/s]
+Training and weight update for Round 3 completed.
+
+
+==== Round 4 ====
+Receiving encrypted model (2498596 bytes)...
+Receiving model: 100%|██████████████████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 6.19MB/s]
+Model for Round 4 loaded successfully.
+Found 630 images belonging to 2 classes.
+Found 156 images belonging to 2 classes.
+Training locally on Set 4...
+[codecarbon WARNING @ 03:15:20] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon WARNING @ 03:15:20] Error while trying to count physical CPUs: invalid literal for int() with base 10: '-'. Defaulting to 1.
+[codecarbon INFO @ 03:15:20] [setup] RAM Tracking...
+[codecarbon INFO @ 03:15:20] [setup] CPU Tracking...
+[codecarbon WARNING @ 03:15:20] We saw that you have a Cortex-A72 but we don't know it. Please contact us.
+[codecarbon WARNING @ 03:15:20] No CPU tracking mode found. Falling back on estimation based on TDP for CPU.
+ Linux OS detected: Please ensure RAPL files exist at /sys/class/powercap/intel-rapl/subsystem to measure CPU
+
+[codecarbon INFO @ 03:15:20] CPU Model on constant consumption mode: Cortex-A72
+[codecarbon WARNING @ 03:15:20] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 03:15:20] [setup] GPU Tracking...
+[codecarbon INFO @ 03:15:20] No GPU found.
+[codecarbon INFO @ 03:15:20] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: Unspecified
+
+[codecarbon INFO @ 03:15:20] >>> Tracker's metadata:
+[codecarbon INFO @ 03:15:20]   Platform system: Linux-6.6.74+rpt-rpi-v8-aarch64-with-glibc2.36
+[codecarbon INFO @ 03:15:20]   Python version: 3.11.2
+[codecarbon INFO @ 03:15:20]   CodeCarbon version: 3.0.0
+[codecarbon INFO @ 03:15:20]   Available RAM : 7.627 GB
+[codecarbon INFO @ 03:15:20]   CPU count: 4 thread(s) in 1 physical CPU(s)
+[codecarbon INFO @ 03:15:20]   CPU model: Cortex-A72
+[codecarbon INFO @ 03:15:20]   GPU count: None
+[codecarbon INFO @ 03:15:20]   GPU model: None
+[codecarbon INFO @ 03:15:24] Emissions data (if any) will be saved to file /home/client2/Client2/emissions.csv
+/home/client2/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Epoch 1/20
+[codecarbon INFO @ 03:15:39] Energy consumed for RAM : 0.000013 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:15:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:15:39] Energy consumed for All CPU : 0.000177 kWh
+[codecarbon INFO @ 03:15:39] 0.000190 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.8653 - loss: 0.1264[codecarbon INFO @ 03:15:54] Energy consumed for RAM : 0.000025 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:15:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:15:54] Energy consumed for All CPU : 0.000354 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8565 - loss: 0.1268 [codecarbon INFO @ 03:16:09] Energy consumed for RAM : 0.000038 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:16:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:16:09] Energy consumed for All CPU : 0.000532 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8547 - loss: 0.1266[codecarbon INFO @ 03:16:24] Energy consumed for RAM : 0.000050 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:16:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:16:24] Energy consumed for All CPU : 0.000708 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 69s 3s/step - accuracy: 0.8546 - loss: 0.1264 - val_accuracy: 0.5192 - val_loss: 0.3425
+Epoch 2/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 33s 2s/step - accuracy: 0.8828 - loss: 0.1357[codecarbon INFO @ 03:16:39] Energy consumed for RAM : 0.000062 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:16:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:16:39] Energy consumed for All CPU : 0.000886 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.8707 - loss: 0.1254[codecarbon INFO @ 03:16:54] Energy consumed for RAM : 0.000075 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:16:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:16:54] Energy consumed for All CPU : 0.001063 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8643 - loss: 0.1244[codecarbon INFO @ 03:17:09] Energy consumed for RAM : 0.000087 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:17:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:17:09] Energy consumed for All CPU : 0.001240 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8644 - loss: 0.1234 - val_accuracy: 0.4679 - val_loss: 0.3496
+Epoch 3/20
+[codecarbon INFO @ 03:17:24] Energy consumed for RAM : 0.000100 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:17:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:17:24] Energy consumed for All CPU : 0.001417 kWh
+[codecarbon INFO @ 03:17:24] 0.001517 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:17:24] 0.009015 g.CO2eq/s mean an estimation of 284.2980757170957 kg.CO2eq/year
+[codecarbon INFO @ 03:17:39] Energy consumed for RAM : 0.000112 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:17:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:17:39] Energy consumed for All CPU : 0.001594 kWh
+[codecarbon INFO @ 03:17:39] 0.001706 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:17:54] Energy consumed for RAM : 0.000125 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:17:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:17:54] Energy consumed for All CPU : 0.001771 kWh
+[codecarbon INFO @ 03:17:54] 0.001896 kWh of electricity used since the beginning.
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.9048 - loss: 0.1034[codecarbon INFO @ 03:18:09] Energy consumed for RAM : 0.000137 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:18:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:18:09] Energy consumed for All CPU : 0.001948 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8989 - loss: 0.1040 [codecarbon INFO @ 03:18:24] Energy consumed for RAM : 0.000150 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:18:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:18:24] Energy consumed for All CPU : 0.002125 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8988 - loss: 0.1039[codecarbon INFO @ 03:18:39] Energy consumed for RAM : 0.000162 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:18:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:18:39] Energy consumed for All CPU : 0.002302 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.8987 - loss: 0.1038 - val_accuracy: 0.4359 - val_loss: 0.3698
+Epoch 4/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.8541 - loss: 0.1239[codecarbon INFO @ 03:18:54] Energy consumed for RAM : 0.000175 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:18:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:18:54] Energy consumed for All CPU : 0.002479 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8689 - loss: 0.1139[codecarbon INFO @ 03:19:09] Energy consumed for RAM : 0.000187 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:19:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:19:09] Energy consumed for All CPU : 0.002656 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8740 - loss: 0.1112[codecarbon INFO @ 03:19:24] Energy consumed for RAM : 0.000200 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:19:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:19:24] Energy consumed for All CPU : 0.002833 kWh
+[codecarbon INFO @ 03:19:24] 0.003033 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8742 - loss: 0.1112 - val_accuracy: 0.5321 - val_loss: 0.3295
+Epoch 5/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.8973 - loss: 0.1118[codecarbon INFO @ 03:19:39] Energy consumed for RAM : 0.000212 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:19:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:19:39] Energy consumed for All CPU : 0.003010 kWh
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9010 - loss: 0.1064[codecarbon INFO @ 03:19:54] Energy consumed for RAM : 0.000225 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:19:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:19:54] Energy consumed for All CPU : 0.003188 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9038 - loss: 0.1037[codecarbon INFO @ 03:20:09] Energy consumed for RAM : 0.000237 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:20:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:20:09] Energy consumed for All CPU : 0.003364 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9040 - loss: 0.1035 - val_accuracy: 0.5513 - val_loss: 0.3397
+Epoch 6/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 34s 2s/step - accuracy: 0.8281 - loss: 0.1199[codecarbon INFO @ 03:20:24] Energy consumed for RAM : 0.000250 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:20:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:20:24] Energy consumed for All CPU : 0.003542 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.8696 - loss: 0.1105[codecarbon INFO @ 03:20:39] Energy consumed for RAM : 0.000262 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:20:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:20:39] Energy consumed for All CPU : 0.003719 kWh
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8749 - loss: 0.1078[codecarbon INFO @ 03:20:54] Energy consumed for RAM : 0.000275 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:20:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:20:54] Energy consumed for All CPU : 0.003896 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8761 - loss: 0.1073 - val_accuracy: 0.5641 - val_loss: 0.3386
+Epoch 7/20
+[codecarbon INFO @ 03:21:09] Energy consumed for RAM : 0.000287 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:21:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:21:09] Energy consumed for All CPU : 0.004073 kWh
+[codecarbon INFO @ 03:21:09] 0.004360 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:21:24] Energy consumed for RAM : 0.000300 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:21:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:21:24] Energy consumed for All CPU : 0.004250 kWh
+[codecarbon INFO @ 03:21:24] 0.004550 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:21:24] 0.009016 g.CO2eq/s mean an estimation of 284.32113659476374 kg.CO2eq/year
+[codecarbon INFO @ 03:21:39] Energy consumed for RAM : 0.000312 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:21:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:21:39] Energy consumed for All CPU : 0.004427 kWh
+[codecarbon INFO @ 03:21:39] 0.004740 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.9068 - loss: 0.1078[codecarbon INFO @ 03:21:54] Energy consumed for RAM : 0.000325 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:21:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:21:54] Energy consumed for All CPU : 0.004604 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.9032 - loss: 0.1042 [codecarbon INFO @ 03:22:09] Energy consumed for RAM : 0.000337 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:22:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:22:09] Energy consumed for All CPU : 0.004782 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9008 - loss: 0.1032[codecarbon INFO @ 03:22:24] Energy consumed for RAM : 0.000350 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:22:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:22:24] Energy consumed for All CPU : 0.004959 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9003 - loss: 0.1031 - val_accuracy: 0.4679 - val_loss: 0.3757
+Epoch 8/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.8788 - loss: 0.1091[codecarbon INFO @ 03:22:39] Energy consumed for RAM : 0.000362 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:22:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:22:39] Energy consumed for All CPU : 0.005136 kWh
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.8861 - loss: 0.1045[codecarbon INFO @ 03:22:54] Energy consumed for RAM : 0.000375 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:22:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:22:54] Energy consumed for All CPU : 0.005313 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8887 - loss: 0.1026[codecarbon INFO @ 03:23:09] Energy consumed for RAM : 0.000387 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:23:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:23:09] Energy consumed for All CPU : 0.005490 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8891 - loss: 0.1023 - val_accuracy: 0.5641 - val_loss: 0.3285
+Epoch 9/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.8719 - loss: 0.1105[codecarbon INFO @ 03:23:24] Energy consumed for RAM : 0.000400 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:23:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:23:24] Energy consumed for All CPU : 0.005667 kWh
+[codecarbon INFO @ 03:23:24] 0.006067 kWh of electricity used since the beginning.
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8846 - loss: 0.1052[codecarbon INFO @ 03:23:39] Energy consumed for RAM : 0.000412 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:23:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:23:39] Energy consumed for All CPU : 0.005844 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8929 - loss: 0.1020[codecarbon INFO @ 03:23:54] Energy consumed for RAM : 0.000425 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:23:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:23:54] Energy consumed for All CPU : 0.006021 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8936 - loss: 0.1017 - val_accuracy: 0.5064 - val_loss: 0.3461
+Epoch 10/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.8976 - loss: 0.1004[codecarbon INFO @ 03:24:09] Energy consumed for RAM : 0.000437 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:24:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:24:09] Energy consumed for All CPU : 0.006198 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.8934 - loss: 0.1002[codecarbon INFO @ 03:24:24] Energy consumed for RAM : 0.000450 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:24:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:24:24] Energy consumed for All CPU : 0.006375 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8943 - loss: 0.1012[codecarbon INFO @ 03:24:39] Energy consumed for RAM : 0.000462 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:24:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:24:39] Energy consumed for All CPU : 0.006552 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8948 - loss: 0.1010 - val_accuracy: 0.5449 - val_loss: 0.3430
+Epoch 11/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 33s 2s/step - accuracy: 0.7734 - loss: 0.1471[codecarbon INFO @ 03:24:54] Energy consumed for RAM : 0.000475 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:24:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:24:54] Energy consumed for All CPU : 0.006730 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.8590 - loss: 0.1129[codecarbon INFO @ 03:25:09] Energy consumed for RAM : 0.000487 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:25:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:25:09] Energy consumed for All CPU : 0.006907 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8757 - loss: 0.1053[codecarbon INFO @ 03:25:24] Energy consumed for RAM : 0.000500 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:25:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:25:24] Energy consumed for All CPU : 0.007084 kWh
+[codecarbon INFO @ 03:25:24] 0.007584 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8795 - loss: 0.1040 - val_accuracy: 0.4487 - val_loss: 0.4251
+Epoch 12/20
+[codecarbon INFO @ 03:25:39] Energy consumed for RAM : 0.000512 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:25:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:25:39] Energy consumed for All CPU : 0.007261 kWh
+[codecarbon INFO @ 03:25:39] 0.007773 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:25:54] Energy consumed for RAM : 0.000525 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:25:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:25:54] Energy consumed for All CPU : 0.007438 kWh
+[codecarbon INFO @ 03:25:54] 0.007963 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:26:09] Energy consumed for RAM : 0.000537 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:26:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:26:09] Energy consumed for All CPU : 0.007615 kWh
+[codecarbon INFO @ 03:26:09] 0.008152 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 23s 2s/step - accuracy: 0.9169 - loss: 0.0996[codecarbon INFO @ 03:26:24] Energy consumed for RAM : 0.000550 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:26:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:26:24] Energy consumed for All CPU : 0.007792 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.9127 - loss: 0.0967 [codecarbon INFO @ 03:26:39] Energy consumed for RAM : 0.000562 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:26:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:26:39] Energy consumed for All CPU : 0.007969 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9080 - loss: 0.0975[codecarbon INFO @ 03:26:54] Energy consumed for RAM : 0.000575 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:26:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:26:54] Energy consumed for All CPU : 0.008146 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9074 - loss: 0.0975 - val_accuracy: 0.4487 - val_loss: 0.3735
+Epoch 13/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.8881 - loss: 0.0954[codecarbon INFO @ 03:27:09] Energy consumed for RAM : 0.000587 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:27:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:27:09] Energy consumed for All CPU : 0.008324 kWh
+14/20 ━━━━━━━━━━━━━━━━━━━━ 10s 2s/step - accuracy: 0.8930 - loss: 0.0923[codecarbon INFO @ 03:27:24] Energy consumed for RAM : 0.000600 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:27:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:27:24] Energy consumed for All CPU : 0.008501 kWh
+[codecarbon INFO @ 03:27:24] 0.009101 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8908 - loss: 0.0941[codecarbon INFO @ 03:27:39] Energy consumed for RAM : 0.000612 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:27:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:27:39] Energy consumed for All CPU : 0.008678 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8906 - loss: 0.0943 - val_accuracy: 0.4679 - val_loss: 0.3656
+Epoch 14/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.9240 - loss: 0.0772[codecarbon INFO @ 03:27:54] Energy consumed for RAM : 0.000625 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:27:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:27:54] Energy consumed for All CPU : 0.008855 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8977 - loss: 0.0896[codecarbon INFO @ 03:28:09] Energy consumed for RAM : 0.000637 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:28:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:28:09] Energy consumed for All CPU : 0.009032 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8961 - loss: 0.0910[codecarbon INFO @ 03:28:24] Energy consumed for RAM : 0.000650 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:28:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:28:24] Energy consumed for All CPU : 0.009210 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8961 - loss: 0.0912 - val_accuracy: 0.4359 - val_loss: 0.3944
+Epoch 15/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.8854 - loss: 0.0965[codecarbon INFO @ 03:28:39] Energy consumed for RAM : 0.000662 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:28:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:28:39] Energy consumed for All CPU : 0.009387 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.8863 - loss: 0.0999[codecarbon INFO @ 03:28:54] Energy consumed for RAM : 0.000675 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:28:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:28:54] Energy consumed for All CPU : 0.009564 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8931 - loss: 0.0973[codecarbon INFO @ 03:29:09] Energy consumed for RAM : 0.000687 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:29:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:29:09] Energy consumed for All CPU : 0.009741 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8932 - loss: 0.0972 - val_accuracy: 0.4359 - val_loss: 0.4259
+Epoch 16/20
+[codecarbon INFO @ 03:29:24] Energy consumed for RAM : 0.000700 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:29:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:29:24] Energy consumed for All CPU : 0.009918 kWh
+[codecarbon INFO @ 03:29:24] 0.010618 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:29:24] 0.009016 g.CO2eq/s mean an estimation of 284.3143867239064 kg.CO2eq/year
+[codecarbon INFO @ 03:29:39] Energy consumed for RAM : 0.000712 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:29:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:29:39] Energy consumed for All CPU : 0.010095 kWh
+[codecarbon INFO @ 03:29:39] 0.010807 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:29:54] Energy consumed for RAM : 0.000725 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:29:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:29:54] Energy consumed for All CPU : 0.010272 kWh
+[codecarbon INFO @ 03:29:54] 0.010997 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 21s 2s/step - accuracy: 0.9143 - loss: 0.0985[codecarbon INFO @ 03:30:09] Energy consumed for RAM : 0.000737 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:30:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:30:09] Energy consumed for All CPU : 0.010449 kWh
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9098 - loss: 0.0960[codecarbon INFO @ 03:30:24] Energy consumed for RAM : 0.000750 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:30:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:30:24] Energy consumed for All CPU : 0.010627 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9109 - loss: 0.0944[codecarbon INFO @ 03:30:39] Energy consumed for RAM : 0.000762 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:30:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:30:39] Energy consumed for All CPU : 0.010803 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9110 - loss: 0.0942 - val_accuracy: 0.4615 - val_loss: 0.3873
+Epoch 17/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.8788 - loss: 0.1025[codecarbon INFO @ 03:30:54] Energy consumed for RAM : 0.000775 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:30:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:30:54] Energy consumed for All CPU : 0.010981 kWh
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.8904 - loss: 0.0952[codecarbon INFO @ 03:31:09] Energy consumed for RAM : 0.000787 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:31:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:31:09] Energy consumed for All CPU : 0.011158 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8933 - loss: 0.0944[codecarbon INFO @ 03:31:24] Energy consumed for RAM : 0.000800 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:31:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:31:24] Energy consumed for All CPU : 0.011335 kWh
+[codecarbon INFO @ 03:31:24] 0.012134 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8937 - loss: 0.0942 - val_accuracy: 0.4615 - val_loss: 0.4057
+Epoch 18/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 28s 2s/step - accuracy: 0.9456 - loss: 0.0735[codecarbon INFO @ 03:31:39] Energy consumed for RAM : 0.000812 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:31:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:31:39] Energy consumed for All CPU : 0.011512 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 13s 2s/step - accuracy: 0.9404 - loss: 0.0766[codecarbon INFO @ 03:31:54] Energy consumed for RAM : 0.000825 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:31:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:31:54] Energy consumed for All CPU : 0.011689 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9322 - loss: 0.0801[codecarbon INFO @ 03:32:09] Energy consumed for RAM : 0.000837 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:32:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:32:09] Energy consumed for All CPU : 0.011866 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9313 - loss: 0.0805 - val_accuracy: 0.5321 - val_loss: 0.3727
+Epoch 19/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.9336 - loss: 0.0714[codecarbon INFO @ 03:32:24] Energy consumed for RAM : 0.000850 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:32:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:32:24] Energy consumed for All CPU : 0.012043 kWh
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9369 - loss: 0.0757[codecarbon INFO @ 03:32:39] Energy consumed for RAM : 0.000862 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:32:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:32:39] Energy consumed for All CPU : 0.012220 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9358 - loss: 0.0782[codecarbon INFO @ 03:32:54] Energy consumed for RAM : 0.000875 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:32:54] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:32:54] Energy consumed for All CPU : 0.012397 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9355 - loss: 0.0783 - val_accuracy: 0.5192 - val_loss: 0.3721
+Epoch 20/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.8872 - loss: 0.1140[codecarbon INFO @ 03:33:09] Energy consumed for RAM : 0.000887 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:33:09] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:33:09] Energy consumed for All CPU : 0.012574 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.8898 - loss: 0.1046[codecarbon INFO @ 03:33:24] Energy consumed for RAM : 0.000900 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:33:24] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:33:24] Energy consumed for All CPU : 0.012751 kWh
+[codecarbon INFO @ 03:33:24] 0.013651 kWh of electricity used since the beginning.
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8963 - loss: 0.0980[codecarbon INFO @ 03:33:39] Energy consumed for RAM : 0.000912 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:33:39] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:33:39] Energy consumed for All CPU : 0.012929 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8971 - loss: 0.0971 - val_accuracy: 0.4936 - val_loss: 0.3941
+[codecarbon INFO @ 03:33:51] Energy consumed for RAM : 0.000922 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:33:51] Delta energy consumed for CPU with constant : 0.000133 kWh, power : 42.5 W
+[codecarbon INFO @ 03:33:51] Energy consumed for All CPU : 0.013062 kWh
+[codecarbon INFO @ 03:33:51] 0.013983 kWh of electricity used since the beginning.
+[MEMORY] Current memory usage: 2408.19 MB
+[ENERGY] Estimated energy usage for Set 4: 0.0100 kg CO₂
+Found 7045 images belonging to 2 classes.
+/home/client2/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 424s 2s/step
+Test Accuracy : 85.79%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.86      0.87      0.87      3768
+   notdrowsy       0.85      0.84      0.85      3277
+
+    accuracy                           0.86      7045
+   macro avg       0.86      0.86      0.86      7045
+weighted avg       0.86      0.86      0.86      7045
+
+Sending updated weights (3043276 bytes) to the server...
+Uploading weights: 100%|████████████████████████████████████████████████████████| 3.04M/3.04M [00:00<00:00, 20.7MB/s]
+Training and weight update for Round 4 completed.
+
+
+==== Round 5 ====
+Receiving encrypted model (2495948 bytes)...
+Receiving model: 100%|██████████████████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 6.01MB/s]
+Model for Round 5 loaded successfully.
+Found 630 images belonging to 2 classes.
+Found 157 images belonging to 2 classes.
+Training locally on Set 5...
+[codecarbon WARNING @ 03:41:42] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon WARNING @ 03:41:42] Error while trying to count physical CPUs: invalid literal for int() with base 10: '-'. Defaulting to 1.
+[codecarbon INFO @ 03:41:42] [setup] RAM Tracking...
+[codecarbon INFO @ 03:41:42] [setup] CPU Tracking...
+[codecarbon WARNING @ 03:41:42] We saw that you have a Cortex-A72 but we don't know it. Please contact us.
+[codecarbon WARNING @ 03:41:42] No CPU tracking mode found. Falling back on estimation based on TDP for CPU.
+ Linux OS detected: Please ensure RAPL files exist at /sys/class/powercap/intel-rapl/subsystem to measure CPU
+
+[codecarbon INFO @ 03:41:42] CPU Model on constant consumption mode: Cortex-A72
+[codecarbon WARNING @ 03:41:42] No CPU tracking mode found. Falling back on CPU constant mode.
+[codecarbon INFO @ 03:41:42] [setup] GPU Tracking...
+[codecarbon INFO @ 03:41:42] No GPU found.
+[codecarbon INFO @ 03:41:42] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: global constant
+                GPU Tracking Method: Unspecified
+
+[codecarbon INFO @ 03:41:42] >>> Tracker's metadata:
+[codecarbon INFO @ 03:41:42]   Platform system: Linux-6.6.74+rpt-rpi-v8-aarch64-with-glibc2.36
+[codecarbon INFO @ 03:41:42]   Python version: 3.11.2
+[codecarbon INFO @ 03:41:42]   CodeCarbon version: 3.0.0
+[codecarbon INFO @ 03:41:42]   Available RAM : 7.627 GB
+[codecarbon INFO @ 03:41:42]   CPU count: 4 thread(s) in 1 physical CPU(s)
+[codecarbon INFO @ 03:41:42]   CPU model: Cortex-A72
+[codecarbon INFO @ 03:41:42]   GPU count: None
+[codecarbon INFO @ 03:41:42]   GPU model: None
+[codecarbon INFO @ 03:41:45] Emissions data (if any) will be saved to file /home/client2/Client2/emissions.csv
+/home/client2/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Epoch 1/20
+[codecarbon INFO @ 03:42:00] Energy consumed for RAM : 0.000013 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:42:00] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:42:00] Energy consumed for All CPU : 0.000177 kWh
+[codecarbon INFO @ 03:42:00] 0.000190 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.8503 - loss: 0.1206[codecarbon INFO @ 03:42:15] Energy consumed for RAM : 0.000025 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:42:15] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:42:15] Energy consumed for All CPU : 0.000354 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8622 - loss: 0.1175 [codecarbon INFO @ 03:42:30] Energy consumed for RAM : 0.000038 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:42:30] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:42:30] Energy consumed for All CPU : 0.000532 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8626 - loss: 0.1177[codecarbon INFO @ 03:42:45] Energy consumed for RAM : 0.000050 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:42:45] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:42:45] Energy consumed for All CPU : 0.000708 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 69s 3s/step - accuracy: 0.8627 - loss: 0.1178 - val_accuracy: 0.6815 - val_loss: 0.2555
+Epoch 2/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 33s 2s/step - accuracy: 0.8516 - loss: 0.1236[codecarbon INFO @ 03:43:00] Energy consumed for RAM : 0.000062 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:43:00] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:43:00] Energy consumed for All CPU : 0.000886 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.8852 - loss: 0.1067[codecarbon INFO @ 03:43:15] Energy consumed for RAM : 0.000075 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:43:15] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:43:15] Energy consumed for All CPU : 0.001063 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8862 - loss: 0.1048[codecarbon INFO @ 03:43:30] Energy consumed for RAM : 0.000088 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:43:30] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:43:30] Energy consumed for All CPU : 0.001240 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8856 - loss: 0.1045 - val_accuracy: 0.6688 - val_loss: 0.2429
+Epoch 3/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 41s 2s/step - accuracy: 0.9375 - loss: 0.0764[codecarbon INFO @ 03:43:45] Energy consumed for RAM : 0.000100 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:43:45] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:43:45] Energy consumed for All CPU : 0.001417 kWh
+[codecarbon INFO @ 03:43:45] 0.001517 kWh of electricity used since the beginning.
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.8725 - loss: 0.1058[codecarbon INFO @ 03:44:00] Energy consumed for RAM : 0.000113 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:44:00] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:44:00] Energy consumed for All CPU : 0.001594 kWh
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.8813 - loss: 0.1043[codecarbon INFO @ 03:44:15] Energy consumed for RAM : 0.000125 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:44:15] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:44:15] Energy consumed for All CPU : 0.001771 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8832 - loss: 0.1040 - val_accuracy: 0.7134 - val_loss: 0.2435
+Epoch 4/20
+[codecarbon INFO @ 03:44:30] Energy consumed for RAM : 0.000137 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:44:30] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:44:30] Energy consumed for All CPU : 0.001948 kWh
+[codecarbon INFO @ 03:44:30] 0.002086 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:44:45] Energy consumed for RAM : 0.000150 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:44:45] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:44:45] Energy consumed for All CPU : 0.002125 kWh
+[codecarbon INFO @ 03:44:45] 0.002275 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:45:00] Energy consumed for RAM : 0.000162 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:45:00] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:45:00] Energy consumed for All CPU : 0.002302 kWh
+[codecarbon INFO @ 03:45:00] 0.002465 kWh of electricity used since the beginning.
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.9026 - loss: 0.0940[codecarbon INFO @ 03:45:16] Energy consumed for RAM : 0.000175 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:45:16] Delta energy consumed for CPU with constant : 0.000178 kWh, power : 42.5 W
+[codecarbon INFO @ 03:45:16] Energy consumed for All CPU : 0.002481 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8922 - loss: 0.1012[codecarbon INFO @ 03:45:31] Energy consumed for RAM : 0.000188 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:45:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:45:31] Energy consumed for All CPU : 0.002657 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8876 - loss: 0.1037[codecarbon INFO @ 03:45:46] Energy consumed for RAM : 0.000200 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:45:46] Delta energy consumed for CPU with constant : 0.000178 kWh, power : 42.5 W
+[codecarbon INFO @ 03:45:46] Energy consumed for All CPU : 0.002835 kWh
+[codecarbon INFO @ 03:45:46] 0.003035 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.8874 - loss: 0.1039 - val_accuracy: 0.7006 - val_loss: 0.2340
+Epoch 5/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.8724 - loss: 0.1123[codecarbon INFO @ 03:46:01] Energy consumed for RAM : 0.000213 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:46:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:46:01] Energy consumed for All CPU : 0.003012 kWh
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.8906 - loss: 0.1048[codecarbon INFO @ 03:46:16] Energy consumed for RAM : 0.000225 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:46:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:46:16] Energy consumed for All CPU : 0.003189 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8967 - loss: 0.1031[codecarbon INFO @ 03:46:31] Energy consumed for RAM : 0.000238 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:46:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:46:31] Energy consumed for All CPU : 0.003366 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8972 - loss: 0.1029 - val_accuracy: 0.6879 - val_loss: 0.2363
+Epoch 6/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.9288 - loss: 0.0772[codecarbon INFO @ 03:46:46] Energy consumed for RAM : 0.000250 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:46:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:46:46] Energy consumed for All CPU : 0.003543 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.9136 - loss: 0.0892[codecarbon INFO @ 03:47:01] Energy consumed for RAM : 0.000263 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:47:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:47:01] Energy consumed for All CPU : 0.003720 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9065 - loss: 0.0942[codecarbon INFO @ 03:47:16] Energy consumed for RAM : 0.000275 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:47:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:47:16] Energy consumed for All CPU : 0.003897 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9060 - loss: 0.0945 - val_accuracy: 0.6815 - val_loss: 0.2428
+Epoch 7/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 34s 2s/step - accuracy: 0.9688 - loss: 0.0647[codecarbon INFO @ 03:47:31] Energy consumed for RAM : 0.000288 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:47:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:47:31] Energy consumed for All CPU : 0.004074 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.9496 - loss: 0.0745[codecarbon INFO @ 03:47:46] Energy consumed for RAM : 0.000300 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:47:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:47:46] Energy consumed for All CPU : 0.004251 kWh
+[codecarbon INFO @ 03:47:46] 0.004551 kWh of electricity used since the beginning.
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9387 - loss: 0.0799[codecarbon INFO @ 03:48:01] Energy consumed for RAM : 0.000313 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:48:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:48:01] Energy consumed for All CPU : 0.004429 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9358 - loss: 0.0812 - val_accuracy: 0.6561 - val_loss: 0.2631
+Epoch 8/20
+[codecarbon INFO @ 03:48:16] Energy consumed for RAM : 0.000325 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:48:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:48:16] Energy consumed for All CPU : 0.004606 kWh
+[codecarbon INFO @ 03:48:16] 0.004931 kWh of electricity used since the beginning.
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.8606 - loss: 0.1057[codecarbon INFO @ 03:48:31] Energy consumed for RAM : 0.000338 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:48:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:48:31] Energy consumed for All CPU : 0.004783 kWh
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.8788 - loss: 0.1006[codecarbon INFO @ 03:48:46] Energy consumed for RAM : 0.000350 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:48:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:48:46] Energy consumed for All CPU : 0.004960 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8824 - loss: 0.0998[codecarbon INFO @ 03:49:01] Energy consumed for RAM : 0.000363 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:49:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:49:01] Energy consumed for All CPU : 0.005137 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8834 - loss: 0.0996 - val_accuracy: 0.6242 - val_loss: 0.2932
+Epoch 9/20
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 21s 2s/step - accuracy: 0.9260 - loss: 0.0966[codecarbon INFO @ 03:49:16] Energy consumed for RAM : 0.000375 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:49:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:49:16] Energy consumed for All CPU : 0.005314 kWh
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9197 - loss: 0.0981[codecarbon INFO @ 03:49:31] Energy consumed for RAM : 0.000388 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:49:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:49:31] Energy consumed for All CPU : 0.005491 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9182 - loss: 0.0980[codecarbon INFO @ 03:49:46] Energy consumed for RAM : 0.000400 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:49:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:49:46] Energy consumed for All CPU : 0.005668 kWh
+[codecarbon INFO @ 03:49:46] 0.006068 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9180 - loss: 0.0979 - val_accuracy: 0.6752 - val_loss: 0.2842
+Epoch 10/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.9234 - loss: 0.0821[codecarbon INFO @ 03:50:01] Energy consumed for RAM : 0.000413 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:50:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:50:01] Energy consumed for All CPU : 0.005845 kWh
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.9218 - loss: 0.0873[codecarbon INFO @ 03:50:16] Energy consumed for RAM : 0.000425 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:50:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:50:16] Energy consumed for All CPU : 0.006022 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9223 - loss: 0.0873[codecarbon INFO @ 03:50:31] Energy consumed for RAM : 0.000438 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:50:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:50:31] Energy consumed for All CPU : 0.006200 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9222 - loss: 0.0874 - val_accuracy: 0.6752 - val_loss: 0.2676
+Epoch 11/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 28s 2s/step - accuracy: 0.9216 - loss: 0.0938[codecarbon INFO @ 03:50:46] Energy consumed for RAM : 0.000450 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:50:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:50:46] Energy consumed for All CPU : 0.006377 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 13s 2s/step - accuracy: 0.9235 - loss: 0.0893[codecarbon INFO @ 03:51:01] Energy consumed for RAM : 0.000462 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:51:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:51:01] Energy consumed for All CPU : 0.006554 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9201 - loss: 0.0885[codecarbon INFO @ 03:51:16] Energy consumed for RAM : 0.000475 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:51:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:51:16] Energy consumed for All CPU : 0.006731 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9197 - loss: 0.0884 - val_accuracy: 0.6306 - val_loss: 0.2831
+Epoch 12/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.8649 - loss: 0.1165[codecarbon INFO @ 03:51:31] Energy consumed for RAM : 0.000487 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:51:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:51:31] Energy consumed for All CPU : 0.006908 kWh
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.8826 - loss: 0.1031[codecarbon INFO @ 03:51:46] Energy consumed for RAM : 0.000500 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:51:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:51:46] Energy consumed for All CPU : 0.007085 kWh
+[codecarbon INFO @ 03:51:46] 0.007585 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8876 - loss: 0.0990[codecarbon INFO @ 03:52:01] Energy consumed for RAM : 0.000512 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:52:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:52:01] Energy consumed for All CPU : 0.007262 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8881 - loss: 0.0987 - val_accuracy: 0.6624 - val_loss: 0.2875
+Epoch 13/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.9492 - loss: 0.0822[codecarbon INFO @ 03:52:16] Energy consumed for RAM : 0.000525 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:52:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:52:16] Energy consumed for All CPU : 0.007439 kWh
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.9159 - loss: 0.0918[codecarbon INFO @ 03:52:31] Energy consumed for RAM : 0.000537 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:52:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:52:31] Energy consumed for All CPU : 0.007616 kWh
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.9100 - loss: 0.0939[codecarbon INFO @ 03:52:46] Energy consumed for RAM : 0.000550 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:52:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:52:46] Energy consumed for All CPU : 0.007793 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9091 - loss: 0.0941 - val_accuracy: 0.6561 - val_loss: 0.2781
+Epoch 14/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 33s 2s/step - accuracy: 0.8750 - loss: 0.0981[codecarbon INFO @ 03:53:01] Energy consumed for RAM : 0.000562 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:53:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:53:01] Energy consumed for All CPU : 0.007970 kWh
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.8798 - loss: 0.0980[codecarbon INFO @ 03:53:16] Energy consumed for RAM : 0.000575 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:53:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:53:16] Energy consumed for All CPU : 0.008147 kWh
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8907 - loss: 0.0963[codecarbon INFO @ 03:53:31] Energy consumed for RAM : 0.000587 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:53:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:53:31] Energy consumed for All CPU : 0.008325 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8927 - loss: 0.0959 - val_accuracy: 0.6815 - val_loss: 0.2680
+Epoch 15/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 41s 2s/step - accuracy: 1.0000 - loss: 0.0591[codecarbon INFO @ 03:53:46] Energy consumed for RAM : 0.000600 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:53:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:53:46] Energy consumed for All CPU : 0.008502 kWh
+[codecarbon INFO @ 03:53:46] 0.009102 kWh of electricity used since the beginning.
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.9200 - loss: 0.0797[codecarbon INFO @ 03:54:01] Energy consumed for RAM : 0.000612 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:54:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:54:01] Energy consumed for All CPU : 0.008679 kWh
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9106 - loss: 0.0859[codecarbon INFO @ 03:54:16] Energy consumed for RAM : 0.000625 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:54:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:54:16] Energy consumed for All CPU : 0.008856 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9091 - loss: 0.0869 - val_accuracy: 0.6433 - val_loss: 0.2796
+Epoch 16/20
+[codecarbon INFO @ 03:54:31] Energy consumed for RAM : 0.000637 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:54:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:54:31] Energy consumed for All CPU : 0.009033 kWh
+[codecarbon INFO @ 03:54:31] 0.009670 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.9317 - loss: 0.0884[codecarbon INFO @ 03:54:46] Energy consumed for RAM : 0.000650 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:54:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:54:46] Energy consumed for All CPU : 0.009210 kWh
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9196 - loss: 0.0905[codecarbon INFO @ 03:55:01] Energy consumed for RAM : 0.000662 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:55:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:55:01] Energy consumed for All CPU : 0.009387 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9171 - loss: 0.0909[codecarbon INFO @ 03:55:16] Energy consumed for RAM : 0.000675 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:55:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:55:16] Energy consumed for All CPU : 0.009564 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9165 - loss: 0.0910 - val_accuracy: 0.6688 - val_loss: 0.2693
+Epoch 17/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.9164 - loss: 0.0826[codecarbon INFO @ 03:55:31] Energy consumed for RAM : 0.000687 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:55:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:55:31] Energy consumed for All CPU : 0.009741 kWh
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.9232 - loss: 0.0831 [codecarbon INFO @ 03:55:46] Energy consumed for RAM : 0.000700 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:55:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:55:46] Energy consumed for All CPU : 0.009918 kWh
+[codecarbon INFO @ 03:55:46] 0.010618 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9235 - loss: 0.0830[codecarbon INFO @ 03:56:01] Energy consumed for RAM : 0.000712 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:56:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:56:01] Energy consumed for All CPU : 0.010095 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9232 - loss: 0.0831 - val_accuracy: 0.6624 - val_loss: 0.2813
+Epoch 18/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.9097 - loss: 0.0956[codecarbon INFO @ 03:56:16] Energy consumed for RAM : 0.000725 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:56:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:56:16] Energy consumed for All CPU : 0.010272 kWh
+14/20 ━━━━━━━━━━━━━━━━━━━━ 10s 2s/step - accuracy: 0.9104 - loss: 0.0909[codecarbon INFO @ 03:56:31] Energy consumed for RAM : 0.000737 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:56:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:56:31] Energy consumed for All CPU : 0.010449 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9108 - loss: 0.0906[codecarbon INFO @ 03:56:46] Energy consumed for RAM : 0.000750 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:56:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:56:46] Energy consumed for All CPU : 0.010626 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9110 - loss: 0.0905 - val_accuracy: 0.6497 - val_loss: 0.2944
+Epoch 19/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 30s 2s/step - accuracy: 0.8757 - loss: 0.1120[codecarbon INFO @ 03:57:01] Energy consumed for RAM : 0.000762 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:57:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:57:01] Energy consumed for All CPU : 0.010803 kWh
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8978 - loss: 0.0969[codecarbon INFO @ 03:57:16] Energy consumed for RAM : 0.000775 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:57:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:57:16] Energy consumed for All CPU : 0.010981 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9053 - loss: 0.0924[codecarbon INFO @ 03:57:31] Energy consumed for RAM : 0.000787 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:57:31] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:57:31] Energy consumed for All CPU : 0.011158 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9062 - loss: 0.0919 - val_accuracy: 0.6624 - val_loss: 0.2694
+Epoch 20/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.8958 - loss: 0.0932[codecarbon INFO @ 03:57:46] Energy consumed for RAM : 0.000800 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:57:46] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:57:46] Energy consumed for All CPU : 0.011335 kWh
+[codecarbon INFO @ 03:57:46] 0.012135 kWh of electricity used since the beginning.
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.8931 - loss: 0.0940[codecarbon INFO @ 03:58:01] Energy consumed for RAM : 0.000812 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:58:01] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:58:01] Energy consumed for All CPU : 0.011512 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8982 - loss: 0.0935[codecarbon INFO @ 03:58:16] Energy consumed for RAM : 0.000825 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:58:16] Delta energy consumed for CPU with constant : 0.000177 kWh, power : 42.5 W
+[codecarbon INFO @ 03:58:16] Energy consumed for All CPU : 0.011689 kWh
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8988 - loss: 0.0934 - val_accuracy: 0.6497 - val_loss: 0.2810
+[codecarbon INFO @ 03:58:26] Energy consumed for RAM : 0.000833 kWh. RAM Power : 3.0 W
+[codecarbon INFO @ 03:58:26] Delta energy consumed for CPU with constant : 0.000116 kWh, power : 42.5 W
+[codecarbon INFO @ 03:58:26] Energy consumed for All CPU : 0.011805 kWh
+[codecarbon INFO @ 03:58:26] 0.012638 kWh of electricity used since the beginning.
+[MEMORY] Current memory usage: 2353.17 MB
+[ENERGY] Estimated energy usage for Set 5: 0.0090 kg CO₂
+Found 7045 images belonging to 2 classes.
+/home/client2/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 422s 2s/step
+Test Accuracy : 86.73%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.90      0.84      0.87      3768
+   notdrowsy       0.83      0.90      0.86      3277
+
+    accuracy                           0.87      7045
+   macro avg       0.87      0.87      0.87      7045
+weighted avg       0.87      0.87      0.87      7045
+
+Sending updated weights (3042296 bytes) to the server...
+Uploading weights: 100%|████████████████████████████████████████████████████████| 3.04M/3.04M [00:00<00:00, 18.3MB/s]
+Training and weight update for Round 5 completed.
+
+Connection to server closed.

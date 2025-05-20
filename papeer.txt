@@ -1,0 +1,7 @@
+https://consensus.app/papers/resourceaware-knowledge-distillation-for-federated-chen-tian/87df263f5f14531e94867a584e3c932b/
+
+https://consensus.app/papers/feddkd-federated-learning-with-decentralized-knowledge-li-chen/3b089902868455fd9e16eb0c4369535c/
+
+https://link.springer.com/article/10.1007/s10489-022-04431-1
+
+https://ieeexplore.ieee.org/document/10090471

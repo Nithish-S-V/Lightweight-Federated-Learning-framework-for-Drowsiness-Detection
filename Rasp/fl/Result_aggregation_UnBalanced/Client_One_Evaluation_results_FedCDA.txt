@@ -1,0 +1,45 @@
+
+--- FedCDA | Set 1 ---
+Accuracy: 0.6616
+Classification Report:
+              precision    recall  f1-score   support
+
+    Eyeclose       1.00      0.63      0.78        82
+     Neutral       0.49      0.84      0.62        64
+        Yawn       0.71      0.48      0.57        52
+
+    accuracy                           0.66       198
+   macro avg       0.73      0.65      0.66       198
+weighted avg       0.76      0.66      0.67       198
+
+============================================================
+
+--- FedCDA | Set 2 ---
+Accuracy: 0.7020
+Classification Report:
+              precision    recall  f1-score   support
+
+    Eyeclose       0.98      0.68      0.81        82
+     Neutral       0.53      0.89      0.66        64
+        Yawn       0.79      0.50      0.61        52
+
+    accuracy                           0.70       198
+   macro avg       0.77      0.69      0.69       198
+weighted avg       0.78      0.70      0.71       198
+
+============================================================
+
+--- FedCDA | Set 3 ---
+Accuracy: 0.7323
+Classification Report:
+              precision    recall  f1-score   support
+
+    Eyeclose       1.00      0.73      0.85        82
+     Neutral       0.55      0.89      0.68        64
+        Yawn       0.80      0.54      0.64        52
+
+    accuracy                           0.73       198
+   macro avg       0.78      0.72      0.72       198
+weighted avg       0.80      0.73      0.74       198
+
+============================================================

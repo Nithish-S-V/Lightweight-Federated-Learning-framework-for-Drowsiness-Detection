@@ -1,0 +1,237 @@
+(venv) D:\Major Project>cd D:\Major Project\Rasp\Final_Results_MEtrcs\rasp_async
+
+(venv) D:\Major Project\Rasp\Final_Results_MEtrcs\rasp_async>python server_main.py
+2025-05-11 01:54:46.030343: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-05-11 01:54:48.128458: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Found 7045 images belonging to 2 classes.
+2025-05-11 01:54:53.550841: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From D:\Major Project\venv\lib\site-packages\keras\src\backend\tensorflow\core.py:219: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+Evaluation of teacher
+Evaluation of distilled student
+Waiting for clients to connect...
+Client 1 connected from ('192.168.137.228', 36178).
+Client 2 connected from ('192.168.137.74', 58874).
+[Client 1] Sending global model for Round 1...
+[Client 2] Sending global model for Round 1...
+Sending model: 100%|████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 3.66MB/s]
+Global model for Round 1 sent to client.████████████████▉       | 2.10M/2.50M [00:00<00:00, 3.53MB/s]
+[Client 1] Waiting for updated weights...
+Sending model: 100%|████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 2.77MB/s]
+Global model for Round 1 sent to client.████████████████████████| 2.50M/2.50M [00:00<00:00, 2.59MB/s]
+[Client 2] Waiting for updated weights...
+[Client 2] Received weights.
+[Server] Only client 2 sent. Updating model without aggregation.
+Found 7045 images belonging to 2 classes.
+D:\Major Project\venv\lib\site-packages\keras\src\trainers\data_adapters\py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 47s 209ms/step
+Test Accuracy : 85.32%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.89      0.82      0.86      3768
+   notdrowsy       0.81      0.89      0.85      3277
+
+    accuracy                           0.85      7045
+   macro avg       0.85      0.86      0.85      7045
+weighted avg       0.86      0.85      0.85      7045
+
+[Client 2] Sending global model for Round 2...
+[Client 1] Received weights.
+[Server] Both clients sent in round 1. Performing aggregation...
+Found 7045 images belonging to 2 classes.
+D:\Major Project\venv\lib\site-packages\keras\src\trainers\data_adapters\py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Sending model: 100%|████████████████████████████████████████████| 2.51M/2.51M [00:00<00:00, 13.1MB/s]
+Global model for Round 2 sent to client.
+[Client 2] Waiting for updated weights...
+221/221 ━━━━━━━━━━━━━━━━━━━━ 41s 185ms/step
+Test Accuracy : 85.88%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.86      0.88      0.87      3768
+   notdrowsy       0.86      0.83      0.85      3277
+
+    accuracy                           0.86      7045
+   macro avg       0.86      0.86      0.86      7045
+weighted avg       0.86      0.86      0.86      7045
+
+[Client 1] Sending global model for Round 2...
+Sending model: 100%|████████████████████████████████████████████| 2.51M/2.51M [00:00<00:00, 12.9MB/s]
+Global model for Round 2 sent to client.
+[Client 1] Waiting for updated weights...
+[Client 2] Received weights.
+[Server] Only client 2 sent. Updating model without aggregation.
+Found 7045 images belonging to 2 classes.
+D:\Major Project\venv\lib\site-packages\keras\src\trainers\data_adapters\py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 39s 178ms/step
+Test Accuracy : 85.68%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.91      0.81      0.86      3768
+   notdrowsy       0.81      0.91      0.86      3277
+
+    accuracy                           0.86      7045
+   macro avg       0.86      0.86      0.86      7045
+weighted avg       0.86      0.86      0.86      7045
+
+[Client 2] Sending global model for Round 3...
+Sending model: 100%|████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 5.80MB/s]
+Global model for Round 3 sent to client.
+[Client 2] Waiting for updated weights...
+[Client 1] Received weights.
+[Server] Both clients sent in round 2. Performing aggregation...
+Found 7045 images belonging to 2 classes.
+D:\Major Project\venv\lib\site-packages\keras\src\trainers\data_adapters\py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 41s 183ms/step
+Test Accuracy : 87.31%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.89      0.87      0.88      3768
+   notdrowsy       0.86      0.87      0.87      3277
+
+    accuracy                           0.87      7045
+   macro avg       0.87      0.87      0.87      7045
+weighted avg       0.87      0.87      0.87      7045
+
+[Client 1] Sending global model for Round 3...
+Sending model: 100%|████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 4.91MB/s]
+Global model for Round 3 sent to client.
+[Client 1] Waiting for updated weights...
+[Client 2] Received weights.
+[Server] Only client 2 sent. Updating model without aggregation.
+Found 7045 images belonging to 2 classes.
+D:\Major Project\venv\lib\site-packages\keras\src\trainers\data_adapters\py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 40s 180ms/step
+Test Accuracy : 85.24%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.90      0.82      0.86      3768
+   notdrowsy       0.81      0.89      0.85      3277
+
+    accuracy                           0.85      7045
+   macro avg       0.85      0.85      0.85      7045
+weighted avg       0.86      0.85      0.85      7045
+
+[Client 2] Sending global model for Round 4...
+Sending model: 100%|████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 6.98MB/s]
+Global model for Round 4 sent to client.
+[Client 2] Waiting for updated weights...
+[Client 1] Received weights.
+[Server] Both clients sent in round 3. Performing aggregation...
+Found 7045 images belonging to 2 classes.
+D:\Major Project\venv\lib\site-packages\keras\src\trainers\data_adapters\py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 40s 181ms/step
+Test Accuracy : 87.15%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.88      0.88      0.88      3768
+   notdrowsy       0.86      0.87      0.86      3277
+
+    accuracy                           0.87      7045
+   macro avg       0.87      0.87      0.87      7045
+weighted avg       0.87      0.87      0.87      7045
+
+[Client 1] Sending global model for Round 4...
+Sending model: 100%|████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 4.82MB/s]
+Global model for Round 4 sent to client.
+[Client 1] Waiting for updated weights...
+[Client 2] Received weights.
+[Server] Only client 2 sent. Updating model without aggregation.
+Found 7045 images belonging to 2 classes.
+D:\Major Project\venv\lib\site-packages\keras\src\trainers\data_adapters\py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 40s 179ms/step
+Test Accuracy : 85.79%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.86      0.87      0.87      3768
+   notdrowsy       0.85      0.84      0.85      3277
+
+    accuracy                           0.86      7045
+   macro avg       0.86      0.86      0.86      7045
+weighted avg       0.86      0.86      0.86      7045
+
+[Client 2] Sending global model for Round 5...
+Sending model: 100%|████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 11.4MB/s]
+Global model for Round 5 sent to client.
+[Client 2] Waiting for updated weights...
+[Client 1] Received weights.
+[Server] Both clients sent in round 4. Performing aggregation...
+Found 7045 images belonging to 2 classes.
+D:\Major Project\venv\lib\site-packages\keras\src\trainers\data_adapters\py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 40s 182ms/step
+Test Accuracy : 88.12%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.90      0.88      0.89      3768
+   notdrowsy       0.86      0.89      0.87      3277
+
+    accuracy                           0.88      7045
+   macro avg       0.88      0.88      0.88      7045
+weighted avg       0.88      0.88      0.88      7045
+
+[Client 1] Sending global model for Round 5...
+Sending model: 100%|████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 6.68MB/s]
+Global model for Round 5 sent to client.
+[Client 1] Waiting for updated weights...
+[Client 2] Received weights.
+[Server] Only client 2 sent. Updating model without aggregation.
+Found 7045 images belonging to 2 classes.
+D:\Major Project\venv\lib\site-packages\keras\src\trainers\data_adapters\py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 40s 180ms/step
+Test Accuracy : 86.73%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.90      0.84      0.87      3768
+   notdrowsy       0.83      0.90      0.86      3277
+
+    accuracy                           0.87      7045
+   macro avg       0.87      0.87      0.87      7045
+weighted avg       0.87      0.87      0.87      7045
+
+[Client 2] Connection closed.
+[Client 1] Received weights.
+[Server] Both clients sent in round 5. Performing aggregation...
+Found 7045 images belonging to 2 classes.
+D:\Major Project\venv\lib\site-packages\keras\src\trainers\data_adapters\py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 40s 183ms/step
+Test Accuracy : 87.37%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.89      0.87      0.88      3768
+   notdrowsy       0.86      0.87      0.87      3277
+
+    accuracy                           0.87      7045
+   macro avg       0.87      0.87      0.87      7045
+weighted avg       0.87      0.87      0.87      7045
+
+[Client 1] Connection closed.

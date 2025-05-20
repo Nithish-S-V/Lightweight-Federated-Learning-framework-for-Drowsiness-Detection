@@ -1,0 +1,21 @@
+Centralized Learning Results
+==========================
+
+Final Training Accuracy: 0.8750
+Final Training Loss: 0.2898
+Final Validation Accuracy: 0.9352
+Final Validation Loss: 0.1580
+
+Confusion Matrix:
+[[3261  276]
+ [  85 1939]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+  Not Drowsy     0.9746    0.9220    0.9476      3537
+      Drowsy     0.8754    0.9580    0.9148      2024
+
+    accuracy                         0.9351      5561
+   macro avg     0.9250    0.9400    0.9312      5561
+weighted avg     0.9385    0.9351    0.9356      5561

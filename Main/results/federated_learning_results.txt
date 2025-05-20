@@ -1,0 +1,218 @@
+Federated Learning Results
+=========================
+
+Number of clients: 2
+Number of rounds: 5
+Local epochs per round: 10
+Batch size: 32
+
+
+Round 1 Results
+-----------------
+
+client1:
+Training History (Final Epoch):
+- accuracy: 0.9774
+- loss: 0.0147
+- val_accuracy: 0.5351
+- val_loss: 0.4481
+
+Evaluation Metrics:
+- loss: 0.4409
+- compile_metrics: 0.5452
+
+client2:
+Training History (Final Epoch):
+- accuracy: 0.9741
+- loss: 0.0200
+- val_accuracy: 0.5452
+- val_loss: 0.3809
+
+Evaluation Metrics:
+- loss: 0.3797
+- compile_metrics: 0.5753
+
+Global Model Metrics:
+- accuracy: 0.8917
+- confusion_matrix:
+[[979  48]
+ [168 800]]
+- classification_report:
+              precision    recall  f1-score   support
+
+  Not Drowsy       0.85      0.95      0.90      1027
+      Drowsy       0.94      0.83      0.88       968
+
+    accuracy                           0.89      1995
+   macro avg       0.90      0.89      0.89      1995
+weighted avg       0.90      0.89      0.89      1995
+
+
+
+Round 2 Results
+-----------------
+
+client1:
+Training History (Final Epoch):
+- accuracy: 0.9691
+- loss: 0.0203
+- val_accuracy: 0.5686
+- val_loss: 0.3830
+
+Evaluation Metrics:
+- loss: 0.3837
+- compile_metrics: 0.5652
+
+client2:
+Training History (Final Epoch):
+- accuracy: 0.9758
+- loss: 0.0169
+- val_accuracy: 0.5485
+- val_loss: 0.4285
+
+Evaluation Metrics:
+- loss: 0.4400
+- compile_metrics: 0.5284
+
+Global Model Metrics:
+- accuracy: 0.8812
+- confusion_matrix:
+[[973  54]
+ [183 785]]
+- classification_report:
+              precision    recall  f1-score   support
+
+  Not Drowsy       0.84      0.95      0.89      1027
+      Drowsy       0.94      0.81      0.87       968
+
+    accuracy                           0.88      1995
+   macro avg       0.89      0.88      0.88      1995
+weighted avg       0.89      0.88      0.88      1995
+
+
+
+Round 3 Results
+-----------------
+
+client1:
+Training History (Final Epoch):
+- accuracy: 0.9649
+- loss: 0.0226
+- val_accuracy: 0.5719
+- val_loss: 0.3510
+
+Evaluation Metrics:
+- loss: 0.3450
+- compile_metrics: 0.5786
+
+client2:
+Training History (Final Epoch):
+- accuracy: 0.9833
+- loss: 0.0121
+- val_accuracy: 0.5318
+- val_loss: 0.3992
+
+Evaluation Metrics:
+- loss: 0.3941
+- compile_metrics: 0.5452
+
+Global Model Metrics:
+- accuracy: 0.8897
+- confusion_matrix:
+[[948  79]
+ [141 827]]
+- classification_report:
+              precision    recall  f1-score   support
+
+  Not Drowsy       0.87      0.92      0.90      1027
+      Drowsy       0.91      0.85      0.88       968
+
+    accuracy                           0.89      1995
+   macro avg       0.89      0.89      0.89      1995
+weighted avg       0.89      0.89      0.89      1995
+
+
+
+Round 4 Results
+-----------------
+
+client1:
+Training History (Final Epoch):
+- accuracy: 0.9833
+- loss: 0.0146
+- val_accuracy: 0.5652
+- val_loss: 0.4017
+
+Evaluation Metrics:
+- loss: 0.4097
+- compile_metrics: 0.5452
+
+client2:
+Training History (Final Epoch):
+- accuracy: 0.9766
+- loss: 0.0186
+- val_accuracy: 0.5686
+- val_loss: 0.3746
+
+Evaluation Metrics:
+- loss: 0.3980
+- compile_metrics: 0.5418
+
+Global Model Metrics:
+- accuracy: 0.8827
+- confusion_matrix:
+[[989  38]
+ [196 772]]
+- classification_report:
+              precision    recall  f1-score   support
+
+  Not Drowsy       0.83      0.96      0.89      1027
+      Drowsy       0.95      0.80      0.87       968
+
+    accuracy                           0.88      1995
+   macro avg       0.89      0.88      0.88      1995
+weighted avg       0.89      0.88      0.88      1995
+
+
+
+Round 5 Results
+-----------------
+
+client1:
+Training History (Final Epoch):
+- accuracy: 0.9632
+- loss: 0.0245
+- val_accuracy: 0.6321
+- val_loss: 0.3212
+
+Evaluation Metrics:
+- loss: 0.3254
+- compile_metrics: 0.5987
+
+client2:
+Training History (Final Epoch):
+- accuracy: 0.9699
+- loss: 0.0211
+- val_accuracy: 0.6120
+- val_loss: 0.3280
+
+Evaluation Metrics:
+- loss: 0.3454
+- compile_metrics: 0.5886
+
+Global Model Metrics:
+- accuracy: 0.9043
+- confusion_matrix:
+[[951  76]
+ [115 853]]
+- classification_report:
+              precision    recall  f1-score   support
+
+  Not Drowsy       0.89      0.93      0.91      1027
+      Drowsy       0.92      0.88      0.90       968
+
+    accuracy                           0.90      1995
+   macro avg       0.91      0.90      0.90      1995
+weighted avg       0.90      0.90      0.90      1995
+
+

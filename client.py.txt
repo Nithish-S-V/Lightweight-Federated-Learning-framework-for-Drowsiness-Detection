@@ -1,0 +1,56 @@
+# Client Code
+import socket
+import zlib
+import tempfile
+import tensorflow as tf
+import numpy as np
+import struct
+
+# Dummy local dataset for training
+def get_local_data():
+    return np.random.random((10, 224, 224, 3)), np.random.randint(0, 2, 10)
+
+def client_socket():
+    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client.connect(('192.168.137.1', 5000))
+    print("Connection successful")
+    # Receive the model length first
+    data_length = struct.unpack('>I', client.recv(4))[0]
+    received_data = b""
+    while len(received_data) < data_length:
+        packet = client.recv(1024 * 1024)
+        if not packet:
+            break
+        received_data += packet
+    decompressed_data = zlib.decompress(received_data)
+
+    # Load the received model
+    with tempfile.NamedTemporaryFile(suffix=".h5", delete=False) as tmp:
+        tmp.write(decompressed_data)
+        tmp.flush()
+        global_model = tf.keras.models.load_model(tmp.name)
+    print("Global model received from server.")
+
+    # Recompile the model
+    global_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+    print("Model recompiled successfully.")
+
+    # Train locally
+    X_train, y_train = get_local_data()
+    global_model.fit(X_train, y_train, epochs=2)
+    print("Local training completed.")
+
+    # Save and compress the updated model
+    with tempfile.NamedTemporaryFile(suffix=".h5", delete=False) as tmp:
+        global_model.save(tmp.name)
+        tmp.seek(0)
+        updated_model_data = tmp.read()
+    compressed_data = zlib.compress(updated_model_data)
+
+    # Send the updated model length first
+    client.sendall(struct.pack('>I', len(compressed_data)))
+    client.sendall(compressed_data)
+    print("Updated model sent to server.")
+
+if __name__ == "__main__":
+	client_socket()

@@ -1,0 +1,53 @@
+import struct
+import hashlib
+import zlib
+import tempfile
+import tqdm
+import tenseal as ts  # CKKS homomorphic encryption
+import tensorflow as tf
+
+def send_homomorphic_encrypted_model(client, model, context):
+    """Saves, compresses, encrypts with CKKS, and sends the full Keras model to the server."""
+    
+    # ✅ Step 1: Save the full model to a temporary file
+    with tempfile.NamedTemporaryFile(suffix=".keras", delete=False) as tmp:
+        model.save(tmp.name)  # Save full Keras model (architecture + weights)
+        tmp.seek(0)
+        model_data = tmp.read()  # Read the binary model data
+    
+    print(f"🔹 Saved model size: {len(model_data)} bytes")
+
+    # ✅ Step 2: Compress the model data
+    compressed_data = zlib.compress(model_data)
+    print(f"🔹 Compressed model size: {len(compressed_data)} bytes")
+
+    # ✅ Step 3: Encrypt the compressed model using CKKS
+    ckks_vector = ts.ckks_vector(context, list(compressed_data))  # Encrypt as CKKS vector
+    encrypted_data = ckks_vector.serialize()
+    encrypted_size = len(encrypted_data)
+    print(f"🔹 CKKS Encrypted model size: {encrypted_size} bytes")
+
+    # ✅ Step 4: Compute checksum for integrity verification
+    checksum = hashlib.sha256(encrypted_data).digest()
+
+    # ✅ Step 5: Send the header (data length + checksum)
+    header = struct.pack(">I", encrypted_size) + checksum  # (4 bytes length + 32 bytes checksum)
+    
+    try:
+        client.sendall(header)
+        print(f"✅ Sending homomorphically encrypted model (Size: {encrypted_size} bytes, Checksum: {checksum.hex()})")
+
+        # ✅ Step 6: Send encrypted model in chunks
+        CHUNK_SIZE = 65536  # 64KB chunks
+        sent_bytes = 0
+        with tqdm.tqdm(total=encrypted_size, unit="B", unit_scale=True, desc="Uploading Model") as pbar:
+            for i in range(0, encrypted_size, CHUNK_SIZE):
+                chunk = encrypted_data[i:i + CHUNK_SIZE]
+                client.sendall(chunk)
+                sent_bytes += len(chunk)
+                pbar.update(len(chunk))
+
+        print(f"✅ Full encrypted model sent successfully! Total sent: {sent_bytes} bytes")
+    
+    except Exception as e:
+        print(f"❌ Error: Failed to send encrypted model: {e}")

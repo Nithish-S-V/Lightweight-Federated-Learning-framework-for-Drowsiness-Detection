@@ -1,0 +1,6 @@
+1. We need to implement the old federated learning process in a nonidentical dataset, so u need to make our data set into nonidentical one 
+2. we need to implement the knowledge distillation concept so that I can implement this federated learning in Raspberry Pi, so we need a simple model That can accept the weights from our mobile+capsule-Net model
+Also,I don't have many credits to prompt, so u need to analyze every file created before u run any process
+3. The encryption we used is heavy weight I guess, so we need a lightweight one to implement in Raspberry Pi
+Also, I don't have a Rasberry Pi now, so just consider running them in Raspberry Pi and creating accordingly
+4. When you start to implement the above steps, create a separate folder for Raspberry Pi implementation and normal implementation on my laptop so I can easily access and understand the process.the point is i dont need to prompt u again to code for raspberry pi ,create a necessary steps file to implement them in raspberry pi in that separate folder,just make to folders and pt the files which we use for now in one and rapberry pi implementation related file in another one

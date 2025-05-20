@@ -1,0 +1,1301 @@
+(fedlearn-env) client1@raspberrypi:~/Client1 $ python client1_en.py
+Connected to server.
+
+==== Round 1 ====
+Receiving encrypted model (2495544 bytes)...
+Receiving model: 100%|██████████████████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 3.08MB/s]
+Model for Round 1 loaded successfully.
+Found 629 images belonging to 2 classes.
+Found 156 images belonging to 2 classes.
+Training locally on Set 1...
+[codecarbon INFO @ 01:57:09] [setup] RAM Tracking...
+[codecarbon INFO @ 01:57:09] [setup] CPU Tracking...
+[codecarbon WARNING @ 01:57:09] No CPU tracking mode found. Falling back on CPU constant mode.
+ Linux OS detected: Please ensure RAPL files exist at \sys\class\powercap\intel-rapl to measure CPU
+
+[codecarbon WARNING @ 01:57:09] We saw that you have a Cortex-A72 but we don't know it. Please contact us.
+[codecarbon INFO @ 01:57:09] CPU Model on constant consumption mode: Cortex-A72
+[codecarbon INFO @ 01:57:09] [setup] GPU Tracking...
+[codecarbon INFO @ 01:57:09] No GPU found.
+[codecarbon INFO @ 01:57:09] >>> Tracker's metadata:
+[codecarbon INFO @ 01:57:09]   Platform system: Linux-6.6.74+rpt-rpi-v8-aarch64-with-glibc2.36
+[codecarbon INFO @ 01:57:09]   Python version: 3.11.2
+[codecarbon INFO @ 01:57:09]   CodeCarbon version: 2.8.4
+[codecarbon INFO @ 01:57:09]   Available RAM : 7.627 GB
+[codecarbon INFO @ 01:57:09]   CPU count: 4
+[codecarbon INFO @ 01:57:09]   CPU model: Cortex-A72
+[codecarbon INFO @ 01:57:09]   GPU count: None
+[codecarbon INFO @ 01:57:09]   GPU model: None
+[codecarbon INFO @ 01:57:13] Emissions data (if any) will be saved to file /home/client1/Client1/emissions.csv
+/home/client1/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Epoch 1/20
+[codecarbon INFO @ 01:57:28] Energy consumed for RAM : 0.000012 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 01:57:28] Energy consumed for all CPUs : 0.000177 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 01:57:28] 0.000189 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.9043 - loss: 0.4868[codecarbon INFO @ 01:57:43] Energy consumed for RAM : 0.000024 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 01:57:43] Energy consumed for all CPUs : 0.000354 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8693 - loss: 0.4742[codecarbon INFO @ 01:57:58] Energy consumed for RAM : 0.000036 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 01:57:58] Energy consumed for all CPUs : 0.000531 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8533 - loss: 0.4643[codecarbon INFO @ 01:58:13] Energy consumed for RAM : 0.000048 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 01:58:13] Energy consumed for all CPUs : 0.000709 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 01:58:13] 0.000756 kWh of electricity used since the beginning.
+[codecarbon INFO @ 01:58:28] Energy consumed for RAM : 0.000060 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 01:58:28] Energy consumed for all CPUs : 0.000886 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 74s 3s/step - accuracy: 0.8517 - loss: 0.4628 - val_accuracy: 0.5513 - val_loss: 0.4287
+Epoch 2/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 28s 2s/step - accuracy: 0.7699 - loss: 0.3716[codecarbon INFO @ 01:58:43] Energy consumed for RAM : 0.000071 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 01:58:43] Energy consumed for all CPUs : 0.001063 kWh. Total CPU Power : 42.5 W
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.7893 - loss: 0.3577 [codecarbon INFO @ 01:58:58] Energy consumed for RAM : 0.000083 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 01:58:58] Energy consumed for all CPUs : 0.001240 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.7943 - loss: 0.3527[codecarbon INFO @ 01:59:13] Energy consumed for RAM : 0.000095 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 01:59:13] Energy consumed for all CPUs : 0.001417 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 01:59:13] 0.001512 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 49s 2s/step - accuracy: 0.7951 - loss: 0.3519 - val_accuracy: 0.5769 - val_loss: 0.3781
+Epoch 3/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 28s 2s/step - accuracy: 0.8791 - loss: 0.2813[codecarbon INFO @ 01:59:28] Energy consumed for RAM : 0.000107 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 01:59:28] Energy consumed for all CPUs : 0.001594 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8652 - loss: 0.2841[codecarbon INFO @ 01:59:43] Energy consumed for RAM : 0.000119 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 01:59:43] Energy consumed for all CPUs : 0.001771 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8569 - loss: 0.2835[codecarbon INFO @ 01:59:58] Energy consumed for RAM : 0.000131 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 01:59:58] Energy consumed for all CPUs : 0.001948 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8561 - loss: 0.2833 - val_accuracy: 0.5833 - val_loss: 0.3529
+Epoch 4/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.7795 - loss: 0.2672[codecarbon INFO @ 02:00:13] Energy consumed for RAM : 0.000143 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:00:13] Energy consumed for all CPUs : 0.002125 kWh. Total CPU Power : 42.5 W
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.8364 - loss: 0.2595[codecarbon INFO @ 02:00:28] Energy consumed for RAM : 0.000155 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:00:28] Energy consumed for all CPUs : 0.002302 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8460 - loss: 0.2552[codecarbon INFO @ 02:00:43] Energy consumed for RAM : 0.000167 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:00:43] Energy consumed for all CPUs : 0.002479 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8465 - loss: 0.2547 - val_accuracy: 0.5641 - val_loss: 0.3437
+Epoch 5/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 34s 2s/step - accuracy: 0.8672 - loss: 0.2386[codecarbon INFO @ 02:00:58] Energy consumed for RAM : 0.000179 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:00:58] Energy consumed for all CPUs : 0.002656 kWh. Total CPU Power : 42.5 W
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.8931 - loss: 0.2285[codecarbon INFO @ 02:01:13] Energy consumed for RAM : 0.000191 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:01:13] Energy consumed for all CPUs : 0.002833 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:01:13] 0.003024 kWh of electricity used since the beginning.
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8937 - loss: 0.2253[codecarbon INFO @ 02:01:28] Energy consumed for RAM : 0.000203 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:01:28] Energy consumed for all CPUs : 0.003011 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8942 - loss: 0.2241 - val_accuracy: 0.5769 - val_loss: 0.3403
+Epoch 6/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 42s 2s/step - accuracy: 0.8438 - loss: 0.2543[codecarbon INFO @ 02:01:43] Energy consumed for RAM : 0.000214 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:01:43] Energy consumed for all CPUs : 0.003188 kWh. Total CPU Power : 42.5 W
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.8591 - loss: 0.2201[codecarbon INFO @ 02:01:58] Energy consumed for RAM : 0.000226 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:01:58] Energy consumed for all CPUs : 0.003365 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.8690 - loss: 0.2137[codecarbon INFO @ 02:02:13] Energy consumed for RAM : 0.000238 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:02:13] Energy consumed for all CPUs : 0.003542 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8714 - loss: 0.2125[codecarbon INFO @ 02:02:28] Energy consumed for RAM : 0.000250 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:02:28] Energy consumed for all CPUs : 0.003719 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8720 - loss: 0.2121 - val_accuracy: 0.5705 - val_loss: 0.3381
+Epoch 7/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.8482 - loss: 0.2134[codecarbon INFO @ 02:02:43] Energy consumed for RAM : 0.000262 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:02:43] Energy consumed for all CPUs : 0.003896 kWh. Total CPU Power : 42.5 W
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8594 - loss: 0.2061 [codecarbon INFO @ 02:02:58] Energy consumed for RAM : 0.000274 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:02:58] Energy consumed for all CPUs : 0.004073 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8650 - loss: 0.2034[codecarbon INFO @ 02:03:13] Energy consumed for RAM : 0.000286 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:03:13] Energy consumed for all CPUs : 0.004250 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:03:13] 0.004536 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8658 - loss: 0.2030 - val_accuracy: 0.5769 - val_loss: 0.3482
+Epoch 8/20
+[codecarbon INFO @ 02:03:28] Energy consumed for RAM : 0.000298 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:03:28] Energy consumed for all CPUs : 0.004427 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:03:28] 0.004725 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:03:43] Energy consumed for RAM : 0.000310 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:03:43] Energy consumed for all CPUs : 0.004604 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:03:43] 0.004914 kWh of electricity used since the beginning.
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.8385 - loss: 0.2114[codecarbon INFO @ 02:03:58] Energy consumed for RAM : 0.000322 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:03:58] Energy consumed for all CPUs : 0.004781 kWh. Total CPU Power : 42.5 W
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.8606 - loss: 0.1953[codecarbon INFO @ 02:04:13] Energy consumed for RAM : 0.000334 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:04:13] Energy consumed for all CPUs : 0.004959 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8681 - loss: 0.1904[codecarbon INFO @ 02:04:28] Energy consumed for RAM : 0.000345 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:04:28] Energy consumed for all CPUs : 0.005135 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.8687 - loss: 0.1900 - val_accuracy: 0.5769 - val_loss: 0.3625
+Epoch 9/20
+[codecarbon INFO @ 02:04:43] Energy consumed for RAM : 0.000357 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:04:43] Energy consumed for all CPUs : 0.005313 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:04:43] 0.005670 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:04:58] Energy consumed for RAM : 0.000369 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:04:58] Energy consumed for all CPUs : 0.005490 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:04:58] 0.005859 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:05:13] Energy consumed for RAM : 0.000381 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:05:13] Energy consumed for all CPUs : 0.005667 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:05:13] 0.006048 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:05:13] 0.008988 g.CO2eq/s mean an estimation of 283.43582388961727 kg.CO2eq/year
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 21s 2s/step - accuracy: 0.9340 - loss: 0.1645[codecarbon INFO @ 02:05:28] Energy consumed for RAM : 0.000393 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:05:28] Energy consumed for all CPUs : 0.005844 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9205 - loss: 0.1667[codecarbon INFO @ 02:05:43] Energy consumed for RAM : 0.000405 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:05:43] Energy consumed for all CPUs : 0.006021 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9151 - loss: 0.1681[codecarbon INFO @ 02:05:58] Energy consumed for RAM : 0.000417 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:05:58] Energy consumed for all CPUs : 0.006198 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9142 - loss: 0.1683 - val_accuracy: 0.6090 - val_loss: 0.3570
+Epoch 10/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.9521 - loss: 0.1468[codecarbon INFO @ 02:06:13] Energy consumed for RAM : 0.000429 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:06:13] Energy consumed for all CPUs : 0.006377 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.9363 - loss: 0.1525[codecarbon INFO @ 02:06:28] Energy consumed for RAM : 0.000441 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:06:28] Energy consumed for all CPUs : 0.006553 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9277 - loss: 0.1553[codecarbon INFO @ 02:06:43] Energy consumed for RAM : 0.000453 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:06:43] Energy consumed for all CPUs : 0.006730 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9266 - loss: 0.1557 - val_accuracy: 0.5641 - val_loss: 0.3281
+Epoch 11/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.9535 - loss: 0.1395[codecarbon INFO @ 02:06:58] Energy consumed for RAM : 0.000464 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:06:58] Energy consumed for all CPUs : 0.006907 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 13s 2s/step - accuracy: 0.9341 - loss: 0.1426[codecarbon INFO @ 02:07:13] Energy consumed for RAM : 0.000476 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:07:13] Energy consumed for all CPUs : 0.007083 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:07:13] 0.007559 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9226 - loss: 0.1459[codecarbon INFO @ 02:07:28] Energy consumed for RAM : 0.000488 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:07:28] Energy consumed for all CPUs : 0.007260 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9215 - loss: 0.1463 - val_accuracy: 0.5705 - val_loss: 0.3290
+Epoch 12/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.9306 - loss: 0.1543[codecarbon INFO @ 02:07:43] Energy consumed for RAM : 0.000500 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:07:43] Energy consumed for all CPUs : 0.007437 kWh. Total CPU Power : 42.5 W
+11/20 ━━━━━━━━━━━━━━━━━━━━ 17s 2s/step - accuracy: 0.9064 - loss: 0.1528[codecarbon INFO @ 02:07:58] Energy consumed for RAM : 0.000512 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:07:58] Energy consumed for all CPUs : 0.007614 kWh. Total CPU Power : 42.5 W
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.9024 - loss: 0.1514[codecarbon INFO @ 02:08:13] Energy consumed for RAM : 0.000524 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:08:13] Energy consumed for all CPUs : 0.007791 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9017 - loss: 0.1513 - val_accuracy: 0.5641 - val_loss: 0.3233
+Epoch 13/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 34s 2s/step - accuracy: 0.8594 - loss: 0.1552[codecarbon INFO @ 02:08:28] Energy consumed for RAM : 0.000536 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:08:28] Energy consumed for all CPUs : 0.007968 kWh. Total CPU Power : 42.5 W
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.8896 - loss: 0.1465[codecarbon INFO @ 02:08:43] Energy consumed for RAM : 0.000548 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:08:43] Energy consumed for all CPUs : 0.008146 kWh. Total CPU Power : 42.5 W
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.8878 - loss: 0.1468[codecarbon INFO @ 02:08:58] Energy consumed for RAM : 0.000560 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:08:58] Energy consumed for all CPUs : 0.008324 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8870 - loss: 0.1469 - val_accuracy: 0.5513 - val_loss: 0.3341
+Epoch 14/20
+[codecarbon INFO @ 02:09:13] Energy consumed for RAM : 0.000572 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:09:13] Energy consumed for all CPUs : 0.008501 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:09:13] 0.009072 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:09:13] 0.008986 g.CO2eq/s mean an estimation of 283.38990980642274 kg.CO2eq/year
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.8629 - loss: 0.1428[codecarbon INFO @ 02:09:28] Energy consumed for RAM : 0.000584 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:09:28] Energy consumed for all CPUs : 0.008678 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.8802 - loss: 0.1419[codecarbon INFO @ 02:09:43] Energy consumed for RAM : 0.000596 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:09:43] Energy consumed for all CPUs : 0.008855 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8832 - loss: 0.1416[codecarbon INFO @ 02:09:58] Energy consumed for RAM : 0.000607 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:09:58] Energy consumed for all CPUs : 0.009032 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8839 - loss: 0.1415 - val_accuracy: 0.5705 - val_loss: 0.3381
+Epoch 15/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 23s 2s/step - accuracy: 0.8980 - loss: 0.1309[codecarbon INFO @ 02:10:13] Energy consumed for RAM : 0.000619 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:10:13] Energy consumed for all CPUs : 0.009209 kWh. Total CPU Power : 42.5 W
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.9043 - loss: 0.1312 [codecarbon INFO @ 02:10:28] Energy consumed for RAM : 0.000631 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:10:28] Energy consumed for all CPUs : 0.009386 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9057 - loss: 0.1315[codecarbon INFO @ 02:10:43] Energy consumed for RAM : 0.000643 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:10:43] Energy consumed for all CPUs : 0.009563 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9057 - loss: 0.1316 - val_accuracy: 0.5769 - val_loss: 0.3444
+Epoch 16/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.8906 - loss: 0.1296[codecarbon INFO @ 02:10:58] Energy consumed for RAM : 0.000655 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:10:58] Energy consumed for all CPUs : 0.009740 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.8973 - loss: 0.1278[codecarbon INFO @ 02:11:13] Energy consumed for RAM : 0.000667 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:11:13] Energy consumed for all CPUs : 0.009917 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:11:13] 0.010584 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8984 - loss: 0.1279[codecarbon INFO @ 02:11:28] Energy consumed for RAM : 0.000679 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:11:28] Energy consumed for all CPUs : 0.010094 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8987 - loss: 0.1279 - val_accuracy: 0.5321 - val_loss: 0.3286
+Epoch 17/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 30s 2s/step - accuracy: 0.9284 - loss: 0.1171[codecarbon INFO @ 02:11:43] Energy consumed for RAM : 0.000691 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:11:43] Energy consumed for all CPUs : 0.010271 kWh. Total CPU Power : 42.5 W
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9160 - loss: 0.1231[codecarbon INFO @ 02:11:58] Energy consumed for RAM : 0.000703 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:11:58] Energy consumed for all CPUs : 0.010448 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9126 - loss: 0.1246[codecarbon INFO @ 02:12:13] Energy consumed for RAM : 0.000715 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:12:13] Energy consumed for all CPUs : 0.010625 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9123 - loss: 0.1248 - val_accuracy: 0.5385 - val_loss: 0.3318
+Epoch 18/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.9480 - loss: 0.1118[codecarbon INFO @ 02:12:28] Energy consumed for RAM : 0.000727 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:12:28] Energy consumed for all CPUs : 0.010803 kWh. Total CPU Power : 42.5 W
+11/20 ━━━━━━━━━━━━━━━━━━━━ 17s 2s/step - accuracy: 0.9140 - loss: 0.1241[codecarbon INFO @ 02:12:43] Energy consumed for RAM : 0.000739 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:12:43] Energy consumed for all CPUs : 0.010981 kWh. Total CPU Power : 42.5 W
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.9032 - loss: 0.1275[codecarbon INFO @ 02:12:58] Energy consumed for RAM : 0.000750 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:12:58] Energy consumed for all CPUs : 0.011158 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9010 - loss: 0.1278 - val_accuracy: 0.5385 - val_loss: 0.3320
+Epoch 19/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 43s 2s/step - accuracy: 0.8750 - loss: 0.1505[codecarbon INFO @ 02:13:13] Energy consumed for RAM : 0.000762 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:13:13] Energy consumed for all CPUs : 0.011335 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:13:13] 0.012097 kWh of electricity used since the beginning.
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.8901 - loss: 0.1362[codecarbon INFO @ 02:13:28] Energy consumed for RAM : 0.000774 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:13:28] Energy consumed for all CPUs : 0.011512 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.8975 - loss: 0.1318[codecarbon INFO @ 02:13:43] Energy consumed for RAM : 0.000786 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:13:43] Energy consumed for all CPUs : 0.011689 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8997 - loss: 0.1300 - val_accuracy: 0.5513 - val_loss: 0.3182
+Epoch 20/20
+[codecarbon INFO @ 02:13:58] Energy consumed for RAM : 0.000798 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:13:58] Energy consumed for all CPUs : 0.011866 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:13:58] 0.012664 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.9090 - loss: 0.1239[codecarbon INFO @ 02:14:13] Energy consumed for RAM : 0.000810 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:14:13] Energy consumed for all CPUs : 0.012043 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9100 - loss: 0.1240[codecarbon INFO @ 02:14:28] Energy consumed for RAM : 0.000822 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:14:28] Energy consumed for all CPUs : 0.012220 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9103 - loss: 0.1236[codecarbon INFO @ 02:14:43] Energy consumed for RAM : 0.000834 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:14:43] Energy consumed for all CPUs : 0.012397 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.9104 - loss: 0.1234 - val_accuracy: 0.5705 - val_loss: 0.3158
+[codecarbon INFO @ 02:14:45] Energy consumed for RAM : 0.000835 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:14:45] Energy consumed for all CPUs : 0.012415 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:14:45] 0.013250 kWh of electricity used since the beginning.
+[MEMORY] Current memory usage: 1237.41 MB
+[ENERGY] Estimated energy usage for Set 1: 0.0095 kg CO₂
+Found 7045 images belonging to 2 classes.
+/home/client1/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 430s 2s/step
+Test Accuracy : 82.46%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.79      0.91      0.85      3768
+   notdrowsy       0.87      0.73      0.79      3277
+
+    accuracy                           0.82      7045
+   macro avg       0.83      0.82      0.82      7045
+weighted avg       0.83      0.82      0.82      7045
+
+Sending updated weights (3347916 bytes) to the server...
+Uploading weights: 100%|████████████████████████████████████████████████████████| 3.35M/3.35M [00:00<00:00, 8.76MB/s]
+Training and weight update for Round 1 completed.
+
+
+==== Round 2 ====
+Receiving encrypted model (2509752 bytes)...
+Receiving model: 100%|██████████████████████████████████████████████████████████| 2.51M/2.51M [00:00<00:00, 6.45MB/s]
+Model for Round 2 loaded successfully.
+Found 630 images belonging to 2 classes.
+Found 156 images belonging to 2 classes.
+Training locally on Set 2...
+[codecarbon INFO @ 02:23:12] [setup] RAM Tracking...
+[codecarbon INFO @ 02:23:12] [setup] CPU Tracking...
+[codecarbon WARNING @ 02:23:12] No CPU tracking mode found. Falling back on CPU constant mode.
+ Linux OS detected: Please ensure RAPL files exist at \sys\class\powercap\intel-rapl to measure CPU
+
+[codecarbon WARNING @ 02:23:13] We saw that you have a Cortex-A72 but we don't know it. Please contact us.
+[codecarbon INFO @ 02:23:13] CPU Model on constant consumption mode: Cortex-A72
+[codecarbon INFO @ 02:23:13] [setup] GPU Tracking...
+[codecarbon INFO @ 02:23:13] No GPU found.
+[codecarbon INFO @ 02:23:13] >>> Tracker's metadata:
+[codecarbon INFO @ 02:23:13]   Platform system: Linux-6.6.74+rpt-rpi-v8-aarch64-with-glibc2.36
+[codecarbon INFO @ 02:23:13]   Python version: 3.11.2
+[codecarbon INFO @ 02:23:13]   CodeCarbon version: 2.8.4
+[codecarbon INFO @ 02:23:13]   Available RAM : 7.627 GB
+[codecarbon INFO @ 02:23:13]   CPU count: 4
+[codecarbon INFO @ 02:23:13]   CPU model: Cortex-A72
+[codecarbon INFO @ 02:23:13]   GPU count: None
+[codecarbon INFO @ 02:23:13]   GPU model: None
+[codecarbon INFO @ 02:23:16] Emissions data (if any) will be saved to file /home/client1/Client1/emissions.csv
+/home/client1/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Epoch 1/20
+[codecarbon INFO @ 02:23:31] Energy consumed for RAM : 0.000012 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:23:31] Energy consumed for all CPUs : 0.000177 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:23:31] 0.000189 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.8652 - loss: 0.1399[codecarbon INFO @ 02:23:46] Energy consumed for RAM : 0.000024 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:23:46] Energy consumed for all CPUs : 0.000354 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.8672 - loss: 0.1388[codecarbon INFO @ 02:24:01] Energy consumed for RAM : 0.000036 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:24:01] Energy consumed for all CPUs : 0.000532 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8688 - loss: 0.1383[codecarbon INFO @ 02:24:16] Energy consumed for RAM : 0.000048 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:24:16] Energy consumed for all CPUs : 0.000708 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 67s 3s/step - accuracy: 0.8689 - loss: 0.1383 - val_accuracy: 0.6218 - val_loss: 0.2738
+Epoch 2/20
+[codecarbon INFO @ 02:24:31] Energy consumed for RAM : 0.000060 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:24:31] Energy consumed for all CPUs : 0.000886 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:24:31] 0.000945 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:24:46] Energy consumed for RAM : 0.000071 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:24:46] Energy consumed for all CPUs : 0.001063 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:24:46] 0.001134 kWh of electricity used since the beginning.
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 30s 2s/step - accuracy: 0.8867 - loss: 0.1218[codecarbon INFO @ 02:25:01] Energy consumed for RAM : 0.000083 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:25:01] Energy consumed for all CPUs : 0.001240 kWh. Total CPU Power : 42.5 W
+12/20 ━━━━━━━━━━━━━━━━━━━━ 15s 2s/step - accuracy: 0.8681 - loss: 0.1357[codecarbon INFO @ 02:25:16] Energy consumed for RAM : 0.000095 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:25:16] Energy consumed for all CPUs : 0.001417 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:25:16] 0.001512 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8658 - loss: 0.1383[codecarbon INFO @ 02:25:31] Energy consumed for RAM : 0.000107 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:25:31] Energy consumed for all CPUs : 0.001594 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 76s 2s/step - accuracy: 0.8658 - loss: 0.1384 - val_accuracy: 0.5962 - val_loss: 0.2712
+Epoch 3/20
+[codecarbon INFO @ 02:25:46] Energy consumed for RAM : 0.000119 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:25:46] Energy consumed for all CPUs : 0.001771 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:25:46] 0.001890 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:26:01] Energy consumed for RAM : 0.000131 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:26:01] Energy consumed for all CPUs : 0.001948 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:26:01] 0.002079 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:26:16] Energy consumed for RAM : 0.000143 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:26:16] Energy consumed for all CPUs : 0.002125 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:26:16] 0.002268 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 21s 2s/step - accuracy: 0.8315 - loss: 0.1527[codecarbon INFO @ 02:26:31] Energy consumed for RAM : 0.000155 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:26:31] Energy consumed for all CPUs : 0.002302 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.8519 - loss: 0.1423[codecarbon INFO @ 02:26:46] Energy consumed for RAM : 0.000167 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:26:46] Energy consumed for all CPUs : 0.002480 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8570 - loss: 0.1399[codecarbon INFO @ 02:27:01] Energy consumed for RAM : 0.000179 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:27:01] Energy consumed for all CPUs : 0.002657 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.8579 - loss: 0.1395 - val_accuracy: 0.6474 - val_loss: 0.2714
+Epoch 4/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 23s 2s/step - accuracy: 0.8710 - loss: 0.1336[codecarbon INFO @ 02:27:16] Energy consumed for RAM : 0.000191 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:27:16] Energy consumed for all CPUs : 0.002834 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:27:16] 0.003024 kWh of electricity used since the beginning.
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8794 - loss: 0.1298 [codecarbon INFO @ 02:27:31] Energy consumed for RAM : 0.000203 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:27:31] Energy consumed for all CPUs : 0.003011 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8813 - loss: 0.1287[codecarbon INFO @ 02:27:46] Energy consumed for RAM : 0.000214 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:27:46] Energy consumed for all CPUs : 0.003188 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 48s 2s/step - accuracy: 0.8812 - loss: 0.1286 - val_accuracy: 0.5833 - val_loss: 0.2795
+Epoch 5/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 28s 2s/step - accuracy: 0.9259 - loss: 0.1146[codecarbon INFO @ 02:28:01] Energy consumed for RAM : 0.000226 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:28:01] Energy consumed for all CPUs : 0.003365 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.9154 - loss: 0.1171[codecarbon INFO @ 02:28:16] Energy consumed for RAM : 0.000238 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:28:16] Energy consumed for all CPUs : 0.003542 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9073 - loss: 0.1186[codecarbon INFO @ 02:28:31] Energy consumed for RAM : 0.000250 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:28:31] Energy consumed for all CPUs : 0.003719 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9063 - loss: 0.1188 - val_accuracy: 0.5833 - val_loss: 0.2795
+Epoch 6/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.9290 - loss: 0.1208[codecarbon INFO @ 02:28:46] Energy consumed for RAM : 0.000262 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:28:46] Energy consumed for all CPUs : 0.003896 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.9184 - loss: 0.1189[codecarbon INFO @ 02:29:01] Energy consumed for RAM : 0.000274 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:29:01] Energy consumed for all CPUs : 0.004074 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9128 - loss: 0.1203[codecarbon INFO @ 02:29:16] Energy consumed for RAM : 0.000286 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:29:16] Energy consumed for all CPUs : 0.004251 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:29:16] 0.004537 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9119 - loss: 0.1206 - val_accuracy: 0.6603 - val_loss: 0.2800
+Epoch 7/20
+[codecarbon INFO @ 02:29:31] Energy consumed for RAM : 0.000298 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:29:31] Energy consumed for all CPUs : 0.004428 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:29:31] 0.004725 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:29:46] Energy consumed for RAM : 0.000310 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:29:46] Energy consumed for all CPUs : 0.004605 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:29:46] 0.004914 kWh of electricity used since the beginning.
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 12:00 38s/step - accuracy: 0.8438 - loss: 0.1373[codecarbon INFO @ 02:30:01] Energy consumed for RAM : 0.000322 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:30:01] Energy consumed for all CPUs : 0.004782 kWh. Total CPU Power : 42.5 W
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.8397 - loss: 0.1342[codecarbon INFO @ 02:30:16] Energy consumed for RAM : 0.000334 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:30:16] Energy consumed for all CPUs : 0.004959 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.8528 - loss: 0.1294[codecarbon INFO @ 02:30:31] Energy consumed for RAM : 0.000345 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:30:31] Energy consumed for all CPUs : 0.005136 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.8574 - loss: 0.1274 - val_accuracy: 0.6346 - val_loss: 0.2826
+Epoch 8/20
+[codecarbon INFO @ 02:30:46] Energy consumed for RAM : 0.000357 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:30:46] Energy consumed for all CPUs : 0.005313 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:30:46] 0.005671 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:31:01] Energy consumed for RAM : 0.000369 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:31:01] Energy consumed for all CPUs : 0.005490 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:31:01] 0.005860 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:31:16] Energy consumed for RAM : 0.000381 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:31:16] Energy consumed for all CPUs : 0.005667 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:31:16] 0.006049 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:31:16] 0.008988 g.CO2eq/s mean an estimation of 283.43803904368286 kg.CO2eq/year
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.9056 - loss: 0.1112[codecarbon INFO @ 02:31:31] Energy consumed for RAM : 0.000393 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:31:31] Energy consumed for all CPUs : 0.005845 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.9039 - loss: 0.1147[codecarbon INFO @ 02:31:46] Energy consumed for RAM : 0.000405 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:31:46] Energy consumed for all CPUs : 0.006022 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9008 - loss: 0.1159[codecarbon INFO @ 02:32:01] Energy consumed for RAM : 0.000417 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:32:01] Energy consumed for all CPUs : 0.006199 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9005 - loss: 0.1159 - val_accuracy: 0.6282 - val_loss: 0.2955
+Epoch 9/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.8353 - loss: 0.1345[codecarbon INFO @ 02:32:16] Energy consumed for RAM : 0.000429 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:32:16] Energy consumed for all CPUs : 0.006376 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8534 - loss: 0.1253[codecarbon INFO @ 02:32:31] Energy consumed for RAM : 0.000441 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:32:31] Energy consumed for all CPUs : 0.006553 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8593 - loss: 0.1243[codecarbon INFO @ 02:32:46] Energy consumed for RAM : 0.000453 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:32:46] Energy consumed for all CPUs : 0.006730 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8600 - loss: 0.1242 - val_accuracy: 0.6346 - val_loss: 0.2882
+Epoch 10/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.8576 - loss: 0.1366[codecarbon INFO @ 02:33:01] Energy consumed for RAM : 0.000465 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:33:01] Energy consumed for all CPUs : 0.006907 kWh. Total CPU Power : 42.5 W
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.8846 - loss: 0.1218[codecarbon INFO @ 02:33:16] Energy consumed for RAM : 0.000477 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:33:16] Energy consumed for all CPUs : 0.007084 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:33:16] 0.007561 kWh of electricity used since the beginning.
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8868 - loss: 0.1196[codecarbon INFO @ 02:33:31] Energy consumed for RAM : 0.000488 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:33:31] Energy consumed for all CPUs : 0.007261 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8867 - loss: 0.1193 - val_accuracy: 0.6026 - val_loss: 0.3022
+Epoch 11/20
+[codecarbon INFO @ 02:33:46] Energy consumed for RAM : 0.000500 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:33:46] Energy consumed for all CPUs : 0.007438 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:33:46] 0.007939 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:34:01] Energy consumed for RAM : 0.000512 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:34:01] Energy consumed for all CPUs : 0.007615 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:34:01] 0.008128 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:34:16] Energy consumed for RAM : 0.000524 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:34:16] Energy consumed for all CPUs : 0.007793 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:34:16] 0.008317 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 21s 2s/step - accuracy: 0.8463 - loss: 0.1344[codecarbon INFO @ 02:34:31] Energy consumed for RAM : 0.000536 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:34:31] Energy consumed for all CPUs : 0.007970 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.8595 - loss: 0.1274[codecarbon INFO @ 02:34:46] Energy consumed for RAM : 0.000548 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:34:46] Energy consumed for all CPUs : 0.008147 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8654 - loss: 0.1251[codecarbon INFO @ 02:35:01] Energy consumed for RAM : 0.000560 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:35:01] Energy consumed for all CPUs : 0.008324 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 81s 2s/step - accuracy: 0.8664 - loss: 0.1247 - val_accuracy: 0.6154 - val_loss: 0.2983
+Epoch 12/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 23s 2s/step - accuracy: 0.8818 - loss: 0.1107[codecarbon INFO @ 02:35:16] Energy consumed for RAM : 0.000572 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:35:16] Energy consumed for all CPUs : 0.008501 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:35:16] 0.009073 kWh of electricity used since the beginning.
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8780 - loss: 0.1126 [codecarbon INFO @ 02:35:31] Energy consumed for RAM : 0.000584 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:35:31] Energy consumed for all CPUs : 0.008678 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8769 - loss: 0.1140[codecarbon INFO @ 02:35:46] Energy consumed for RAM : 0.000596 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:35:46] Energy consumed for all CPUs : 0.008856 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.8768 - loss: 0.1142 - val_accuracy: 0.6026 - val_loss: 0.2946
+Epoch 13/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.9052 - loss: 0.1005[codecarbon INFO @ 02:36:01] Energy consumed for RAM : 0.000608 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:36:01] Energy consumed for all CPUs : 0.009033 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 10s 2s/step - accuracy: 0.8943 - loss: 0.1075[codecarbon INFO @ 02:36:16] Energy consumed for RAM : 0.000620 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:36:16] Energy consumed for all CPUs : 0.009210 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8922 - loss: 0.1092[codecarbon INFO @ 02:36:31] Energy consumed for RAM : 0.000631 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:36:31] Energy consumed for all CPUs : 0.009387 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8919 - loss: 0.1094 - val_accuracy: 0.6218 - val_loss: 0.3024
+Epoch 14/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.9156 - loss: 0.1073[codecarbon INFO @ 02:36:46] Energy consumed for RAM : 0.000643 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:36:46] Energy consumed for all CPUs : 0.009564 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8967 - loss: 0.1097[codecarbon INFO @ 02:37:01] Energy consumed for RAM : 0.000655 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:37:01] Energy consumed for all CPUs : 0.009741 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8953 - loss: 0.1095[codecarbon INFO @ 02:37:16] Energy consumed for RAM : 0.000667 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:37:16] Energy consumed for all CPUs : 0.009918 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:37:16] 0.010585 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8951 - loss: 0.1096 - val_accuracy: 0.6090 - val_loss: 0.2999
+Epoch 15/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.9180 - loss: 0.0992[codecarbon INFO @ 02:37:31] Energy consumed for RAM : 0.000679 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:37:31] Energy consumed for all CPUs : 0.010095 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.9001 - loss: 0.1057[codecarbon INFO @ 02:37:46] Energy consumed for RAM : 0.000691 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:37:46] Energy consumed for all CPUs : 0.010272 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8966 - loss: 0.1065[codecarbon INFO @ 02:38:01] Energy consumed for RAM : 0.000703 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:38:01] Energy consumed for all CPUs : 0.010449 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.8960 - loss: 0.1068 - val_accuracy: 0.6218 - val_loss: 0.2956
+Epoch 16/20
+[codecarbon INFO @ 02:38:16] Energy consumed for RAM : 0.000715 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:38:16] Energy consumed for all CPUs : 0.010626 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:38:16] 0.011341 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:38:31] Energy consumed for RAM : 0.000727 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:38:31] Energy consumed for all CPUs : 0.010803 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:38:31] 0.011530 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:38:46] Energy consumed for RAM : 0.000739 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:38:46] Energy consumed for all CPUs : 0.010980 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:38:46] 0.011719 kWh of electricity used since the beginning.
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.9094 - loss: 0.1008[codecarbon INFO @ 02:39:01] Energy consumed for RAM : 0.000751 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:39:01] Energy consumed for all CPUs : 0.011158 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9031 - loss: 0.1037[codecarbon INFO @ 02:39:16] Energy consumed for RAM : 0.000762 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:39:16] Energy consumed for all CPUs : 0.011335 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:39:16] 0.012097 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9002 - loss: 0.1049 - val_accuracy: 0.6218 - val_loss: 0.3005
+Epoch 17/20
+[codecarbon INFO @ 02:39:31] Energy consumed for RAM : 0.000774 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:39:31] Energy consumed for all CPUs : 0.011512 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:39:31] 0.012286 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 21s 2s/step - accuracy: 0.9047 - loss: 0.1025[codecarbon INFO @ 02:39:46] Energy consumed for RAM : 0.000786 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:39:46] Energy consumed for all CPUs : 0.011689 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9021 - loss: 0.1026[codecarbon INFO @ 02:40:01] Energy consumed for RAM : 0.000798 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:40:01] Energy consumed for all CPUs : 0.011866 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8995 - loss: 0.1031[codecarbon INFO @ 02:40:16] Energy consumed for RAM : 0.000810 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:40:16] Energy consumed for all CPUs : 0.012043 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.8988 - loss: 0.1033 - val_accuracy: 0.6090 - val_loss: 0.3069
+Epoch 18/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 23s 2s/step - accuracy: 0.9016 - loss: 0.1075[codecarbon INFO @ 02:40:31] Energy consumed for RAM : 0.000822 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:40:31] Energy consumed for all CPUs : 0.012220 kWh. Total CPU Power : 42.5 W
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.8971 - loss: 0.1087 [codecarbon INFO @ 02:40:46] Energy consumed for RAM : 0.000834 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:40:46] Energy consumed for all CPUs : 0.012397 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8977 - loss: 0.1077[codecarbon INFO @ 02:41:01] Energy consumed for RAM : 0.000846 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:41:01] Energy consumed for all CPUs : 0.012574 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.8977 - loss: 0.1076 - val_accuracy: 0.5833 - val_loss: 0.3122
+Epoch 19/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.9138 - loss: 0.1061[codecarbon INFO @ 02:41:16] Energy consumed for RAM : 0.000858 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:41:16] Energy consumed for all CPUs : 0.012751 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:41:16] 0.013609 kWh of electricity used since the beginning.
+15/20 ━━━━━━━━━━━━━━━━━━━━ 8s 2s/step - accuracy: 0.9136 - loss: 0.1038 [codecarbon INFO @ 02:41:31] Energy consumed for RAM : 0.000870 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:41:31] Energy consumed for all CPUs : 0.012928 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9117 - loss: 0.1037[codecarbon INFO @ 02:41:46] Energy consumed for RAM : 0.000882 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:41:46] Energy consumed for all CPUs : 0.013105 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9114 - loss: 0.1037 - val_accuracy: 0.6090 - val_loss: 0.3039
+Epoch 20/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.9240 - loss: 0.0941[codecarbon INFO @ 02:42:01] Energy consumed for RAM : 0.000893 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:42:01] Energy consumed for all CPUs : 0.013283 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 10s 2s/step - accuracy: 0.9193 - loss: 0.0984[codecarbon INFO @ 02:42:16] Energy consumed for RAM : 0.000905 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:42:16] Energy consumed for all CPUs : 0.013460 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9117 - loss: 0.1007[codecarbon INFO @ 02:42:31] Energy consumed for RAM : 0.000917 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:42:31] Energy consumed for all CPUs : 0.013637 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9105 - loss: 0.1010 - val_accuracy: 0.6090 - val_loss: 0.3003
+[codecarbon INFO @ 02:42:46] Energy consumed for RAM : 0.000929 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:42:46] Energy consumed for all CPUs : 0.013814 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:42:46] 0.014743 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:43:01] Energy consumed for RAM : 0.000941 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:43:01] Energy consumed for all CPUs : 0.013991 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:43:01] 0.014932 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:43:11] Energy consumed for RAM : 0.000949 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:43:11] Energy consumed for all CPUs : 0.014107 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:43:11] 0.015056 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:43:11] 0.008987 g.CO2eq/s mean an estimation of 283.4208014515616 kg.CO2eq/year
+[MEMORY] Current memory usage: 2003.21 MB
+[ENERGY] Estimated energy usage for Set 2: 0.0107 kg CO₂
+Found 7045 images belonging to 2 classes.
+/home/client1/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 418s 2s/step
+Test Accuracy : 85.22%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.83      0.90      0.87      3768
+   notdrowsy       0.88      0.79      0.83      3277
+
+    accuracy                           0.85      7045
+   macro avg       0.86      0.85      0.85      7045
+weighted avg       0.85      0.85      0.85      7045
+
+Sending updated weights (3342264 bytes) to the server...
+Uploading weights: 100%|████████████████████████████████████████████████████████| 3.34M/3.34M [00:00<00:00, 14.0MB/s]
+Training and weight update for Round 2 completed.
+
+
+==== Round 3 ====
+Receiving encrypted model (2500772 bytes)...
+Receiving model: 100%|██████████████████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 6.22MB/s]
+Model for Round 3 loaded successfully.
+Found 629 images belonging to 2 classes.
+Found 157 images belonging to 2 classes.
+Training locally on Set 3...
+[codecarbon INFO @ 02:50:57] [setup] RAM Tracking...
+[codecarbon INFO @ 02:50:57] [setup] CPU Tracking...
+[codecarbon WARNING @ 02:50:57] No CPU tracking mode found. Falling back on CPU constant mode.
+ Linux OS detected: Please ensure RAPL files exist at \sys\class\powercap\intel-rapl to measure CPU
+
+[codecarbon WARNING @ 02:50:58] We saw that you have a Cortex-A72 but we don't know it. Please contact us.
+[codecarbon INFO @ 02:50:58] CPU Model on constant consumption mode: Cortex-A72
+[codecarbon INFO @ 02:50:58] [setup] GPU Tracking...
+[codecarbon INFO @ 02:50:58] No GPU found.
+[codecarbon INFO @ 02:50:58] >>> Tracker's metadata:
+[codecarbon INFO @ 02:50:58]   Platform system: Linux-6.6.74+rpt-rpi-v8-aarch64-with-glibc2.36
+[codecarbon INFO @ 02:50:58]   Python version: 3.11.2
+[codecarbon INFO @ 02:50:58]   CodeCarbon version: 2.8.4
+[codecarbon INFO @ 02:50:58]   Available RAM : 7.627 GB
+[codecarbon INFO @ 02:50:58]   CPU count: 4
+[codecarbon INFO @ 02:50:58]   CPU model: Cortex-A72
+[codecarbon INFO @ 02:50:58]   GPU count: None
+[codecarbon INFO @ 02:50:58]   GPU model: None
+[codecarbon INFO @ 02:51:01] Emissions data (if any) will be saved to file /home/client1/Client1/emissions.csv
+/home/client1/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Epoch 1/20
+[codecarbon INFO @ 02:51:16] Energy consumed for RAM : 0.000012 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:51:16] Energy consumed for all CPUs : 0.000177 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:51:16] 0.000189 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.9253 - loss: 0.1011[codecarbon INFO @ 02:51:31] Energy consumed for RAM : 0.000024 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:51:31] Energy consumed for all CPUs : 0.000354 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9019 - loss: 0.1096[codecarbon INFO @ 02:51:46] Energy consumed for RAM : 0.000036 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:51:46] Energy consumed for all CPUs : 0.000531 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8974 - loss: 0.1113[codecarbon INFO @ 02:52:01] Energy consumed for RAM : 0.000048 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:52:01] Energy consumed for all CPUs : 0.000708 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 67s 3s/step - accuracy: 0.8966 - loss: 0.1116 - val_accuracy: 0.6752 - val_loss: 0.2714
+Epoch 2/20
+[codecarbon INFO @ 02:52:16] Energy consumed for RAM : 0.000060 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:52:16] Energy consumed for all CPUs : 0.000885 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:52:16] 0.000945 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:52:31] Energy consumed for RAM : 0.000071 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:52:31] Energy consumed for all CPUs : 0.001063 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:52:31] 0.001134 kWh of electricity used since the beginning.
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.8971 - loss: 0.1264[codecarbon INFO @ 02:52:46] Energy consumed for RAM : 0.000083 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:52:46] Energy consumed for all CPUs : 0.001240 kWh. Total CPU Power : 42.5 W
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.8998 - loss: 0.1128[codecarbon INFO @ 02:53:01] Energy consumed for RAM : 0.000095 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:53:01] Energy consumed for all CPUs : 0.001417 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:53:01] 0.001512 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9002 - loss: 0.1106[codecarbon INFO @ 02:53:16] Energy consumed for RAM : 0.000107 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:53:16] Energy consumed for all CPUs : 0.001594 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 75s 2s/step - accuracy: 0.9001 - loss: 0.1104 - val_accuracy: 0.6369 - val_loss: 0.2750
+Epoch 3/20
+[codecarbon INFO @ 02:53:31] Energy consumed for RAM : 0.000119 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:53:31] Energy consumed for all CPUs : 0.001771 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:53:31] 0.001890 kWh of electricity used since the beginning.
+[codecarbon INFO @ 02:53:46] Energy consumed for RAM : 0.000131 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:53:46] Energy consumed for all CPUs : 0.001948 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:53:46] 0.002079 kWh of electricity used since the beginning.
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 11:42 37s/step - accuracy: 0.8571 - loss: 0.1131[codecarbon INFO @ 02:54:01] Energy consumed for RAM : 0.000143 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:54:01] Energy consumed for all CPUs : 0.002125 kWh. Total CPU Power : 42.5 W
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.9114 - loss: 0.0986[codecarbon INFO @ 02:54:16] Energy consumed for RAM : 0.000155 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:54:16] Energy consumed for all CPUs : 0.002302 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9074 - loss: 0.0996[codecarbon INFO @ 02:54:31] Energy consumed for RAM : 0.000167 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:54:31] Energy consumed for all CPUs : 0.002479 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9064 - loss: 0.0998 - val_accuracy: 0.5924 - val_loss: 0.3121
+Epoch 4/20
+[codecarbon INFO @ 02:54:46] Energy consumed for RAM : 0.000179 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:54:46] Energy consumed for all CPUs : 0.002656 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:54:46] 0.002835 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 21s 2s/step - accuracy: 0.9289 - loss: 0.0867[codecarbon INFO @ 02:55:01] Energy consumed for RAM : 0.000191 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:55:01] Energy consumed for all CPUs : 0.002833 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:55:01] 0.003024 kWh of electricity used since the beginning.
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9135 - loss: 0.0949[codecarbon INFO @ 02:55:16] Energy consumed for RAM : 0.000203 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:55:16] Energy consumed for all CPUs : 0.003010 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9112 - loss: 0.0958[codecarbon INFO @ 02:55:31] Energy consumed for RAM : 0.000214 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:55:31] Energy consumed for all CPUs : 0.003188 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9105 - loss: 0.0961 - val_accuracy: 0.6115 - val_loss: 0.2971
+Epoch 5/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.9425 - loss: 0.0814[codecarbon INFO @ 02:55:46] Energy consumed for RAM : 0.000226 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:55:46] Energy consumed for all CPUs : 0.003365 kWh. Total CPU Power : 42.5 W
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.9296 - loss: 0.0888 [codecarbon INFO @ 02:56:01] Energy consumed for RAM : 0.000238 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:56:01] Energy consumed for all CPUs : 0.003542 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9240 - loss: 0.0913[codecarbon INFO @ 02:56:16] Energy consumed for RAM : 0.000250 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:56:16] Energy consumed for all CPUs : 0.003719 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9232 - loss: 0.0916 - val_accuracy: 0.5924 - val_loss: 0.2997
+Epoch 6/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.8868 - loss: 0.1127[codecarbon INFO @ 02:56:31] Energy consumed for RAM : 0.000262 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:56:31] Energy consumed for all CPUs : 0.003896 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.8830 - loss: 0.1119[codecarbon INFO @ 02:56:46] Energy consumed for RAM : 0.000274 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:56:46] Energy consumed for all CPUs : 0.004073 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8835 - loss: 0.1105[codecarbon INFO @ 02:57:01] Energy consumed for RAM : 0.000286 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:57:01] Energy consumed for all CPUs : 0.004250 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:57:01] 0.004536 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.8838 - loss: 0.1103 - val_accuracy: 0.6051 - val_loss: 0.2901
+Epoch 7/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.9105 - loss: 0.0853[codecarbon INFO @ 02:57:16] Energy consumed for RAM : 0.000298 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:57:16] Energy consumed for all CPUs : 0.004427 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 10s 2s/step - accuracy: 0.9219 - loss: 0.0879[codecarbon INFO @ 02:57:31] Energy consumed for RAM : 0.000310 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:57:31] Energy consumed for all CPUs : 0.004604 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9230 - loss: 0.0895[codecarbon INFO @ 02:57:46] Energy consumed for RAM : 0.000322 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:57:46] Energy consumed for all CPUs : 0.004781 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9227 - loss: 0.0899 - val_accuracy: 0.5924 - val_loss: 0.2936
+Epoch 8/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.8613 - loss: 0.1133[codecarbon INFO @ 02:58:01] Energy consumed for RAM : 0.000334 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:58:01] Energy consumed for all CPUs : 0.004958 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8853 - loss: 0.1028[codecarbon INFO @ 02:58:16] Energy consumed for RAM : 0.000345 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:58:16] Energy consumed for all CPUs : 0.005135 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8925 - loss: 0.1010[codecarbon INFO @ 02:58:31] Energy consumed for RAM : 0.000357 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:58:31] Energy consumed for all CPUs : 0.005312 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8935 - loss: 0.1007 - val_accuracy: 0.6115 - val_loss: 0.2847
+Epoch 9/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.8715 - loss: 0.1172[codecarbon INFO @ 02:58:46] Energy consumed for RAM : 0.000369 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:58:46] Energy consumed for all CPUs : 0.005489 kWh. Total CPU Power : 42.5 W
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.9043 - loss: 0.1024[codecarbon INFO @ 02:59:01] Energy consumed for RAM : 0.000381 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:59:01] Energy consumed for all CPUs : 0.005667 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 02:59:01] 0.006048 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9109 - loss: 0.0986[codecarbon INFO @ 02:59:16] Energy consumed for RAM : 0.000393 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:59:16] Energy consumed for all CPUs : 0.005844 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9109 - loss: 0.0985 - val_accuracy: 0.5987 - val_loss: 0.2900
+Epoch 10/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.9219 - loss: 0.0789[codecarbon INFO @ 02:59:31] Energy consumed for RAM : 0.000405 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:59:31] Energy consumed for all CPUs : 0.006021 kWh. Total CPU Power : 42.5 W
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.8981 - loss: 0.0970[codecarbon INFO @ 02:59:46] Energy consumed for RAM : 0.000417 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 02:59:46] Energy consumed for all CPUs : 0.006198 kWh. Total CPU Power : 42.5 W
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8975 - loss: 0.0995[codecarbon INFO @ 03:00:01] Energy consumed for RAM : 0.000429 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:00:01] Energy consumed for all CPUs : 0.006375 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.8971 - loss: 0.0997 - val_accuracy: 0.6242 - val_loss: 0.2853
+Epoch 11/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.8828 - loss: 0.0997[codecarbon INFO @ 03:00:16] Energy consumed for RAM : 0.000441 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:00:16] Energy consumed for all CPUs : 0.006552 kWh. Total CPU Power : 42.5 W
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.9021 - loss: 0.0952[codecarbon INFO @ 03:00:31] Energy consumed for RAM : 0.000453 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:00:31] Energy consumed for all CPUs : 0.006729 kWh. Total CPU Power : 42.5 W
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.9088 - loss: 0.0925[codecarbon INFO @ 03:00:46] Energy consumed for RAM : 0.000465 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:00:46] Energy consumed for all CPUs : 0.006906 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9090 - loss: 0.0926 - val_accuracy: 0.6369 - val_loss: 0.3016
+Epoch 12/20
+[codecarbon INFO @ 03:01:01] Energy consumed for RAM : 0.000476 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:01:01] Energy consumed for all CPUs : 0.007083 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:01:01] 0.007560 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:01:01] 0.008987 g.CO2eq/s mean an estimation of 283.4153296261299 kg.CO2eq/year
+[codecarbon INFO @ 03:01:16] Energy consumed for RAM : 0.000488 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:01:16] Energy consumed for all CPUs : 0.007260 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:01:16] 0.007749 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:01:31] Energy consumed for RAM : 0.000500 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:01:31] Energy consumed for all CPUs : 0.007437 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:01:31] 0.007938 kWh of electricity used since the beginning.
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 26s 2s/step - accuracy: 0.9169 - loss: 0.1036[codecarbon INFO @ 03:01:46] Energy consumed for RAM : 0.000512 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:01:46] Energy consumed for all CPUs : 0.007615 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 11s 2s/step - accuracy: 0.9119 - loss: 0.1002[codecarbon INFO @ 03:02:01] Energy consumed for RAM : 0.000524 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:02:01] Energy consumed for all CPUs : 0.007792 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9130 - loss: 0.0977[codecarbon INFO @ 03:02:16] Energy consumed for RAM : 0.000536 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:02:16] Energy consumed for all CPUs : 0.007969 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 83s 2s/step - accuracy: 0.9133 - loss: 0.0973 - val_accuracy: 0.6178 - val_loss: 0.2900
+Epoch 13/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.9118 - loss: 0.0845[codecarbon INFO @ 03:02:31] Energy consumed for RAM : 0.000548 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:02:31] Energy consumed for all CPUs : 0.008146 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 10s 2s/step - accuracy: 0.9076 - loss: 0.0885[codecarbon INFO @ 03:02:46] Energy consumed for RAM : 0.000560 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:02:46] Energy consumed for all CPUs : 0.008323 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9089 - loss: 0.0889[codecarbon INFO @ 03:03:01] Energy consumed for RAM : 0.000572 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:03:01] Energy consumed for all CPUs : 0.008500 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:03:01] 0.009072 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9087 - loss: 0.0891 - val_accuracy: 0.6178 - val_loss: 0.3004
+Epoch 14/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.8555 - loss: 0.1261[codecarbon INFO @ 03:03:16] Energy consumed for RAM : 0.000584 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:03:16] Energy consumed for all CPUs : 0.008677 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.8850 - loss: 0.1091[codecarbon INFO @ 03:03:31] Energy consumed for RAM : 0.000596 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:03:31] Energy consumed for all CPUs : 0.008855 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8943 - loss: 0.1047[codecarbon INFO @ 03:03:46] Energy consumed for RAM : 0.000608 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:03:46] Energy consumed for all CPUs : 0.009032 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.8951 - loss: 0.1043 - val_accuracy: 0.5987 - val_loss: 0.3181
+Epoch 15/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.9497 - loss: 0.0753[codecarbon INFO @ 03:04:01] Energy consumed for RAM : 0.000619 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:04:01] Energy consumed for all CPUs : 0.009209 kWh. Total CPU Power : 42.5 W
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9225 - loss: 0.0836[codecarbon INFO @ 03:04:16] Energy consumed for RAM : 0.000631 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:04:16] Energy consumed for all CPUs : 0.009386 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9105 - loss: 0.0887[codecarbon INFO @ 03:04:31] Energy consumed for RAM : 0.000643 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:04:31] Energy consumed for all CPUs : 0.009563 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9092 - loss: 0.0891 - val_accuracy: 0.5987 - val_loss: 0.3125
+Epoch 16/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.9635 - loss: 0.0765[codecarbon INFO @ 03:04:46] Energy consumed for RAM : 0.000655 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:04:46] Energy consumed for all CPUs : 0.009740 kWh. Total CPU Power : 42.5 W
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.9351 - loss: 0.0848[codecarbon INFO @ 03:05:01] Energy consumed for RAM : 0.000667 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:05:01] Energy consumed for all CPUs : 0.009918 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:05:01] 0.010585 kWh of electricity used since the beginning.
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.9271 - loss: 0.0876[codecarbon INFO @ 03:05:16] Energy consumed for RAM : 0.000679 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:05:16] Energy consumed for all CPUs : 0.010094 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9254 - loss: 0.0882 - val_accuracy: 0.5987 - val_loss: 0.3056
+Epoch 17/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 33s 2s/step - accuracy: 0.9062 - loss: 0.0920[codecarbon INFO @ 03:05:31] Energy consumed for RAM : 0.000691 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:05:31] Energy consumed for all CPUs : 0.010272 kWh. Total CPU Power : 42.5 W
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.8988 - loss: 0.0911[codecarbon INFO @ 03:05:46] Energy consumed for RAM : 0.000703 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:05:46] Energy consumed for all CPUs : 0.010449 kWh. Total CPU Power : 42.5 W
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9030 - loss: 0.0894[codecarbon INFO @ 03:06:01] Energy consumed for RAM : 0.000715 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:06:01] Energy consumed for all CPUs : 0.010626 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9043 - loss: 0.0890 - val_accuracy: 0.6051 - val_loss: 0.3132
+Epoch 18/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 41s 2s/step - accuracy: 0.9688 - loss: 0.0670[codecarbon INFO @ 03:06:16] Energy consumed for RAM : 0.000727 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:06:16] Energy consumed for all CPUs : 0.010803 kWh. Total CPU Power : 42.5 W
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.9489 - loss: 0.0788[codecarbon INFO @ 03:06:31] Energy consumed for RAM : 0.000739 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:06:31] Energy consumed for all CPUs : 0.010980 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9390 - loss: 0.0828[codecarbon INFO @ 03:06:46] Energy consumed for RAM : 0.000751 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:06:46] Energy consumed for all CPUs : 0.011157 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9373 - loss: 0.0833 - val_accuracy: 0.5987 - val_loss: 0.3170
+Epoch 19/20
+[codecarbon INFO @ 03:07:01] Energy consumed for RAM : 0.000762 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:07:01] Energy consumed for all CPUs : 0.011334 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:07:01] 0.012096 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:07:01] 0.008985 g.CO2eq/s mean an estimation of 283.3631293272018 kg.CO2eq/year
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.9300 - loss: 0.0723[codecarbon INFO @ 03:07:16] Energy consumed for RAM : 0.000774 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:07:16] Energy consumed for all CPUs : 0.011511 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9180 - loss: 0.0825[codecarbon INFO @ 03:07:31] Energy consumed for RAM : 0.000786 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:07:31] Energy consumed for all CPUs : 0.011688 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9165 - loss: 0.0836[codecarbon INFO @ 03:07:46] Energy consumed for RAM : 0.000798 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:07:46] Energy consumed for all CPUs : 0.011865 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9159 - loss: 0.0840 - val_accuracy: 0.6178 - val_loss: 0.3130
+Epoch 20/20
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 21s 2s/step - accuracy: 0.8992 - loss: 0.0910[codecarbon INFO @ 03:08:01] Energy consumed for RAM : 0.000810 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:08:02] Energy consumed for all CPUs : 0.012042 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9027 - loss: 0.0899[codecarbon INFO @ 03:08:16] Energy consumed for RAM : 0.000822 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:08:16] Energy consumed for all CPUs : 0.012219 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9034 - loss: 0.0900[codecarbon INFO @ 03:08:31] Energy consumed for RAM : 0.000834 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:08:31] Energy consumed for all CPUs : 0.012396 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9037 - loss: 0.0899 - val_accuracy: 0.5860 - val_loss: 0.3244
+[codecarbon INFO @ 03:08:33] Energy consumed for RAM : 0.000835 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:08:33] Energy consumed for all CPUs : 0.012417 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:08:33] 0.013252 kWh of electricity used since the beginning.
+[MEMORY] Current memory usage: 2182.45 MB
+[ENERGY] Estimated energy usage for Set 3: 0.0095 kg CO₂
+Found 7045 images belonging to 2 classes.
+/home/client1/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 416s 2s/step
+Test Accuracy : 84.54%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.82      0.91      0.86      3768
+   notdrowsy       0.88      0.77      0.82      3277
+
+    accuracy                           0.85      7045
+   macro avg       0.85      0.84      0.84      7045
+weighted avg       0.85      0.85      0.84      7045
+
+Sending updated weights (3056036 bytes) to the server...
+Uploading weights: 100%|████████████████████████████████████████████████████████| 3.06M/3.06M [00:00<00:00, 10.3MB/s]
+Training and weight update for Round 3 completed.
+
+
+==== Round 4 ====
+Receiving encrypted model (2498380 bytes)...
+Receiving model: 100%|██████████████████████████████████████████████████████████| 2.50M/2.50M [00:01<00:00, 2.44MB/s]
+Model for Round 4 loaded successfully.
+Found 630 images belonging to 2 classes.
+Found 156 images belonging to 2 classes.
+Training locally on Set 4...
+[codecarbon INFO @ 03:16:44] [setup] RAM Tracking...
+[codecarbon INFO @ 03:16:44] [setup] CPU Tracking...
+[codecarbon WARNING @ 03:16:44] No CPU tracking mode found. Falling back on CPU constant mode.
+ Linux OS detected: Please ensure RAPL files exist at \sys\class\powercap\intel-rapl to measure CPU
+
+[codecarbon WARNING @ 03:16:44] We saw that you have a Cortex-A72 but we don't know it. Please contact us.
+[codecarbon INFO @ 03:16:44] CPU Model on constant consumption mode: Cortex-A72
+[codecarbon INFO @ 03:16:44] [setup] GPU Tracking...
+[codecarbon INFO @ 03:16:44] No GPU found.
+[codecarbon INFO @ 03:16:44] >>> Tracker's metadata:
+[codecarbon INFO @ 03:16:44]   Platform system: Linux-6.6.74+rpt-rpi-v8-aarch64-with-glibc2.36
+[codecarbon INFO @ 03:16:44]   Python version: 3.11.2
+[codecarbon INFO @ 03:16:44]   CodeCarbon version: 2.8.4
+[codecarbon INFO @ 03:16:44]   Available RAM : 7.627 GB
+[codecarbon INFO @ 03:16:44]   CPU count: 4
+[codecarbon INFO @ 03:16:44]   CPU model: Cortex-A72
+[codecarbon INFO @ 03:16:44]   GPU count: None
+[codecarbon INFO @ 03:16:44]   GPU model: None
+[codecarbon INFO @ 03:16:48] Emissions data (if any) will be saved to file /home/client1/Client1/emissions.csv
+/home/client1/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Epoch 1/20
+[codecarbon INFO @ 03:17:03] Energy consumed for RAM : 0.000012 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:17:03] Energy consumed for all CPUs : 0.000177 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:17:03] 0.000189 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.8493 - loss: 0.1316[codecarbon INFO @ 03:17:18] Energy consumed for RAM : 0.000024 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:17:18] Energy consumed for all CPUs : 0.000354 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.8617 - loss: 0.1241[codecarbon INFO @ 03:17:33] Energy consumed for RAM : 0.000036 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:17:33] Energy consumed for all CPUs : 0.000532 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8652 - loss: 0.1223[codecarbon INFO @ 03:17:48] Energy consumed for RAM : 0.000048 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:17:48] Energy consumed for all CPUs : 0.000709 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 66s 3s/step - accuracy: 0.8661 - loss: 0.1218 - val_accuracy: 0.6731 - val_loss: 0.2640
+Epoch 2/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 29s 2s/step - accuracy: 0.8991 - loss: 0.1022[codecarbon INFO @ 03:18:03] Energy consumed for RAM : 0.000060 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:18:03] Energy consumed for all CPUs : 0.000886 kWh. Total CPU Power : 42.5 W
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9072 - loss: 0.1004[codecarbon INFO @ 03:18:18] Energy consumed for RAM : 0.000071 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:18:18] Energy consumed for all CPUs : 0.001063 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9025 - loss: 0.1016[codecarbon INFO @ 03:18:33] Energy consumed for RAM : 0.000083 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:18:33] Energy consumed for all CPUs : 0.001240 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9018 - loss: 0.1018 - val_accuracy: 0.6667 - val_loss: 0.2703
+Epoch 3/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 30s 2s/step - accuracy: 0.9062 - loss: 0.0795[codecarbon INFO @ 03:18:48] Energy consumed for RAM : 0.000095 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:18:48] Energy consumed for all CPUs : 0.001417 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:18:48] 0.001512 kWh of electricity used since the beginning.
+11/20 ━━━━━━━━━━━━━━━━━━━━ 15s 2s/step - accuracy: 0.9063 - loss: 0.0894[codecarbon INFO @ 03:19:03] Energy consumed for RAM : 0.000107 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:19:03] Energy consumed for all CPUs : 0.001594 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9015 - loss: 0.0931[codecarbon INFO @ 03:19:18] Energy consumed for RAM : 0.000119 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:19:18] Energy consumed for all CPUs : 0.001771 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9012 - loss: 0.0934 - val_accuracy: 0.6795 - val_loss: 0.2766
+Epoch 4/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.8672 - loss: 0.1083[codecarbon INFO @ 03:19:33] Energy consumed for RAM : 0.000131 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:19:33] Energy consumed for all CPUs : 0.001948 kWh. Total CPU Power : 42.5 W
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.8932 - loss: 0.0972[codecarbon INFO @ 03:19:48] Energy consumed for RAM : 0.000143 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:19:48] Energy consumed for all CPUs : 0.002125 kWh. Total CPU Power : 42.5 W
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8958 - loss: 0.0949[codecarbon INFO @ 03:20:03] Energy consumed for RAM : 0.000155 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:20:03] Energy consumed for all CPUs : 0.002302 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.8958 - loss: 0.0949 - val_accuracy: 0.6795 - val_loss: 0.2777
+Epoch 5/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 32s 2s/step - accuracy: 0.9219 - loss: 0.0825[codecarbon INFO @ 03:20:18] Energy consumed for RAM : 0.000167 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:20:18] Energy consumed for all CPUs : 0.002480 kWh. Total CPU Power : 42.5 W
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.9144 - loss: 0.0920[codecarbon INFO @ 03:20:33] Energy consumed for RAM : 0.000179 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:20:33] Energy consumed for all CPUs : 0.002656 kWh. Total CPU Power : 42.5 W
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.9108 - loss: 0.0932[codecarbon INFO @ 03:20:48] Energy consumed for RAM : 0.000191 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:20:48] Energy consumed for all CPUs : 0.002834 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:20:48] 0.003024 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9102 - loss: 0.0933 - val_accuracy: 0.6731 - val_loss: 0.2889
+Epoch 6/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 41s 2s/step - accuracy: 0.9062 - loss: 0.1182[codecarbon INFO @ 03:21:03] Energy consumed for RAM : 0.000203 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:21:03] Energy consumed for all CPUs : 0.003011 kWh. Total CPU Power : 42.5 W
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.9080 - loss: 0.1056[codecarbon INFO @ 03:21:18] Energy consumed for RAM : 0.000214 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:21:18] Energy consumed for all CPUs : 0.003188 kWh. Total CPU Power : 42.5 W
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9104 - loss: 0.0989[codecarbon INFO @ 03:21:33] Energy consumed for RAM : 0.000226 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:21:33] Energy consumed for all CPUs : 0.003365 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9106 - loss: 0.0979 - val_accuracy: 0.6603 - val_loss: 0.2963
+Epoch 7/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 39s 2s/step - accuracy: 0.9375 - loss: 0.0890[codecarbon INFO @ 03:21:48] Energy consumed for RAM : 0.000238 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:21:48] Energy consumed for all CPUs : 0.003542 kWh. Total CPU Power : 42.5 W
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.9132 - loss: 0.0934[codecarbon INFO @ 03:22:03] Energy consumed for RAM : 0.000250 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:22:03] Energy consumed for all CPUs : 0.003719 kWh. Total CPU Power : 42.5 W
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9129 - loss: 0.0932[codecarbon INFO @ 03:22:18] Energy consumed for RAM : 0.000262 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:22:18] Energy consumed for all CPUs : 0.003896 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9127 - loss: 0.0930 - val_accuracy: 0.6667 - val_loss: 0.2894
+Epoch 8/20
+[codecarbon INFO @ 03:22:33] Energy consumed for RAM : 0.000274 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:22:33] Energy consumed for all CPUs : 0.004073 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:22:33] 0.004347 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:22:48] Energy consumed for RAM : 0.000286 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:22:48] Energy consumed for all CPUs : 0.004250 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:22:48] 0.004536 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:22:48] 0.008986 g.CO2eq/s mean an estimation of 283.38327675028063 kg.CO2eq/year
+[codecarbon INFO @ 03:23:03] Energy consumed for RAM : 0.000298 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:23:03] Energy consumed for all CPUs : 0.004428 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:23:03] 0.004725 kWh of electricity used since the beginning.
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.9443 - loss: 0.0894[codecarbon INFO @ 03:23:18] Energy consumed for RAM : 0.000310 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:23:18] Energy consumed for all CPUs : 0.004605 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 10s 2s/step - accuracy: 0.9236 - loss: 0.0940[codecarbon INFO @ 03:23:33] Energy consumed for RAM : 0.000322 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:23:33] Energy consumed for all CPUs : 0.004782 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9198 - loss: 0.0944[codecarbon INFO @ 03:23:48] Energy consumed for RAM : 0.000334 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:23:48] Energy consumed for all CPUs : 0.004959 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9196 - loss: 0.0944 - val_accuracy: 0.6538 - val_loss: 0.3036
+Epoch 9/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.9474 - loss: 0.0884[codecarbon INFO @ 03:24:03] Energy consumed for RAM : 0.000345 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:24:03] Energy consumed for all CPUs : 0.005136 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.9269 - loss: 0.0924[codecarbon INFO @ 03:24:18] Energy consumed for RAM : 0.000357 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:24:18] Energy consumed for all CPUs : 0.005313 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9211 - loss: 0.0932[codecarbon INFO @ 03:24:33] Energy consumed for RAM : 0.000369 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:24:33] Energy consumed for all CPUs : 0.005490 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9207 - loss: 0.0933 - val_accuracy: 0.6410 - val_loss: 0.3078
+Epoch 10/20
+[codecarbon INFO @ 03:24:48] Energy consumed for RAM : 0.000381 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:24:48] Energy consumed for all CPUs : 0.005667 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:24:48] 0.006048 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:24:48] 0.008986 g.CO2eq/s mean an estimation of 283.3980427213108 kg.CO2eq/year
+[codecarbon INFO @ 03:25:03] Energy consumed for RAM : 0.000393 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:25:03] Energy consumed for all CPUs : 0.005844 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:25:03] 0.006237 kWh of electricity used since the beginning.
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 12:03 38s/step - accuracy: 0.9688 - loss: 0.0575[codecarbon INFO @ 03:25:18] Energy consumed for RAM : 0.000405 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:25:18] Energy consumed for all CPUs : 0.006021 kWh. Total CPU Power : 42.5 W
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.9348 - loss: 0.0669[codecarbon INFO @ 03:25:33] Energy consumed for RAM : 0.000417 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:25:33] Energy consumed for all CPUs : 0.006198 kWh. Total CPU Power : 42.5 W
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9204 - loss: 0.0765[codecarbon INFO @ 03:25:48] Energy consumed for RAM : 0.000429 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:25:48] Energy consumed for all CPUs : 0.006376 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 83s 2s/step - accuracy: 0.9176 - loss: 0.0782 - val_accuracy: 0.6667 - val_loss: 0.2865
+Epoch 11/20
+[codecarbon INFO @ 03:26:03] Energy consumed for RAM : 0.000441 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:26:03] Energy consumed for all CPUs : 0.006553 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:26:03] 0.006993 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 21s 2s/step - accuracy: 0.8959 - loss: 0.0974[codecarbon INFO @ 03:26:18] Energy consumed for RAM : 0.000453 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:26:18] Energy consumed for all CPUs : 0.006730 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9083 - loss: 0.0941[codecarbon INFO @ 03:26:33] Energy consumed for RAM : 0.000465 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:26:33] Energy consumed for all CPUs : 0.006907 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9093 - loss: 0.0935 - val_accuracy: 0.6667 - val_loss: 0.2814
+Epoch 12/20
+[codecarbon INFO @ 03:26:48] Energy consumed for RAM : 0.000477 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:26:48] Energy consumed for all CPUs : 0.007084 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:26:48] 0.007561 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:26:48] 0.008986 g.CO2eq/s mean an estimation of 283.3750756475783 kg.CO2eq/year
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 21s 2s/step - accuracy: 0.9030 - loss: 0.0882[codecarbon INFO @ 03:27:03] Energy consumed for RAM : 0.000488 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:27:03] Energy consumed for all CPUs : 0.007261 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9075 - loss: 0.0871[codecarbon INFO @ 03:27:18] Energy consumed for RAM : 0.000500 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:27:18] Energy consumed for all CPUs : 0.007438 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9090 - loss: 0.0869[codecarbon INFO @ 03:27:33] Energy consumed for RAM : 0.000512 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:27:33] Energy consumed for all CPUs : 0.007615 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9093 - loss: 0.0869 - val_accuracy: 0.6795 - val_loss: 0.2771
+Epoch 13/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 23s 2s/step - accuracy: 0.9643 - loss: 0.0599[codecarbon INFO @ 03:27:48] Energy consumed for RAM : 0.000524 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:27:48] Energy consumed for all CPUs : 0.007792 kWh. Total CPU Power : 42.5 W
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.9413 - loss: 0.0718 [codecarbon INFO @ 03:28:03] Energy consumed for RAM : 0.000536 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:28:03] Energy consumed for all CPUs : 0.007969 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9360 - loss: 0.0752[codecarbon INFO @ 03:28:18] Energy consumed for RAM : 0.000548 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:28:18] Energy consumed for all CPUs : 0.008146 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9351 - loss: 0.0758 - val_accuracy: 0.6346 - val_loss: 0.3051
+Epoch 14/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 22s 2s/step - accuracy: 0.9453 - loss: 0.0718[codecarbon INFO @ 03:28:33] Energy consumed for RAM : 0.000560 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:28:33] Energy consumed for all CPUs : 0.008324 kWh. Total CPU Power : 42.5 W
+15/20 ━━━━━━━━━━━━━━━━━━━━ 8s 2s/step - accuracy: 0.9307 - loss: 0.0806 [codecarbon INFO @ 03:28:48] Energy consumed for RAM : 0.000572 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:28:48] Energy consumed for all CPUs : 0.008501 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:28:48] 0.009073 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9258 - loss: 0.0827[codecarbon INFO @ 03:29:03] Energy consumed for RAM : 0.000584 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:29:03] Energy consumed for all CPUs : 0.008678 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9250 - loss: 0.0831 - val_accuracy: 0.6795 - val_loss: 0.2813
+Epoch 15/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.9854 - loss: 0.0473[codecarbon INFO @ 03:29:18] Energy consumed for RAM : 0.000596 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:29:18] Energy consumed for all CPUs : 0.008855 kWh. Total CPU Power : 42.5 W
+15/20 ━━━━━━━━━━━━━━━━━━━━ 8s 2s/step - accuracy: 0.9574 - loss: 0.0622 [codecarbon INFO @ 03:29:33] Energy consumed for RAM : 0.000608 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:29:33] Energy consumed for all CPUs : 0.009032 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9504 - loss: 0.0664[codecarbon INFO @ 03:29:48] Energy consumed for RAM : 0.000619 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:29:48] Energy consumed for all CPUs : 0.009209 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9494 - loss: 0.0671 - val_accuracy: 0.6731 - val_loss: 0.3010
+Epoch 16/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.9244 - loss: 0.0791[codecarbon INFO @ 03:30:03] Energy consumed for RAM : 0.000631 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:30:03] Energy consumed for all CPUs : 0.009386 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 10s 2s/step - accuracy: 0.9241 - loss: 0.0797[codecarbon INFO @ 03:30:18] Energy consumed for RAM : 0.000643 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:30:18] Energy consumed for all CPUs : 0.009563 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9216 - loss: 0.0808[codecarbon INFO @ 03:30:33] Energy consumed for RAM : 0.000655 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:30:33] Energy consumed for all CPUs : 0.009740 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9213 - loss: 0.0809 - val_accuracy: 0.6603 - val_loss: 0.3204
+Epoch 17/20
+[codecarbon INFO @ 03:30:48] Energy consumed for RAM : 0.000667 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:30:48] Energy consumed for all CPUs : 0.009917 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:30:48] 0.010584 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:30:48] 0.008986 g.CO2eq/s mean an estimation of 283.3822336689478 kg.CO2eq/year
+[codecarbon INFO @ 03:31:03] Energy consumed for RAM : 0.000679 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:31:03] Energy consumed for all CPUs : 0.010094 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:31:03] 0.010773 kWh of electricity used since the beginning.
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 33s 2s/step - accuracy: 0.9219 - loss: 0.0861   [codecarbon INFO @ 03:31:18] Energy consumed for RAM : 0.000691 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:31:18] Energy consumed for all CPUs : 0.010272 kWh. Total CPU Power : 42.5 W
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.9120 - loss: 0.0842[codecarbon INFO @ 03:31:33] Energy consumed for RAM : 0.000703 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:31:33] Energy consumed for all CPUs : 0.010449 kWh. Total CPU Power : 42.5 W
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9105 - loss: 0.0852[codecarbon INFO @ 03:31:48] Energy consumed for RAM : 0.000715 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:31:48] Energy consumed for all CPUs : 0.010625 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9112 - loss: 0.0850 - val_accuracy: 0.6538 - val_loss: 0.3190
+Epoch 18/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 40s 2s/step - accuracy: 0.9375 - loss: 0.0684[codecarbon INFO @ 03:32:03] Energy consumed for RAM : 0.000727 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:32:03] Energy consumed for all CPUs : 0.010803 kWh. Total CPU Power : 42.5 W
+10/20 ━━━━━━━━━━━━━━━━━━━━ 17s 2s/step - accuracy: 0.9078 - loss: 0.0930[codecarbon INFO @ 03:32:18] Energy consumed for RAM : 0.000739 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:32:18] Energy consumed for all CPUs : 0.010980 kWh. Total CPU Power : 42.5 W
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9096 - loss: 0.0926[codecarbon INFO @ 03:32:33] Energy consumed for RAM : 0.000751 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:32:33] Energy consumed for all CPUs : 0.011157 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9104 - loss: 0.0921 - val_accuracy: 0.6474 - val_loss: 0.3149
+Epoch 19/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 39s 2s/step - accuracy: 0.8750 - loss: 0.0937[codecarbon INFO @ 03:32:48] Energy consumed for RAM : 0.000762 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:32:48] Energy consumed for all CPUs : 0.011334 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:32:48] 0.012097 kWh of electricity used since the beginning.
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.8944 - loss: 0.0935[codecarbon INFO @ 03:33:03] Energy consumed for RAM : 0.000774 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:33:03] Energy consumed for all CPUs : 0.011511 kWh. Total CPU Power : 42.5 W
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9034 - loss: 0.0925[codecarbon INFO @ 03:33:18] Energy consumed for RAM : 0.000786 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:33:18] Energy consumed for all CPUs : 0.011688 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9050 - loss: 0.0922 - val_accuracy: 0.6538 - val_loss: 0.3082
+Epoch 20/20
+[codecarbon INFO @ 03:33:33] Energy consumed for RAM : 0.000798 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:33:33] Energy consumed for all CPUs : 0.011865 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:33:33] 0.012663 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:33:48] Energy consumed for RAM : 0.000810 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:33:48] Energy consumed for all CPUs : 0.012042 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:33:48] 0.012852 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:34:03] Energy consumed for RAM : 0.000822 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:34:03] Energy consumed for all CPUs : 0.012219 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:34:03] 0.013041 kWh of electricity used since the beginning.
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.9092 - loss: 0.0808[codecarbon INFO @ 03:34:18] Energy consumed for RAM : 0.000834 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:34:18] Energy consumed for all CPUs : 0.012396 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 10s 2s/step - accuracy: 0.9136 - loss: 0.0826[codecarbon INFO @ 03:34:33] Energy consumed for RAM : 0.000846 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:34:33] Energy consumed for all CPUs : 0.012574 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9142 - loss: 0.0826[codecarbon INFO @ 03:34:48] Energy consumed for RAM : 0.000858 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:34:48] Energy consumed for all CPUs : 0.012751 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:34:48] 0.013608 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9145 - loss: 0.0825 - val_accuracy: 0.6474 - val_loss: 0.3077
+[codecarbon INFO @ 03:34:53] Energy consumed for RAM : 0.000862 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:34:53] Energy consumed for all CPUs : 0.012811 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:34:53] 0.013673 kWh of electricity used since the beginning.
+[MEMORY] Current memory usage: 2214.09 MB
+[ENERGY] Estimated energy usage for Set 4: 0.0098 kg CO₂
+Found 7045 images belonging to 2 classes.
+/home/client1/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 411s 2s/step
+Test Accuracy : 87.71%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.91      0.85      0.88      3768
+   notdrowsy       0.84      0.91      0.87      3277
+
+    accuracy                           0.88      7045
+   macro avg       0.88      0.88      0.88      7045
+weighted avg       0.88      0.88      0.88      7045
+
+Sending updated weights (3044024 bytes) to the server...
+Uploading weights: 100%|████████████████████████████████████████████████████████| 3.04M/3.04M [00:00<00:00, 11.9MB/s]
+Training and weight update for Round 4 completed.
+
+
+==== Round 5 ====
+Receiving encrypted model (2495672 bytes)...
+Receiving model: 100%|██████████████████████████████████████████████████████████| 2.50M/2.50M [00:00<00:00, 5.71MB/s]
+Model for Round 5 loaded successfully.
+Found 630 images belonging to 2 classes.
+Found 157 images belonging to 2 classes.
+Training locally on Set 5...
+[codecarbon INFO @ 03:42:32] [setup] RAM Tracking...
+[codecarbon INFO @ 03:42:32] [setup] CPU Tracking...
+[codecarbon WARNING @ 03:42:32] No CPU tracking mode found. Falling back on CPU constant mode.
+ Linux OS detected: Please ensure RAPL files exist at \sys\class\powercap\intel-rapl to measure CPU
+
+[codecarbon WARNING @ 03:42:32] We saw that you have a Cortex-A72 but we don't know it. Please contact us.
+[codecarbon INFO @ 03:42:32] CPU Model on constant consumption mode: Cortex-A72
+[codecarbon INFO @ 03:42:32] [setup] GPU Tracking...
+[codecarbon INFO @ 03:42:32] No GPU found.
+[codecarbon INFO @ 03:42:32] >>> Tracker's metadata:
+[codecarbon INFO @ 03:42:32]   Platform system: Linux-6.6.74+rpt-rpi-v8-aarch64-with-glibc2.36
+[codecarbon INFO @ 03:42:32]   Python version: 3.11.2
+[codecarbon INFO @ 03:42:32]   CodeCarbon version: 2.8.4
+[codecarbon INFO @ 03:42:32]   Available RAM : 7.627 GB
+[codecarbon INFO @ 03:42:32]   CPU count: 4
+[codecarbon INFO @ 03:42:32]   CPU model: Cortex-A72
+[codecarbon INFO @ 03:42:32]   GPU count: None
+[codecarbon INFO @ 03:42:32]   GPU model: None
+[codecarbon INFO @ 03:42:36] Emissions data (if any) will be saved to file /home/client1/Client1/emissions.csv
+/home/client1/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+Epoch 1/20
+[codecarbon INFO @ 03:42:51] Energy consumed for RAM : 0.000012 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:42:51] Energy consumed for all CPUs : 0.000177 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:42:51] 0.000189 kWh of electricity used since the beginning.
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.8808 - loss: 0.1120[codecarbon INFO @ 03:43:06] Energy consumed for RAM : 0.000024 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:43:06] Energy consumed for all CPUs : 0.000354 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.8778 - loss: 0.1109[codecarbon INFO @ 03:43:21] Energy consumed for RAM : 0.000036 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:43:21] Energy consumed for all CPUs : 0.000531 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8803 - loss: 0.1095[codecarbon INFO @ 03:43:36] Energy consumed for RAM : 0.000048 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:43:36] Energy consumed for all CPUs : 0.000709 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 67s 3s/step - accuracy: 0.8809 - loss: 0.1092 - val_accuracy: 0.6688 - val_loss: 0.2631
+Epoch 2/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 30s 2s/step - accuracy: 0.9132 - loss: 0.0856[codecarbon INFO @ 03:43:51] Energy consumed for RAM : 0.000060 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:43:51] Energy consumed for all CPUs : 0.000886 kWh. Total CPU Power : 42.5 W
+12/20 ━━━━━━━━━━━━━━━━━━━━ 14s 2s/step - accuracy: 0.9035 - loss: 0.0971[codecarbon INFO @ 03:44:06] Energy consumed for RAM : 0.000072 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:44:06] Energy consumed for all CPUs : 0.001063 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.8982 - loss: 0.1007[codecarbon INFO @ 03:44:21] Energy consumed for RAM : 0.000083 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:44:21] Energy consumed for all CPUs : 0.001240 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.8976 - loss: 0.1010 - val_accuracy: 0.6497 - val_loss: 0.2628
+Epoch 3/20
+ 3/20 ━━━━━━━━━━━━━━━━━━━━ 31s 2s/step - accuracy: 0.8472 - loss: 0.1309[codecarbon INFO @ 03:44:36] Energy consumed for RAM : 0.000095 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:44:36] Energy consumed for all CPUs : 0.001417 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:44:36] 0.001513 kWh of electricity used since the beginning.
+11/20 ━━━━━━━━━━━━━━━━━━━━ 16s 2s/step - accuracy: 0.8715 - loss: 0.1183[codecarbon INFO @ 03:44:51] Energy consumed for RAM : 0.000107 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:44:51] Energy consumed for all CPUs : 0.001594 kWh. Total CPU Power : 42.5 W
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8835 - loss: 0.1104[codecarbon INFO @ 03:45:06] Energy consumed for RAM : 0.000119 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:45:06] Energy consumed for all CPUs : 0.001771 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.8850 - loss: 0.1092 - val_accuracy: 0.6879 - val_loss: 0.2552
+Epoch 4/20
+ 2/20 ━━━━━━━━━━━━━━━━━━━━ 33s 2s/step - accuracy: 0.8906 - loss: 0.0975[codecarbon INFO @ 03:45:21] Energy consumed for RAM : 0.000131 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:45:21] Energy consumed for all CPUs : 0.001948 kWh. Total CPU Power : 42.5 W
+10/20 ━━━━━━━━━━━━━━━━━━━━ 18s 2s/step - accuracy: 0.8895 - loss: 0.1010[codecarbon INFO @ 03:45:36] Energy consumed for RAM : 0.000143 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:45:36] Energy consumed for all CPUs : 0.002125 kWh. Total CPU Power : 42.5 W
+19/20 ━━━━━━━━━━━━━━━━━━━━ 1s 2s/step - accuracy: 0.8954 - loss: 0.0996[codecarbon INFO @ 03:45:51] Energy consumed for RAM : 0.000155 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:45:51] Energy consumed for all CPUs : 0.002303 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.8964 - loss: 0.0992 - val_accuracy: 0.6879 - val_loss: 0.2437
+Epoch 5/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 40s 2s/step - accuracy: 0.9375 - loss: 0.0716[codecarbon INFO @ 03:46:06] Energy consumed for RAM : 0.000167 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:46:06] Energy consumed for all CPUs : 0.002480 kWh. Total CPU Power : 42.5 W
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.9112 - loss: 0.0839[codecarbon INFO @ 03:46:21] Energy consumed for RAM : 0.000179 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:46:21] Energy consumed for all CPUs : 0.002657 kWh. Total CPU Power : 42.5 W
+18/20 ━━━━━━━━━━━━━━━━━━━━ 3s 2s/step - accuracy: 0.9088 - loss: 0.0853[codecarbon INFO @ 03:46:36] Energy consumed for RAM : 0.000191 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:46:36] Energy consumed for all CPUs : 0.002834 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:46:36] 0.003025 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9079 - loss: 0.0861 - val_accuracy: 0.6688 - val_loss: 0.2474
+Epoch 6/20
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 41s 2s/step - accuracy: 0.8125 - loss: 0.1336[codecarbon INFO @ 03:46:51] Energy consumed for RAM : 0.000203 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:46:51] Energy consumed for all CPUs : 0.003011 kWh. Total CPU Power : 42.5 W
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.8915 - loss: 0.1057[codecarbon INFO @ 03:47:06] Energy consumed for RAM : 0.000214 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:47:06] Energy consumed for all CPUs : 0.003188 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.8991 - loss: 0.0996[codecarbon INFO @ 03:47:21] Energy consumed for RAM : 0.000226 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:47:21] Energy consumed for all CPUs : 0.003366 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9008 - loss: 0.0978 - val_accuracy: 0.6815 - val_loss: 0.2433
+Epoch 7/20
+[codecarbon INFO @ 03:47:36] Energy consumed for RAM : 0.000238 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:47:36] Energy consumed for all CPUs : 0.003543 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:47:36] 0.003781 kWh of electricity used since the beginning.
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.8884 - loss: 0.0980[codecarbon INFO @ 03:47:51] Energy consumed for RAM : 0.000250 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:47:51] Energy consumed for all CPUs : 0.003720 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.8995 - loss: 0.0933[codecarbon INFO @ 03:48:06] Energy consumed for RAM : 0.000262 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:48:06] Energy consumed for all CPUs : 0.003897 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9022 - loss: 0.0919 - val_accuracy: 0.6624 - val_loss: 0.2640
+Epoch 8/20
+[codecarbon INFO @ 03:48:21] Energy consumed for RAM : 0.000274 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:48:21] Energy consumed for all CPUs : 0.004074 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:48:21] 0.004348 kWh of electricity used since the beginning.
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 21s 2s/step - accuracy: 0.9220 - loss: 0.0823[codecarbon INFO @ 03:48:36] Energy consumed for RAM : 0.000286 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:48:36] Energy consumed for all CPUs : 0.004251 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:48:36] 0.004537 kWh of electricity used since the beginning.
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.9176 - loss: 0.0836[codecarbon INFO @ 03:48:51] Energy consumed for RAM : 0.000298 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:48:51] Energy consumed for all CPUs : 0.004428 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9161 - loss: 0.0837[codecarbon INFO @ 03:49:06] Energy consumed for RAM : 0.000310 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:49:06] Energy consumed for all CPUs : 0.004605 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9158 - loss: 0.0838 - val_accuracy: 0.6497 - val_loss: 0.2747
+Epoch 9/20
+ 8/20 ━━━━━━━━━━━━━━━━━━━━ 20s 2s/step - accuracy: 0.8960 - loss: 0.0915[codecarbon INFO @ 03:49:21] Energy consumed for RAM : 0.000322 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:49:21] Energy consumed for all CPUs : 0.004782 kWh. Total CPU Power : 42.5 W
+16/20 ━━━━━━━━━━━━━━━━━━━━ 7s 2s/step - accuracy: 0.8995 - loss: 0.0906[codecarbon INFO @ 03:49:36] Energy consumed for RAM : 0.000334 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:49:36] Energy consumed for all CPUs : 0.004959 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9007 - loss: 0.0909[codecarbon INFO @ 03:49:51] Energy consumed for RAM : 0.000346 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:49:51] Energy consumed for all CPUs : 0.005136 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9010 - loss: 0.0909 - val_accuracy: 0.6561 - val_loss: 0.2811
+Epoch 10/20
+ 7/20 ━━━━━━━━━━━━━━━━━━━━ 23s 2s/step - accuracy: 0.9078 - loss: 0.0858[codecarbon INFO @ 03:50:06] Energy consumed for RAM : 0.000357 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:50:06] Energy consumed for all CPUs : 0.005314 kWh. Total CPU Power : 42.5 W
+15/20 ━━━━━━━━━━━━━━━━━━━━ 8s 2s/step - accuracy: 0.9136 - loss: 0.0838 [codecarbon INFO @ 03:50:21] Energy consumed for RAM : 0.000369 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:50:21] Energy consumed for all CPUs : 0.005491 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9154 - loss: 0.0831[codecarbon INFO @ 03:50:36] Energy consumed for RAM : 0.000381 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:50:36] Energy consumed for all CPUs : 0.005668 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:50:36] 0.006049 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9159 - loss: 0.0829 - val_accuracy: 0.6497 - val_loss: 0.2746
+Epoch 11/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 25s 2s/step - accuracy: 0.9019 - loss: 0.0922[codecarbon INFO @ 03:50:51] Energy consumed for RAM : 0.000393 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:50:51] Energy consumed for all CPUs : 0.005845 kWh. Total CPU Power : 42.5 W
+15/20 ━━━━━━━━━━━━━━━━━━━━ 9s 2s/step - accuracy: 0.9021 - loss: 0.0913 [codecarbon INFO @ 03:51:06] Energy consumed for RAM : 0.000405 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:51:06] Energy consumed for all CPUs : 0.006022 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9056 - loss: 0.0896[codecarbon INFO @ 03:51:21] Energy consumed for RAM : 0.000417 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:51:21] Energy consumed for all CPUs : 0.006199 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9061 - loss: 0.0893 - val_accuracy: 0.6879 - val_loss: 0.2468
+Epoch 12/20
+ 6/20 ━━━━━━━━━━━━━━━━━━━━ 23s 2s/step - accuracy: 0.9206 - loss: 0.0762[codecarbon INFO @ 03:51:36] Energy consumed for RAM : 0.000429 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:51:36] Energy consumed for all CPUs : 0.006376 kWh. Total CPU Power : 42.5 W
+14/20 ━━━━━━━━━━━━━━━━━━━━ 10s 2s/step - accuracy: 0.9093 - loss: 0.0846[codecarbon INFO @ 03:51:51] Energy consumed for RAM : 0.000441 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:51:51] Energy consumed for all CPUs : 0.006554 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9064 - loss: 0.0866[codecarbon INFO @ 03:52:06] Energy consumed for RAM : 0.000453 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:52:06] Energy consumed for all CPUs : 0.006731 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9061 - loss: 0.0867 - val_accuracy: 0.6752 - val_loss: 0.2475
+Epoch 13/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.9070 - loss: 0.0825[codecarbon INFO @ 03:52:21] Energy consumed for RAM : 0.000465 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:52:21] Energy consumed for all CPUs : 0.006908 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.9122 - loss: 0.0812[codecarbon INFO @ 03:52:36] Energy consumed for RAM : 0.000477 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:52:36] Energy consumed for all CPUs : 0.007085 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:52:36] 0.007561 kWh of electricity used since the beginning.
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9158 - loss: 0.0803[codecarbon INFO @ 03:52:51] Energy consumed for RAM : 0.000489 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:52:51] Energy consumed for all CPUs : 0.007262 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9164 - loss: 0.0802 - val_accuracy: 0.6433 - val_loss: 0.2547
+Epoch 14/20
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 24s 2s/step - accuracy: 0.9265 - loss: 0.0843[codecarbon INFO @ 03:53:06] Energy consumed for RAM : 0.000500 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:53:06] Energy consumed for all CPUs : 0.007439 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.9237 - loss: 0.0827[codecarbon INFO @ 03:53:21] Energy consumed for RAM : 0.000512 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:53:21] Energy consumed for all CPUs : 0.007616 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9184 - loss: 0.0836[codecarbon INFO @ 03:53:36] Energy consumed for RAM : 0.000524 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:53:36] Energy consumed for all CPUs : 0.007793 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 46s 2s/step - accuracy: 0.9183 - loss: 0.0835 - val_accuracy: 0.6688 - val_loss: 0.2499
+Epoch 15/20
+[codecarbon INFO @ 03:53:51] Energy consumed for RAM : 0.000536 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:53:51] Energy consumed for all CPUs : 0.007970 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:53:51] 0.008506 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:54:06] Energy consumed for RAM : 0.000548 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:54:06] Energy consumed for all CPUs : 0.008147 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:54:06] 0.008695 kWh of electricity used since the beginning.
+ 1/20 ━━━━━━━━━━━━━━━━━━━━ 12:02 38s/step - accuracy: 0.9688 - loss: 0.0597[codecarbon INFO @ 03:54:21] Energy consumed for RAM : 0.000560 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:54:21] Energy consumed for all CPUs : 0.008324 kWh. Total CPU Power : 42.5 W
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.9357 - loss: 0.0759[codecarbon INFO @ 03:54:36] Energy consumed for RAM : 0.000572 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:54:36] Energy consumed for all CPUs : 0.008502 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:54:36] 0.009073 kWh of electricity used since the beginning.
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9378 - loss: 0.0740[codecarbon INFO @ 03:54:51] Energy consumed for RAM : 0.000584 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:54:51] Energy consumed for all CPUs : 0.008679 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9364 - loss: 0.0746 - val_accuracy: 0.6433 - val_loss: 0.2794
+Epoch 16/20
+[codecarbon INFO @ 03:55:06] Energy consumed for RAM : 0.000596 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:55:06] Energy consumed for all CPUs : 0.008855 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:55:06] 0.009451 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:55:21] Energy consumed for RAM : 0.000608 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:55:21] Energy consumed for all CPUs : 0.009033 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:55:21] 0.009640 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:55:36] Energy consumed for RAM : 0.000620 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:55:36] Energy consumed for all CPUs : 0.009210 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:55:36] 0.009829 kWh of electricity used since the beginning.
+ 5/20 ━━━━━━━━━━━━━━━━━━━━ 27s 2s/step - accuracy: 0.9510 - loss: 0.0713[codecarbon INFO @ 03:55:51] Energy consumed for RAM : 0.000631 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:55:51] Energy consumed for all CPUs : 0.009387 kWh. Total CPU Power : 42.5 W
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.9401 - loss: 0.0756[codecarbon INFO @ 03:56:06] Energy consumed for RAM : 0.000643 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:56:06] Energy consumed for all CPUs : 0.009564 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9369 - loss: 0.0770[codecarbon INFO @ 03:56:21] Energy consumed for RAM : 0.000655 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:56:21] Energy consumed for all CPUs : 0.009741 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 82s 2s/step - accuracy: 0.9368 - loss: 0.0770 - val_accuracy: 0.6815 - val_loss: 0.2546
+Epoch 17/20
+ 4/20 ━━━━━━━━━━━━━━━━━━━━ 28s 2s/step - accuracy: 0.9603 - loss: 0.0623[codecarbon INFO @ 03:56:36] Energy consumed for RAM : 0.000667 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:56:36] Energy consumed for all CPUs : 0.009918 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:56:36] 0.010585 kWh of electricity used since the beginning.
+13/20 ━━━━━━━━━━━━━━━━━━━━ 12s 2s/step - accuracy: 0.9416 - loss: 0.0710[codecarbon INFO @ 03:56:51] Energy consumed for RAM : 0.000679 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:56:51] Energy consumed for all CPUs : 0.010095 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 0s 2s/step - accuracy: 0.9358 - loss: 0.0731[codecarbon INFO @ 03:57:06] Energy consumed for RAM : 0.000691 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:57:06] Energy consumed for all CPUs : 0.010273 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 47s 2s/step - accuracy: 0.9350 - loss: 0.0734 - val_accuracy: 0.6752 - val_loss: 0.2615
+Epoch 18/20
+[codecarbon INFO @ 03:57:21] Energy consumed for RAM : 0.000703 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:57:21] Energy consumed for all CPUs : 0.010449 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:57:21] 0.011152 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:57:36] Energy consumed for RAM : 0.000715 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:57:36] Energy consumed for all CPUs : 0.010627 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:57:36] 0.011341 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:57:51] Energy consumed for RAM : 0.000727 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:57:51] Energy consumed for all CPUs : 0.010804 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:57:51] 0.011531 kWh of electricity used since the beginning.
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.9440 - loss: 0.0703[codecarbon INFO @ 03:58:06] Energy consumed for RAM : 0.000739 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:58:06] Energy consumed for all CPUs : 0.010981 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9393 - loss: 0.0719[codecarbon INFO @ 03:58:21] Energy consumed for RAM : 0.000751 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:58:21] Energy consumed for all CPUs : 0.011158 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 81s 2s/step - accuracy: 0.9389 - loss: 0.0720 - val_accuracy: 0.6115 - val_loss: 0.2980
+Epoch 19/20
+[codecarbon INFO @ 03:58:36] Energy consumed for RAM : 0.000763 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:58:36] Energy consumed for all CPUs : 0.011335 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:58:36] 0.012098 kWh of electricity used since the beginning.
+[codecarbon INFO @ 03:58:36] 0.008987 g.CO2eq/s mean an estimation of 283.40473759652167 kg.CO2eq/year
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.9306 - loss: 0.0771[codecarbon INFO @ 03:58:51] Energy consumed for RAM : 0.000774 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:58:51] Energy consumed for all CPUs : 0.011513 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9258 - loss: 0.0805[codecarbon INFO @ 03:59:06] Energy consumed for RAM : 0.000786 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:59:06] Energy consumed for all CPUs : 0.011690 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 45s 2s/step - accuracy: 0.9252 - loss: 0.0806 - val_accuracy: 0.6051 - val_loss: 0.3175
+Epoch 20/20
+[codecarbon INFO @ 03:59:21] Energy consumed for RAM : 0.000798 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:59:21] Energy consumed for all CPUs : 0.011867 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 03:59:21] 0.012665 kWh of electricity used since the beginning.
+ 9/20 ━━━━━━━━━━━━━━━━━━━━ 19s 2s/step - accuracy: 0.9548 - loss: 0.0730[codecarbon INFO @ 03:59:36] Energy consumed for RAM : 0.000810 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:59:36] Energy consumed for all CPUs : 0.012044 kWh. Total CPU Power : 42.5 W
+17/20 ━━━━━━━━━━━━━━━━━━━━ 5s 2s/step - accuracy: 0.9472 - loss: 0.0748[codecarbon INFO @ 03:59:51] Energy consumed for RAM : 0.000822 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 03:59:51] Energy consumed for all CPUs : 0.012221 kWh. Total CPU Power : 42.5 W
+20/20 ━━━━━━━━━━━━━━━━━━━━ 45s 2s/step - accuracy: 0.9433 - loss: 0.0758 - val_accuracy: 0.6306 - val_loss: 0.2865
+[codecarbon INFO @ 04:00:05] Energy consumed for RAM : 0.000833 kWh. RAM Power : 2.86007022857666 W
+[codecarbon INFO @ 04:00:05] Energy consumed for all CPUs : 0.012385 kWh. Total CPU Power : 42.5 W
+[codecarbon INFO @ 04:00:05] 0.013219 kWh of electricity used since the beginning.
+[MEMORY] Current memory usage: 2317.53 MB
+[ENERGY] Estimated energy usage for Set 5: 0.0094 kg CO₂
+Found 7045 images belonging to 2 classes.
+/home/client1/fedlearn-env/lib/python3.11/site-packages/keras/src/trainers/data_adapters/py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+221/221 ━━━━━━━━━━━━━━━━━━━━ 410s 2s/step
+Test Accuracy : 87.18%
+
+Classification Report after updating global model:
+              precision    recall  f1-score   support
+
+      drowsy       0.88      0.88      0.88      3768
+   notdrowsy       0.86      0.86      0.86      3277
+
+    accuracy                           0.87      7045
+   macro avg       0.87      0.87      0.87      7045
+weighted avg       0.87      0.87      0.87      7045
+
+Sending updated weights (3041740 bytes) to the server...
+Uploading weights: 100%|████████████████████████████████████████████████████████| 3.04M/3.04M [00:00<00:00, 16.3MB/s]
+Training and weight update for Round 5 completed.
+
+Connection to server closed.

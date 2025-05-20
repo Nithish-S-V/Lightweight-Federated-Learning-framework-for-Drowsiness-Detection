@@ -1,0 +1,36 @@
+Round 1 - Accuracy: 0.7075
+              precision    recall  f1-score   support
+
+    Eyeclose       1.00      0.67      0.80       303
+     Neutral       0.55      0.95      0.69       245
+        Yawn       0.80      0.45      0.58       194
+
+    accuracy                           0.71       742
+   macro avg       0.78      0.69      0.69       742
+weighted avg       0.80      0.71      0.71       742
+
+
+Round 2 - Accuracy: 0.7143
+              precision    recall  f1-score   support
+
+    Eyeclose       1.00      0.67      0.80       303
+     Neutral       0.54      0.96      0.69       245
+        Yawn       0.91      0.47      0.62       194
+
+    accuracy                           0.71       742
+   macro avg       0.81      0.70      0.70       742
+weighted avg       0.82      0.71      0.72       742
+
+
+Round 3 - Accuracy: 0.7143
+              precision    recall  f1-score   support
+
+    Eyeclose       0.99      0.70      0.82       303
+     Neutral       0.54      0.98      0.70       245
+        Yawn       0.94      0.40      0.56       194
+
+    accuracy                           0.71       742
+   macro avg       0.82      0.69      0.69       742
+weighted avg       0.83      0.71      0.71       742
+
+

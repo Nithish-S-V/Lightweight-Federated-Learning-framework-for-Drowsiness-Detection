@@ -1,0 +1,79 @@
+import numpy as np
+from sklearn.cluster import KMeans
+
+def compute_cosine_similarity(model1, model2):
+    """Compute cosine similarity between two models."""
+    flat1 = np.concatenate([w.flatten() for w in model1])
+    flat2 = np.concatenate([w.flatten() for w in model2])
+    numerator = np.dot(flat1, flat2)
+    denominator = np.linalg.norm(flat1) * np.linalg.norm(flat2)
+    return numerator / (denominator + 1e-8)
+
+
+def cluster_clients_kmeans(client_weights, num_clusters):
+    """
+    Clusters clients using KMeans based on flattened model weights.
+    Returns a list of cluster labels.
+    """
+    flattened = [np.concatenate([w.flatten() for w in model]) for model in client_weights]
+    kmeans = KMeans(n_clusters=num_clusters, random_state=42, n_init=10)
+    cluster_labels = kmeans.fit_predict(flattened)
+    return cluster_labels
+
+
+def fedcda_aggregate(client_weights, past_model_weights, round_index, num_clusters=2):
+    """
+    FedCDA Aggregation with actual KMeans clustering.
+    - client_weights: list of models' weights from clients (List of List of numpy arrays)
+    - past_model_weights: previous round global model
+    - round_index: integer (starting from 0)
+    - num_clusters: number of clusters to form in KMeans
+    """
+    num_clients = len(client_weights)
+    if num_clients < num_clusters:
+        raise ValueError("Number of clusters cannot exceed number of clients.")
+
+    num_layers = len(client_weights[0])
+    adaptive_lambda = 1.0 / (1 + round_index)
+
+    # --- Step 1: Cluster Clients using KMeans ---
+    cluster_labels = cluster_clients_kmeans(client_weights, num_clusters)
+    clusters = {k: [] for k in range(num_clusters)}
+    for idx, label in enumerate(cluster_labels):
+        clusters[label].append(client_weights[idx])
+
+    # --- Step 2: Intra-Cluster Aggregation ---
+    cluster_aggregates = []
+    for cluster_id, cluster_models in clusters.items():
+        cluster_avg = [
+            np.mean([client[layer] for client in cluster_models], axis=0)
+            for layer in range(num_layers)
+        ]
+        cluster_aggregates.append(cluster_avg)
+
+    # --- Step 3: Inter-Cluster Divergence-Based Fusion ---
+    if len(cluster_aggregates) == 1:
+        # Only one cluster — fallback to FedAvg-style behavior
+        aggregated_weights = cluster_aggregates[0]
+    elif len(cluster_aggregates) == 2:
+        similarity = compute_cosine_similarity(cluster_aggregates[0], cluster_aggregates[1])
+        w1 = 0.5 + 0.5 * similarity
+        w2 = 1.0 - w1
+        aggregated_weights = [
+            w1 * cluster_aggregates[0][i] + w2 * cluster_aggregates[1][i]
+            for i in range(num_layers)
+        ]
+    else:
+        # More than 2 clusters: average across all cluster aggregates
+        aggregated_weights = [
+            np.mean([cluster[i] for cluster in cluster_aggregates], axis=0)
+            for i in range(num_layers)
+        ]
+
+    # --- Step 4: Temporal Smoothing ---
+    smoothed_weights = [
+        (1 - adaptive_lambda) * aggregated_weights[i] + adaptive_lambda * np.array(past_model_weights[i])
+        for i in range(num_layers)
+    ]
+
+    return smoothed_weights

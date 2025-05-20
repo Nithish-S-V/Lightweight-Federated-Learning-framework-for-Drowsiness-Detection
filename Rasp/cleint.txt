@@ -1,0 +1,101 @@
+# client.py (final corrected version)
+import numpy as np
+import tensorflow as tf
+from pathlib import Path
+from cryptography.fernet import Fernet
+import base64
+import os
+import pickle
+import zlib
+import socket
+import time
+from tensorflow.keras import layers, initializers, backend as K
+
+# ... (Keep all layer definitions from original code unchanged) ...
+
+class EdgeNode:
+    def __init__(self, client_id, data_dir):
+        self.client_id = client_id
+        self.data_dir = Path(data_dir)
+        self.model = MobileNetCapsNet()
+        self.model.compile_model()
+        self.current_round = 1
+        self.cipher = None  # Fernet instance will be injected
+
+    def get_encrypted_parameters(self):
+        """Fernet-compatible parameter encryption"""
+        weights = self.model.model.get_weights()
+        serialized = pickle.dumps(weights)
+        compressed = zlib.compress(serialized)
+        return self.cipher.encrypt(compressed)
+
+class FederatedClient:
+    def __init__(self, client_id, data_dir, server_host, server_port):
+        self.client_id = client_id
+        self.data_dir = data_dir
+        self.server_host = server_host
+        self.server_port = server_port
+        self.edge_node = EdgeNode(client_id, data_dir)
+
+    def connect(self):
+        """Secure connection with Fernet key exchange"""
+        max_retries = 3
+        retry_count = 0
+        
+        while retry_count < max_retries:
+            try:
+                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                    s.connect((self.server_host, self.server_port))
+                    
+                    # Receive Fernet key from server
+                    self.edge_node.cipher = Fernet(s.recv(1024))
+                    
+                    while True:
+                        # Receive global model update
+                        self._receive_model_update(s)
+                        
+                        # Train with current parameters
+                        results = self.edge_node.train_round(self.edge_node.current_round)
+                        
+                        # Send encrypted update
+                        self._send_encrypted_update(s, results['encrypted_weights'])
+                        
+                        self.edge_node.current_round += 1
+                break
+                        
+            except (ConnectionResetError, TimeoutError) as e:
+                print(f"Connection error: {str(e)} - Retry {retry_count+1}/{max_retries}")
+                retry_count += 1
+                time.sleep(5)
+
+    def _receive_model_update(self, conn):
+        """Secure model weight reception"""
+        data_size = int.from_bytes(conn.recv(4), byteorder='big')
+        encrypted_data = conn.recv(data_size)
+        
+        decrypted = self.edge_node.cipher.decrypt(encrypted_data)
+        decompressed = zlib.decompress(decrypted)
+        weights = pickle.loads(decompressed)
+        
+        self.edge_node.model.model.set_weights(weights)
+
+    def _send_encrypted_update(self, conn, encrypted_data):
+        """Secure update transmission"""
+        conn.sendall(len(encrypted_data).to_bytes(4, byteorder='big'))
+        conn.sendall(encrypted_data)
+
+# ... (Keep MobileNetCapsNet class and other components unchanged) ...
+
+if __name__ == "__main__":
+    CLIENT_ID = "client_2"
+    DATA_DIR = r"/path/to/client/data"
+    SERVER_IP = "192.168.137.13"
+    SERVER_PORT = 5000
+    
+    client = FederatedClient(
+        client_id=CLIENT_ID,
+        data_dir=DATA_DIR,
+        server_host=SERVER_IP,
+        server_port=SERVER_PORT
+    )
+    client.connect()

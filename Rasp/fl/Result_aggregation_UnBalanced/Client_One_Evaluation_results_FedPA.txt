@@ -1,0 +1,45 @@
+
+--- FedPA | Set 1 ---
+Accuracy: 0.6869
+Classification Report:
+              precision    recall  f1-score   support
+
+    Eyeclose       1.00      0.63      0.78        82
+     Neutral       0.52      0.80      0.63        64
+        Yawn       0.69      0.63      0.66        52
+
+    accuracy                           0.69       198
+   macro avg       0.74      0.69      0.69       198
+weighted avg       0.76      0.69      0.70       198
+
+============================================================
+
+--- FedPA | Set 2 ---
+Accuracy: 0.7222
+Classification Report:
+              precision    recall  f1-score   support
+
+    Eyeclose       0.94      0.73      0.82        82
+     Neutral       0.56      0.84      0.68        64
+        Yawn       0.76      0.56      0.64        52
+
+    accuracy                           0.72       198
+   macro avg       0.75      0.71      0.71       198
+weighted avg       0.77      0.72      0.73       198
+
+============================================================
+
+--- FedPA | Set 3 ---
+Accuracy: 0.7172
+Classification Report:
+              precision    recall  f1-score   support
+
+    Eyeclose       0.98      0.72      0.83        82
+     Neutral       0.54      0.88      0.67        64
+        Yawn       0.77      0.52      0.62        52
+
+    accuracy                           0.72       198
+   macro avg       0.77      0.70      0.71       198
+weighted avg       0.79      0.72      0.72       198
+
+============================================================

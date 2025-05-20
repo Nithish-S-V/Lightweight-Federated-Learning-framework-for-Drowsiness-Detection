@@ -1,0 +1,45 @@
+
+--- FedBN | Set 1 ---
+Accuracy: 0.7116
+Classification Report:
+              precision    recall  f1-score   support
+
+    Eyeclose       1.00      0.69      0.81       303
+     Neutral       0.55      0.96      0.70       245
+        Yawn       0.79      0.44      0.56       194
+
+    accuracy                           0.71       742
+   macro avg       0.78      0.69      0.69       742
+weighted avg       0.80      0.71      0.71       742
+
+============================================================
+
+--- FedBN | Set 2 ---
+Accuracy: 0.7264
+Classification Report:
+              precision    recall  f1-score   support
+
+    Eyeclose       0.99      0.66      0.79       303
+     Neutral       0.57      0.89      0.70       245
+        Yawn       0.76      0.63      0.69       194
+
+    accuracy                           0.73       742
+   macro avg       0.77      0.73      0.73       742
+weighted avg       0.79      0.73      0.73       742
+
+============================================================
+
+--- FedBN | Set 3 ---
+Accuracy: 0.7399
+Classification Report:
+              precision    recall  f1-score   support
+
+    Eyeclose       0.99      0.71      0.83       303
+     Neutral       0.56      0.96      0.71       245
+        Yawn       0.92      0.50      0.65       194
+
+    accuracy                           0.74       742
+   macro avg       0.82      0.73      0.73       742
+weighted avg       0.83      0.74      0.74       742
+
+============================================================

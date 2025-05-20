@@ -1,0 +1,115 @@
+def _build_student_model(teacher_model):
+    # Smaller base model with reduced parameters
+    base_model = tf.keras.applications.MobileNetV2(
+        input_shape=teacher_model.input_shape[1:],
+        include_top=False,
+        weights='imagenet',
+        alpha=0.5
+    )
+    base_model.trainable = False
+
+    x = base_model.output
+    x = layers.Conv2D(128, 3, activation='relu')(x)
+    x = layers.GlobalAveragePooling2D()(x)
+    
+    # Feature alignment with proper dimension matching
+    x = layers.Dense(256, activation='relu')(x)
+    x = layers.Reshape((1, 256))(x)  # Explicit single capsule input
+
+    # First compressed capsule layer
+    teacher_caps1 = teacher_model.get_layer('capsule_layer')
+    x = CapsuleLayer_1(
+        num_capsule=4,  # 50% reduction from teacher's 8
+        dim_capsule=8,  # 50% reduction from teacher's 16D
+        routings=3,
+        weight_initializer=teacher_caps1.weights[0][:, :, :4, :8, :]  # Correct slicing
+    )(x)
+
+    # Second compressed capsule layer
+    teacher_caps2 = teacher_model.get_layer('capsule_layer_1')
+    x = CapsuleLayer_1(
+        num_capsule=2,
+        dim_capsule=16,  # 50% reduction from teacher's 32D
+        routings=3,
+        weight_initializer=teacher_caps2.weights[0][:, :, :2, :16, :8]  # Adjusted slicing
+    )(x)
+
+    outputs = Length()(x)
+    return tf.keras.Model(inputs=base_model.input, outputs=outputs)
+
+class CapsuleLayer_1(layers.Layer):
+    def __init__(self, num_capsule, dim_capsule, routings=3, 
+                 weight_initializer=None, **kwargs):
+        super().__init__(**kwargs)
+        self.num_capsule = num_capsule
+        self.dim_capsule = dim_capsule
+        self.routings = routings
+        self.weight_initializer = weight_initializer
+
+    def build(self, input_shape):
+        self.input_num_capsule = input_shape[1]
+        self.input_dim_capsule = input_shape[2]
+
+        # Dimension-aware weight adaptation
+        if self.weight_initializer is not None:
+            # Preserve matrix subspace while matching dimensions
+            init_weights = self.weight_initializer.numpy()
+            target_shape = (1, self.input_num_capsule, self.num_capsule, 
+                           self.dim_capsule, self.input_dim_capsule)
+            
+            # Calculate zero-padding needs
+            pad_dims = [
+                (0, max(0, target_shape[i] - init_weights.shape[i]))
+                for i in range(len(target_shape))
+            ]
+            
+            # Apply symmetric padding and truncation
+            padded_weights = np.pad(
+                init_weights,
+                pad_dims,
+                mode='constant',
+                constant_values=0
+            )[:target_shape[0], :target_shape[1], :target_shape[2], 
+              :target_shape[3], :target_shape[4]]
+            
+            initializer = tf.keras.initializers.Constant(padded_weights)
+        else:
+            initializer = initializers.glorot_uniform()
+
+        self.W = self.add_weight(
+            shape=(1, self.input_num_capsule, self.num_capsule,
+                  self.dim_capsule, self.input_dim_capsule),
+            initializer=initializer,
+            name='capsule_weights'
+        )
+        self.built = True
+
+    def call(self, inputs):
+        inputs_expand = K.expand_dims(K.expand_dims(inputs, 2), 2)
+        W_tiled = K.tile(self.W, [K.shape(inputs)[0], 1, 1, 1, 1])
+        inputs_hat = tf.squeeze(tf.matmul(W_tiled, inputs_expand, transpose_b=True), axis=-1)
+        b = tf.zeros(shape=[K.shape(inputs)[0], self.input_num_capsule, self.num_capsule])
+
+        for i in range(self.routings):
+            c = tf.nn.softmax(b, axis=2)
+            c_expand = K.expand_dims(c, -1)
+            outputs = self.squash(tf.reduce_sum(inputs_hat * c_expand, axis=1))
+            if i < self.routings - 1:
+                b += tf.reduce_sum(inputs_hat * K.expand_dims(c, -1), axis=-1)
+        
+        return outputs
+
+    def get_config(self):
+        config = super().get_config()
+        config.update({
+            "num_capsule": self.num_capsule,
+            "dim_capsule": self.dim_capsule,
+            "routings": self.routings,
+            "weight_initializer": self.weight_initializer
+        })
+        return config
+
+    def squash(self, vectors, axis=-1):
+        s_squared_norm = K.sum(K.square(vectors), axis, keepdims=True)
+        scale = s_squared_norm / (1 + s_squared_norm) / K.sqrt(s_squared_norm + K.epsilon())
+        return scale * vectors
