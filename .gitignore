@@ -1,0 +1,37 @@
+# Ignore dataset folders inside "Major Project"
+final datset/
+Final Proper/3class_test/
+Final Proper/4_classs_split/
+Final Proper/Centralized dataset/
+Final Proper/Eye_yawn_dataset/
+Final Proper/FederatedData_balanced/
+Final Proper/FederatedData_unbalances/
+Final Proper/Indian_full_data/
+Final Proper/indian+eye_yawn_dataset/
+Final Proper/Initial_try_mam_told/
+Final Proper/Mixed Gaze Data (Lisa V1_V2)/
+Final Proper/set5/
+Final Proper/split_with 5 class_balanced/
+Final Proper/Split_with_5_sets_unbalanced/
+Final Proper/TwoDatasets/
+Final Proper/Yawn/
+
+# Ignore folders and files inside "Rasp"
+Rasp/Final_Results_MEtrcs/Dataset/
+Rasp/Final_Results_MEtrcs/test/
+Rasp/Final_Results_MEtrcs/train/
+Rasp/Final_Results_MEtrcs/test.zip
+
+Rasp/old/test/
+Rasp/old/split_clients_2_with_rounds/
+Rasp/old/initial_train/
+Rasp/old/Combined/
+Rasp/old/client2/
+Rasp/old/client1/
+Rasp/old/Balanced/
+Rasp/old/3,10,20_DataSplit/
+
+# Ignore other folders/files
+Report/
+venv/
+distributed.zip
