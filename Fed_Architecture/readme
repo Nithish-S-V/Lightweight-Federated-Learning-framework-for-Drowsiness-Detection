@@ -1,1 +1,22 @@
+Architecture Description:
+Step 1: Local Training on First Dataset
+Client 1 trains its local model on Set 1 and sends the resulting model weights to the Server.
 
+Client 2 does the same—trains on Set 1 and sends its weights to the Server.
+
+Step 2: Aggregation
+The Server aggregates the weights from both clients (commonly by averaging them).
+
+Step 3: Model Distribution
+The Server sends the aggregated model back to both clients.
+
+Step 4: Local Training on Second Dataset
+Client 1 trains the received aggregated model on Set 2 and sends the updated weights to the Server.
+
+Client 2 trains on Set 2 and sends its updated weights to the Server.
+
+Step 5: Final Aggregation
+The Server aggregates the updated weights from both clients into the final model.
+
+Step 6: Final Model Distribution
+The Server sends the final model to both clients.
